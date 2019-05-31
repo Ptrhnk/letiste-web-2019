@@ -1,0 +1,22 @@
+{
+  "name": "letiste-2019",
+  "version": "1.0.0",
+  "description": "festival web",
+  "main": "index.js",
+  "author": "petr.ha",
+  "license": "MIT",
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.10.0",
+    "next": "^8.1.0",
+    "next-images": "^1.1.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-spring": "^8.0.20",
+    "styled-components": "^4.2.0"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  }
+}
