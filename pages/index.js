@@ -49,14 +49,6 @@ const Svg = styled.svg`
   display: none;
 `;
 
-// const StyledImage = styled(animated.img)`
-//   height: 100vh;
-//   width: 100%;
-//   filter: url(#pictureFilter);
-//   background-image: url(${image});
-//   background-size: cover;
-// `;
-
 const SpringContainer = Keyframes.Spring(async next => {
   while (true) {
     await next({

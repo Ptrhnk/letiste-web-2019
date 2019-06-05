@@ -1,15 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Spring, animated } from "react-spring/renderprops.cjs";
+import { Spring } from "react-spring/renderprops.cjs";
 
 const Svg = styled.svg`
   display: none;
 `;
 
 const Box = styled.div`
-  height: 18rem;
-  width: 18rem;
+  height: 10rem;
+  width: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,14 +26,14 @@ const ArtistBox = ({ artist }, key) => {
   return (
     <>
       <Spring
-        config={{ tension: 200, friction: 100, mass: 20 }}
+        config={{ tension: 250, friction: 100, mass: 20 }}
         from={{ opacity: 0, value: 180 }}
         to={{ opacity: 1, value: 0 }}
       >
         {spring => (
           <div style={spring}>
             <Box key={key} image={artist.image}>
-              {artist.name}
+              {/* {artist.name.replace("<br>", "\n")} */}
             </Box>
             <Svg>
               <defs>
