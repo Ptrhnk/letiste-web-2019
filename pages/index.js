@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import styled from "styled-components";
-import { Spring, animated, Keyframes } from "react-spring/renderprops.cjs";
+import { animated, Keyframes } from "react-spring/renderprops.cjs";
 
-import Page from "../layout/main";
+import Main from "../layout/main";
 import image from "../img/obrazek.jpg";
 
-const Container = styled.div`
+const Container = styled(animated.div)`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,6 +16,7 @@ const Container = styled.div`
   filter: url(#pictureFilter);
   background-image: url(${image});
   background-size: cover;
+  transform: scale(1.02);
 `;
 
 const Menu = styled.div`
@@ -34,74 +35,91 @@ const MenuButton = styled.button`
   font-size: 1.2rem;
   outline: none;
   box-shadow: none;
-  background-color: inherit;
+  background-color: rgba(200, 0, 150, 0.2);
   cursor: pointer;
 
   transition: all 0.3s ease;
   :hover {
-    box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5);
+    /* box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5); */
+    background-color: rgba(200, 0, 150, 0.3);
   }
 `;
 
-const StyledImage = styled(animated.div)`
-  height: 100vh;
-  width: 100%;
-  filter: url(#pictureFilter);
-  background-image: url(${image});
-  background-size: cover;
+const Svg = styled.svg`
+  display: none;
 `;
+
+// const StyledImage = styled(animated.img)`
+//   height: 100vh;
+//   width: 100%;
+//   filter: url(#pictureFilter);
+//   background-image: url(${image});
+//   background-size: cover;
+// `;
 
 const SpringContainer = Keyframes.Spring(async next => {
   while (true) {
     await next({
-      from: { angle: 200, counter: 1 },
-      to: { angle: 130, counter: 0 }
+      from: { angle: 200, opacity: 0, baseFreq: 0.008, scale: 1 },
+      to: { angle: 130, opacity: 5, baseFreq: 0.02, scale: 5 }
     });
     await next({
-      from: { angle: 130, counter: 0 },
-      to: { angle: 200, counter: 1 }
+      from: { angle: 130, opacity: 5, baseFreq: 0.02, scale: 5 },
+      to: { angle: 200, opacity: 0, baseFreq: 0.032, scale: 1 }
     });
   }
 });
 
 const Home = () => {
+  const [trip, setTrip] = useState(false);
   return (
-    <Page>
-      <Container>
-        <Menu>
-          <Link href="/artists">
-            <MenuButton>Artists</MenuButton>
-          </Link>
-          <Link href="/about">
-            <MenuButton>Festival</MenuButton>
-          </Link>
-          <Link href="/history">
-            <MenuButton>History</MenuButton>
-          </Link>
-        </Menu>
-        <SpringContainer
-          reset
-          config={{ duration: 2000 /*, easing: Easing.linear*/ }}
-        >
-          {spring => (
-            <div>
-              <svg width="0" height="0">
+    <Main>
+      <SpringContainer reset config={{ duration: 3000 }}>
+        {spring => (
+          <div>
+            <Container>
+              <Menu>
+                <Link href="/artists">
+                  <MenuButton>Artists</MenuButton>
+                </Link>
+                <Link href="/about">
+                  <MenuButton>Festival</MenuButton>
+                </Link>
+                <Link href="/history">
+                  <MenuButton>History</MenuButton>
+                </Link>
+                <MenuButton onClick={() => setTrip(!trip)}>Trip</MenuButton>
+              </Menu>
+              <Svg width="0" height="0">
                 <defs>
                   <filter id="pictureFilter">
-                    <feColorMatrix
+                    <feTurbulence
+                      type="fractalNoise"
+                      baseFrequency={spring.baseFreq}
+                      numOctaves="1"
+                      result="turbulence"
+                      seed="10"
+                    />
+                    <feDisplacementMap
+                      xChannelSelector="R"
+                      yChannelSelector="B"
+                      in="SourceGraphic"
+                      in2="turbulence"
+                      scale={spring.scale}
+                    />
+                    {/* <feColorMatrix
                       type="hueRotate"
                       in="SourceGraphic"
                       values={spring.angle}
-                    />
+                    /> */}
                   </filter>
                 </defs>
-              </svg>
-            </div>
-          )}
-        </SpringContainer>
-      </Container>
-      <Container />
-    </Page>
+              </Svg>
+            </Container>
+          </div>
+        )}
+      </SpringContainer>
+    </Main>
   );
 };
 

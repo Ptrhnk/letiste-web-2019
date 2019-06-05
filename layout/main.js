@@ -19,6 +19,7 @@ const GlobalStyle = createGlobalStyle`
     letter-spacing: .8px;
     box-sizing: border-box;
     background-image: linear-gradient(to right bottom, palevioletred, pink);
+    /* background-color: black; */
     /* height: 100vh; */
   }
   *, *::after, *::before {
