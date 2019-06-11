@@ -5,32 +5,53 @@ import { animated, Keyframes } from "react-spring/renderprops.cjs";
 
 import Main from "../layout/main";
 import image from "../img/obrazek.jpg";
+import logo from "../img/grafika/vrstva1.png";
 
 const Container = styled(animated.div)`
+  position: fixed;
+  top: 0;
+  left: 0;
+
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100%;
 
-  filter: url(#pictureFilter);
-  background-image: url(${image});
+  background-image: url(${logo});
   background-size: cover;
+  background-position: center;
   transform: scale(1.02);
+
+  /* @media (min-width: 700px) { */
+  filter: url(#tripFilter);
+  /* } */
+`;
+
+const Relative = styled.div`
+  position: relative;
+  height: 100vh;
 `;
 
 const Menu = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  flex-wrap: wrap;
 `;
 
 const MenuButton = styled.button`
   margin: 0.4rem;
   padding: 0.5rem 0.8rem;
-  border: 2px solid white;
-  color: white;
+  border: 2px solid black;
+  color: black;
   border-radius: 2rem;
   font-size: 1.2rem;
   outline: none;
@@ -52,65 +73,71 @@ const Svg = styled.svg`
 const SpringContainer = Keyframes.Spring(async next => {
   while (true) {
     await next({
-      from: { angle: 200, opacity: 0, baseFreq: 0.008, scale: 1 },
-      to: { angle: 130, opacity: 5, baseFreq: 0.02, scale: 5 }
+      from: { angle: 200, opacity: 0, baseFreq: 0.001, scale: 1 },
+      to: { angle: 130, opacity: 5, baseFreq: 0.006, scale: 30 }
     });
     await next({
-      from: { angle: 130, opacity: 5, baseFreq: 0.02, scale: 5 },
-      to: { angle: 200, opacity: 0, baseFreq: 0.032, scale: 1 }
+      from: { angle: 130, opacity: 5, baseFreq: 0.006, scale: 30 },
+      to: { angle: 200, opacity: 0, baseFreq: 0.011, scale: 1 }
     });
   }
 });
 
 const Home = () => {
-  const [trip, setTrip] = useState(false);
+  const [trip, setTrip] = useState(true);
   return (
     <Main>
-      <SpringContainer reset config={{ duration: 3000 }}>
-        {spring => (
-          <div>
-            <Container>
-              <Menu>
-                <Link href="/artists">
-                  <MenuButton>Artists</MenuButton>
-                </Link>
-                <Link href="/about">
-                  <MenuButton>Festival</MenuButton>
-                </Link>
-                <Link href="/history">
-                  <MenuButton>History</MenuButton>
-                </Link>
-                <MenuButton onClick={() => setTrip(!trip)}>Trip</MenuButton>
-              </Menu>
-              <Svg width="0" height="0">
-                <defs>
-                  <filter id="pictureFilter">
-                    <feTurbulence
-                      type="fractalNoise"
-                      baseFrequency={spring.baseFreq}
-                      numOctaves="1"
-                      result="turbulence"
-                      seed="10"
-                    />
-                    <feDisplacementMap
-                      xChannelSelector="R"
-                      yChannelSelector="B"
-                      in="SourceGraphic"
-                      in2="turbulence"
-                      scale={spring.scale}
-                    />
-                    {/* <feColorMatrix
+      <Relative>
+        <Menu>
+          <Link href="/artists">
+            <MenuButton>Artists</MenuButton>
+          </Link>
+          <Link href="/about">
+            <MenuButton>Festival</MenuButton>
+          </Link>
+          <Link href="/history">
+            <MenuButton>History</MenuButton>
+          </Link>
+          <MenuButton onClick={() => setTrip(!trip)}>Trip</MenuButton>
+        </Menu>
+      </Relative>
+      {trip ? (
+        <SpringContainer reset config={{ duration: 5000 }} trip={trip}>
+          {spring => (
+            <div>
+              <Container>
+                <Svg width="0" height="0">
+                  <defs>
+                    <filter id="tripFilter">
+                      <feTurbulence
+                        type="fractalNoise"
+                        baseFrequency={spring.baseFreq}
+                        numOctaves="1"
+                        result="turbulence"
+                        seed="10"
+                      />
+                      <feDisplacementMap
+                        xChannelSelector="R"
+                        yChannelSelector="B"
+                        in="SourceGraphic"
+                        in2="turbulence"
+                        scale={spring.scale}
+                      />
+                      {/* <feColorMatrix
                       type="hueRotate"
                       in="SourceGraphic"
                       values={spring.angle}
                     /> */}
-                  </filter>
-                </defs>
-              </Svg>
-            </Container>
-          </div>
-        )}
-      </SpringContainer>
+                    </filter>
+                  </defs>
+                </Svg>
+              </Container>
+            </div>
+          )}
+        </SpringContainer>
+      ) : (
+        <Container />
+      )}
     </Main>
   );
 };

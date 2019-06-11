@@ -17,6 +17,15 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
+    "export": "next export",
     "start": "next start"
-  }
+  },
+  "plugins": [
+    [
+      "babel-plugin-styled-components",
+      {
+        "displayName": false
+      }
+    ]
+  ]
 }

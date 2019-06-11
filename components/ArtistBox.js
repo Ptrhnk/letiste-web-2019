@@ -8,8 +8,8 @@ const Svg = styled.svg`
 `;
 
 const Box = styled.div`
-  height: 10rem;
-  width: 10rem;
+  height: 13.5rem;
+  width: 13.5rem;
   display: flex;
   justify-content: center;
   align-items: center;

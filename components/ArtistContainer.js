@@ -25,7 +25,7 @@ const ArtistContainer = ({ artists }) => {
           keys={item => item.key}
           from={{ transform: "translate3d(0px,-150px,0)" }}
           to={{ transform: "translate3d(0,0px,0)" }}
-          config={{ tension: 250, friction: 12, mass: 1, delay: 300 }}
+          config={{ tension: 260, friction: 12, mass: 1, delay: 400 }}
         >
           {item => props => (
             <div style={props}>
