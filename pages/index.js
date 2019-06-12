@@ -4,7 +4,10 @@ import styled from "styled-components";
 import { animated, Keyframes } from "react-spring/renderprops.cjs";
 
 import Main from "../layout/main";
-import logo from "../img/grafika/vrstva1.png";
+import layerOne from "../img/grafika/vrstva1.png";
+import layerTwo from "../img/grafika/vrstva2.png";
+import layerThree from "../img/grafika/vrstva3.png";
+import layerFour from "../img/grafika/vrstva4.png";
 
 const Container = styled(animated.div)`
   position: fixed;
@@ -17,7 +20,7 @@ const Container = styled(animated.div)`
   height: 100vh;
   width: 100%;
 
-  background-image: url(${logo});
+  background-image: url(${layerOne});
   background-size: cover;
   background-position: center;
   transform: scale(1.02);
@@ -37,7 +40,7 @@ const Menu = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1000;
+  z-index: 10000;
 
   display: flex;
   justify-content: center;
@@ -65,6 +68,37 @@ const MenuButton = styled.button`
   }
 `;
 
+const LayerTwo = styled.div`
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+
+  background-image: url(${layerTwo});
+  background-size: cover;
+  background-position: center;
+  z-index: 2000;
+`;
+const LayerThree = styled.div`
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+
+  background-image: url(${layerThree});
+  background-size: cover;
+  background-position: center;
+  z-index: 3000;
+`;
+const LayerFour = styled.div`
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+
+  background-image: url(${layerFour});
+  background-size: cover;
+  background-position: center;
+  z-index: 4000;
+`;
+
 const Svg = styled.svg`
   display: none;
 `;
@@ -73,10 +107,10 @@ const SpringContainer = Keyframes.Spring(async next => {
   while (true) {
     await next({
       from: { angle: 200, opacity: 0, baseFreq: 0.001, scale: 1 },
-      to: { angle: 130, opacity: 5, baseFreq: 0.006, scale: 30 }
+      to: { angle: 130, opacity: 5, baseFreq: 0.006, scale: 40 }
     });
     await next({
-      from: { angle: 130, opacity: 5, baseFreq: 0.006, scale: 30 },
+      from: { angle: 130, opacity: 5, baseFreq: 0.006, scale: 40 },
       to: { angle: 200, opacity: 0, baseFreq: 0.011, scale: 1 }
     });
   }
@@ -91,14 +125,17 @@ const Home = () => {
           <Link href="/artists">
             <MenuButton>Artists</MenuButton>
           </Link>
-          <Link href="/about">
+          {/* <Link href="/about">
             <MenuButton>Festival</MenuButton>
           </Link>
           <Link href="/history">
             <MenuButton>History</MenuButton>
-          </Link>
+          </Link> */}
           <MenuButton onClick={() => setTrip(!trip)}>Trip</MenuButton>
         </Menu>
+        {/* <LayerTwo /> */}
+        <LayerThree />
+        {/* <LayerFour /> */}
       </Relative>
       {trip ? (
         <SpringContainer reset config={{ duration: 5000 }} trip={trip}>
