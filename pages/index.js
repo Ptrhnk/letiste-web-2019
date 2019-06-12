@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { animated, Keyframes } from "react-spring/renderprops.cjs";
 
 import Main from "../layout/main";
-import image from "../img/obrazek.jpg";
 import logo from "../img/grafika/vrstva1.png";
 
 const Container = styled(animated.div)`
@@ -61,7 +60,7 @@ const MenuButton = styled.button`
 
   transition: all 0.3s ease;
   :hover {
-    /* box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5); */
+    box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.3);
     background-color: rgba(200, 0, 150, 0.3);
   }
 `;
@@ -84,7 +83,7 @@ const SpringContainer = Keyframes.Spring(async next => {
 });
 
 const Home = () => {
-  const [trip, setTrip] = useState(true);
+  const [trip, setTrip] = useState(false);
   return (
     <Main>
       <Relative>
