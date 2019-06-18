@@ -4,30 +4,31 @@ import styled from "styled-components";
 import { animated, Keyframes } from "react-spring/renderprops.cjs";
 
 import Main from "../layout/main";
+import SocialPanel from "../components/SocialPanel";
+import Menu from "../components/Menu";
+
 import layerOne from "../img/grafika/vrstva1.png";
 import layerTwo from "../img/grafika/vrstva2.png";
 import layerThree from "../img/grafika/vrstva3.png";
 import layerFour from "../img/grafika/vrstva4.png";
 
-const Container = styled(animated.div)`
+const BgContainer = styled(animated.div)`
   position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100vh;
 
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100%;
 
   background-image: url(${layerOne});
   background-size: cover;
   background-position: center;
   transform: scale(1.02);
 
-  /* @media (min-width: 700px) { */
   filter: url(#tripFilter);
-  /* } */
 `;
 
 const Relative = styled.div`
@@ -35,68 +36,57 @@ const Relative = styled.div`
   height: 100vh;
 `;
 
-const Menu = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10000;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-`;
-
-const MenuButton = styled.button`
-  margin: 0.4rem;
-  padding: 0.5rem 0.8rem;
-  border: 2px solid black;
-  color: black;
-  border-radius: 2rem;
-  font-size: 1.2rem;
-  outline: none;
-  box-shadow: none;
-  background-color: rgba(200, 0, 150, 0.2);
-  cursor: pointer;
-
-  transition: all 0.3s ease;
-  :hover {
-    box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.3);
-    background-color: rgba(200, 0, 150, 0.3);
-  }
-`;
-
+// textures and white circle
 const LayerTwo = styled.div`
-  position: absolute;
-  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
   width: 100%;
+  opacity: 0.95;
 
   background-image: url(${layerTwo});
-  background-size: cover;
+  background-size: auto 100%;
+  /* background-size: cover; */
+  background-repeat: no-repeat;
   background-position: center;
   z-index: 2000;
+
+  filter: url(#tripFilter);
 `;
+
+// Letters
 const LayerThree = styled.div`
   position: absolute;
-  height: 100vh;
+  height: 100%;
   width: 100%;
 
   background-image: url(${layerThree});
-  background-size: cover;
-  background-position: center;
+  background-size: auto 80%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
   z-index: 3000;
+
+  @media (max-width: 700px) {
+    background-size: auto 60%;
+  }
 `;
+
+// symbols and sides
 const LayerFour = styled.div`
   position: absolute;
-  height: 100vh;
+  height: 100%;
   width: 100%;
 
   background-image: url(${layerFour});
-  background-size: cover;
-  background-position: center;
+  background-size: auto 80%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
   z-index: 4000;
+
+  @media (max-width: 700px) {
+    background-size: auto 60%;
+  }
 `;
 
 const Svg = styled.svg`
@@ -106,12 +96,12 @@ const Svg = styled.svg`
 const SpringContainer = Keyframes.Spring(async next => {
   while (true) {
     await next({
-      from: { angle: 200, opacity: 0, baseFreq: 0.001, scale: 1 },
-      to: { angle: 130, opacity: 5, baseFreq: 0.006, scale: 40 }
+      from: { angle: 360, opacity: 0, baseFreq: 0.001, scale: 1 },
+      to: { angle: 0, opacity: 5, baseFreq: 0.006, scale: 80 }
     });
     await next({
-      from: { angle: 130, opacity: 5, baseFreq: 0.006, scale: 40 },
-      to: { angle: 200, opacity: 0, baseFreq: 0.011, scale: 1 }
+      from: { angle: 0, opacity: 5, baseFreq: 0.006, scale: 80 },
+      to: { angle: 360, opacity: 0, baseFreq: 0.011, scale: 1 }
     });
   }
 });
@@ -121,27 +111,17 @@ const Home = () => {
   return (
     <Main>
       <Relative>
-        <Menu>
-          <Link href="/artists">
-            <MenuButton>Artists</MenuButton>
-          </Link>
-          {/* <Link href="/about">
-            <MenuButton>Festival</MenuButton>
-          </Link>
-          <Link href="/history">
-            <MenuButton>History</MenuButton>
-          </Link> */}
-          <MenuButton onClick={() => setTrip(!trip)}>Trip</MenuButton>
-        </Menu>
+        <SocialPanel />
+        <Menu onClick={() => setTrip(!trip)} />
         {/* <LayerTwo /> */}
         <LayerThree />
-        {/* <LayerFour /> */}
+        <LayerFour />
       </Relative>
       {trip ? (
         <SpringContainer reset config={{ duration: 5000 }} trip={trip}>
           {spring => (
             <div>
-              <Container>
+              <BgContainer>
                 <Svg width="0" height="0">
                   <defs>
                     <filter id="tripFilter">
@@ -159,20 +139,22 @@ const Home = () => {
                         in2="turbulence"
                         scale={spring.scale}
                       />
-                      {/* <feColorMatrix
-                      type="hueRotate"
-                      in="SourceGraphic"
-                      values={spring.angle}
-                    /> */}
+                    </filter>
+                    <filter id="colorFilter">
+                      <feColorMatrix
+                        type="hueRotate"
+                        in="SourceGraphic"
+                        values={spring.angle}
+                      />
                     </filter>
                   </defs>
                 </Svg>
-              </Container>
+              </BgContainer>
             </div>
           )}
         </SpringContainer>
       ) : (
-        <Container />
+        <BgContainer />
       )}
     </Main>
   );
