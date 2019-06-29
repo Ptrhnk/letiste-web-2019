@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import styled from "styled-components";
 
+import TripButton from "./TripButton";
 import MenuButton from "./MenuButton";
 
 const Panel = styled.div`
@@ -21,7 +22,7 @@ const Panel = styled.div`
 const Menu = ({ onClick }) => {
   return (
     <Panel>
-      <MenuButton onClick={onClick} name={"LET 19"} />
+      <TripButton onClick={onClick} name={"LET 19"} />
       <Link href="/artists">
         <MenuButton name={"ARTISTS"} />
       </Link>

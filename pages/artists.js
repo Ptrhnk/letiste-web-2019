@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import styled from "styled-components";
-import { Spring, animated } from "react-spring/renderprops.cjs";
 
 import Main from "../layout/main";
 import ArtistContainer from "../components/ArtistContainer";
@@ -13,20 +12,26 @@ const Page = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 `;
 
 const StyledLink = styled.a`
+  position: sticky;
+  top: 0;
   padding: 1rem;
   border: 3px solid black;
-  background-color: white;
+  background-color: black;
+  color: white;
   cursor: pointer;
-  z-index: 1000;
+  z-index: 5000;
+  border-radius: 0 0 1rem 0;
 
-  transition: all 0.3s ease;
+  transition: all 0.7s ease;
 
   :hover {
-    background-color: rgba(255, 255, 255, 0);
+    /* background-color: rgba(255, 255, 255, 0); */
+    background-color: white;
+    color: black;
   }
 `;
 
@@ -35,7 +40,6 @@ const Artists = () => {
     <Main>
       <BgContainer trip={false} />
       <Page>
-        <h1>Welcome to artist section</h1>
         <Link href="/">
           <StyledLink>go home</StyledLink>
         </Link>

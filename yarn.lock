@@ -4190,6 +4190,11 @@ styled-jsx@3.2.1:
     stylis "3.5.4"
     stylis-rule-sheet "0.0.10"
 
+styled-react-modal@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/styled-react-modal/-/styled-react-modal-1.2.3.tgz#555774c9d2d12ddfc6128eb13fcafc85fa754912"
+  integrity sha512-N6IUv8lgrSQ8gcLvuO95gpNL+LvamoKBm0Jx3Tb7drNZaO873tmKWt3WFq2d3yX5S4AvmEXe0cY1wC3zKcZSDw==
+
 stylis-rule-sheet@0.0.10, stylis-rule-sheet@^0.0.10:
   version "0.0.10"
   resolved "https://registry.yarnpkg.com/stylis-rule-sheet/-/stylis-rule-sheet-0.0.10.tgz#44e64a2b076643f4b52e5ff71efc04d8c3c4a430"

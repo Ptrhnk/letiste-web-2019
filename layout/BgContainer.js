@@ -18,9 +18,12 @@ const Container = styled(animated.div)`
   background-image: url(${background});
   background-size: cover;
   background-position: center;
-  transform: scale(1.02);
+  transform: scale(1.03);
+
+  z-index: 0;
 
   filter: url(#tripFilter);
+  /* filter: url(#colorFilter); */
 `;
 
 const Svg = styled.svg`
@@ -31,10 +34,10 @@ const SpringContainer = Keyframes.Spring(async next => {
   while (true) {
     await next({
       from: { angle: 360, opacity: 0, baseFreq: 0.001, scale: 1 },
-      to: { angle: 0, opacity: 5, baseFreq: 0.006, scale: 40 }
+      to: { angle: 0, opacity: 5, baseFreq: 0.006, scale: 60 }
     });
     await next({
-      from: { angle: 0, opacity: 5, baseFreq: 0.006, scale: 40 },
+      from: { angle: 0, opacity: 5, baseFreq: 0.006, scale: 60 },
       to: { angle: 360, opacity: 0, baseFreq: 0.011, scale: 1 }
     });
   }

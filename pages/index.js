@@ -7,6 +7,7 @@ import Main from "../layout/main";
 import SocialPanel from "../components/SocialPanel";
 import Menu from "../components/Menu";
 import BgContainer from "../layout/BgContainer";
+import TripButton from "../components/TripButton";
 
 import pismena from "../img/grafika/pismena-karneval.png";
 import symbols from "../img/grafika/symboly.png";
@@ -79,7 +80,12 @@ const Home = () => {
       <BgContainer trip={trip} />
       <Relative>
         <SocialPanel />
-        <Menu onClick={() => setTrip(!trip)} />
+        {/* <Menu onClick={() => setTrip(!trip)} /> */}
+        <TripButton onClick={() => setTrip(!trip)} name={"LET 19"} />
+        {/* <TripButton
+          href="https://goout.net/cs/festivaly/letiste-karneval-2019/cwyxd/+jxgql/"
+          name={"LET 19"}
+        /> */}
         <Letters />
         <Symbols />
         <Logo />
