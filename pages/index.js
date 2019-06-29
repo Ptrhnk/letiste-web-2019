@@ -6,63 +6,45 @@ import { animated, Keyframes } from "react-spring/renderprops.cjs";
 import Main from "../layout/main";
 import SocialPanel from "../components/SocialPanel";
 import Menu from "../components/Menu";
+import BgContainer from "../layout/BgContainer";
 
-import layerOne from "../img/grafika/vrstva1.png";
-import layerTwo from "../img/grafika/vrstva2.png";
-import layerThree from "../img/grafika/vrstva3.png";
-import layerFour from "../img/grafika/vrstva4.png";
-
-const BgContainer = styled(animated.div)`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background-image: url(${layerOne});
-  background-size: cover;
-  background-position: center;
-  transform: scale(1.02);
-
-  filter: url(#tripFilter);
-`;
+import pismena from "../img/grafika/pismena-karneval.png";
+import symbols from "../img/grafika/symboly.png";
+import logo from "../img/grafika/logo.png";
+import corner from "../img/grafika/corner.png";
+import rightSide from "../img/grafika/right-side.png";
 
 const Relative = styled.div`
   position: relative;
   height: 100vh;
 `;
 
-// textures and white circle
-const LayerTwo = styled.div`
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0.95;
-
-  background-image: url(${layerTwo});
-  background-size: auto 100%;
-  /* background-size: cover; */
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: 2000;
-
-  filter: url(#tripFilter);
-`;
-
-// Letters
-const LayerThree = styled.div`
+// Písmena a Karneval
+const Letters = styled.div`
   position: absolute;
   height: 100%;
   width: 100%;
 
-  background-image: url(${layerThree});
-  background-size: auto 80%;
+  background-image: url(${pismena});
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  z-index: 2000;
+  /* background-size: cover; */
+
+  @media (max-width: 700px) {
+    background-size: auto 60%;
+  }
+`;
+
+// Symbols
+const Symbols = styled.div`
+  position: absolute;
+  height: 100%;
+  width: 100%;
+
+  background-image: url(${symbols});
+  background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   z-index: 3000;
@@ -72,88 +54,36 @@ const LayerThree = styled.div`
   }
 `;
 
-// symbols and sides
-const LayerFour = styled.div`
+// Logo
+const Logo = styled.div`
   position: absolute;
   height: 100%;
   width: 100%;
 
-  background-image: url(${layerFour});
-  background-size: auto 80%;
+  background-image: url(${logo});
+  background-size: auto 25%;
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background-position: 50% 28%;
   z-index: 4000;
 
   @media (max-width: 700px) {
-    background-size: auto 60%;
+    background-size: auto 14%;
+    background-position: 50% 38%;
   }
 `;
-
-const Svg = styled.svg`
-  display: none;
-`;
-
-const SpringContainer = Keyframes.Spring(async next => {
-  while (true) {
-    await next({
-      from: { angle: 360, opacity: 0, baseFreq: 0.001, scale: 1 },
-      to: { angle: 0, opacity: 5, baseFreq: 0.006, scale: 40 }
-    });
-    await next({
-      from: { angle: 0, opacity: 5, baseFreq: 0.006, scale: 40 },
-      to: { angle: 360, opacity: 0, baseFreq: 0.011, scale: 1 }
-    });
-  }
-});
 
 const Home = () => {
   const [trip, setTrip] = useState(false);
   return (
     <Main>
+      <BgContainer trip={trip} />
       <Relative>
         <SocialPanel />
         <Menu onClick={() => setTrip(!trip)} />
-        {/* <LayerTwo /> */}
-        <LayerThree />
-        <LayerFour />
+        <Letters />
+        <Symbols />
+        <Logo />
       </Relative>
-      {trip ? (
-        <SpringContainer reset config={{ duration: 6000 }} trip={trip}>
-          {spring => (
-            <BgContainer>
-              <Svg width="0" height="0">
-                <defs>
-                  <filter id="tripFilter">
-                    <feTurbulence
-                      type="fractalNoise"
-                      baseFrequency={spring.baseFreq}
-                      numOctaves="1"
-                      result="turbulence"
-                      seed="10"
-                    />
-                    <feDisplacementMap
-                      xChannelSelector="R"
-                      yChannelSelector="B"
-                      in="SourceGraphic"
-                      in2="turbulence"
-                      scale={spring.scale}
-                    />
-                  </filter>
-                  <filter id="colorFilter">
-                    <feColorMatrix
-                      type="hueRotate"
-                      in="SourceGraphic"
-                      values={spring.angle}
-                    />
-                  </filter>
-                </defs>
-              </Svg>
-            </BgContainer>
-          )}
-        </SpringContainer>
-      ) : (
-        <BgContainer />
-      )}
     </Main>
   );
 };

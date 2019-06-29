@@ -5,14 +5,14 @@ import SocialButton from "./SocialButton";
 
 const Socials = styled.div`
   position: absolute;
+  top: 0;
   right: 0;
-  bottom: 0;
-  border-radius: 0.7rem 0 0 0;
+  border-radius: 0 0 0 0.7rem;
 
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
 
   background-color: rgba(0, 0, 0, 0.9);
   z-index: 10000;

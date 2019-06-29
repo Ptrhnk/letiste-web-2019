@@ -8,18 +8,32 @@ const Svg = styled.svg`
 `;
 
 const Box = styled.div`
-  height: 13.5rem;
-  width: 13.5rem;
+  width: 20rem;
+  height: 16rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  background-image: ${({ image }) => (image ? `url(${image})` : "none")};
+  background-size: cover;
+  background-position: center;
+  border: 4px solid black;
+  /* border-radius: 1rem; */
+  margin: 3rem;
+  color: white;
+`;
+
+const ArtistNameBox = styled.div`
+  padding: 1rem 1rem;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  background-image: ${({ image }) => (image ? `url(${image})` : "none")};
-  background-size: cover;
-  border: 2px solid white;
-  border-radius: 1rem;
-  margin: 0.6rem;
-  color: white;
+  border-top: 3px solid black;
+  background-color: white;
+  color: black;
+  text-transform: uppercase;
 `;
 
 const ArtistBox = ({ artist }, key) => {
@@ -33,7 +47,7 @@ const ArtistBox = ({ artist }, key) => {
         {spring => (
           <div style={spring}>
             <Box key={key} image={artist.image}>
-              {/* {artist.name.replace("<br>", "\n")} */}
+              <ArtistNameBox>{artist.name.replace("<br>", "\n")}</ArtistNameBox>
             </Box>
             <Svg>
               <defs>

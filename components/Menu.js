@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Link from "next/link";
 import styled from "styled-components";
 
 import MenuButton from "./MenuButton";
@@ -13,17 +14,17 @@ const Panel = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
 `;
 
 const Menu = ({ onClick }) => {
   return (
     <Panel>
-      <MenuButton onClick={onClick}>Trip</MenuButton>
-      {/* <Link href="/artists">
-              <MenuButton>Artists</MenuButton>
-            </Link> */}
+      <MenuButton onClick={onClick} name={"LET 19"} />
+      <Link href="/artists">
+        <MenuButton name={"ARTISTS"} />
+      </Link>
     </Panel>
   );
 };

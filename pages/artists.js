@@ -4,9 +4,8 @@ import styled from "styled-components";
 import { Spring, animated } from "react-spring/renderprops.cjs";
 
 import Main from "../layout/main";
-import ArtistBox from "../components/ArtistBox";
 import ArtistContainer from "../components/ArtistContainer";
-import artistList from "../json/artistList";
+import BgContainer from "../layout/BgContainer";
 
 import artists from "../json/artists";
 
@@ -17,25 +16,30 @@ const Page = styled.div`
   align-items: center;
 `;
 
+const StyledLink = styled.a`
+  padding: 1rem;
+  border: 3px solid black;
+  background-color: white;
+  cursor: pointer;
+  z-index: 1000;
+
+  transition: all 0.3s ease;
+
+  :hover {
+    background-color: rgba(255, 255, 255, 0);
+  }
+`;
+
 const Artists = () => {
   return (
     <Main>
+      <BgContainer trip={false} />
       <Page>
-        {/* <Spring
-          config={{ tension: 200, friction: 100, mass: 20 }}
-          from={{ opacity: 0, value: 180 }}
-          to={{ opacity: 1, value: 0 }}
-        >
-          {spring => (
-            <div> */}
         <h1>Welcome to artist section</h1>
         <Link href="/">
-          <a>go home</a>
+          <StyledLink>go home</StyledLink>
         </Link>
         <ArtistContainer artists={artists} />
-        {/* </div>
-          )}
-        </Spring> */}
       </Page>
     </Main>
   );
