@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 import MenuButton from "./MenuButton";
@@ -16,13 +16,14 @@ const Panel = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
 `;
+
 const Menu = ({ onClick }) => {
   return (
     <Panel>
       <MenuButton onClick={onClick}>Trip</MenuButton>
       {/* <Link href="/artists">
-        <MenuButton>Artists</MenuButton>
-      </Link> */}
+              <MenuButton>Artists</MenuButton>
+            </Link> */}
     </Panel>
   );
 };
