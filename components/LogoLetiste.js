@@ -33,34 +33,34 @@ const move = keyframes`
 
 const movePoly1 = keyframes`
   0%, 30% {
-    stroke-dashoffset: 0;
+    stroke-dashoffset: -200;
   }
   70%, 100% {
-    stroke-dashoffset: -200;
+    stroke-dashoffset: 0;
   }
 `;
 const movePoly2 = keyframes`
   0%, 30% {
-    stroke-dashoffset: 0;
+    stroke-dashoffset: 220;
   }
   70%, 100% {
-    stroke-dashoffset: 220;
+    stroke-dashoffset: 0;
   }
 `;
 const movePoly3 = keyframes`
   0%, 30% {
-    stroke-dashoffset: 0;
+    stroke-dashoffset: 400;
   }
   70%, 100% {
-    stroke-dashoffset: 400;
+    stroke-dashoffset: 0;
   }
 `;
 const moveLine = keyframes`
   0%, 30% {
-    stroke-dashoffset: 0;
+    stroke-dashoffset: -200;
   }
   70%, 100% {
-    stroke-dashoffset: -200;
+    stroke-dashoffset: 0;
   }
 `;
 
@@ -75,8 +75,8 @@ const Polyline1 = styled.polyline`
   stroke-dasharray: 200;
   /* stroke-dashoffset: -200; */
 
-  animation: ${movePoly1} 4s ease infinite alternate;
-  /* animation-fill-mode: forwards; */
+  animation: ${movePoly1} 3s ease-out alternate;
+  animation-fill-mode: backwards;
 `;
 const Polyline2 = styled.polyline`
   fill: none;
@@ -88,9 +88,9 @@ const Polyline2 = styled.polyline`
   stroke-dasharray: 220;
   /* stroke-dashoffset: 220; */
 
-  animation: ${movePoly2} 4s ease infinite alternate;
-  animation-delay: 0.5s;
-  /* animation-fill-mode: forwards; */
+  animation: ${movePoly2} 3s ease-out alternate;
+  animation-delay: 0.7s;
+  animation-fill-mode: backwards;
 `;
 const Polyline3 = styled.polyline`
   fill: none;
@@ -101,9 +101,9 @@ const Polyline3 = styled.polyline`
   stroke-dasharray: 400;
   /* stroke-dashoffset: 400; */
 
-  animation: ${movePoly3} 4s ease infinite alternate;
-  animation-delay: 1s;
-  /* animation-fill-mode: forwards; */
+  animation: ${movePoly3} 3s ease-out alternate;
+  animation-delay: 1.4s;
+  animation-fill-mode: backwards;
 `;
 
 const Line = styled.line`
@@ -115,9 +115,9 @@ const Line = styled.line`
   stroke-dasharray: 200;
   /* stroke-dashoffset: -200; */
 
-  animation: ${moveLine} 4s ease infinite alternate;
-  animation-delay: 1.5s;
-  /* animation-fill-mode: forwards; */
+  animation: ${moveLine} 3s ease-out alternate;
+  animation-delay: 2.1s;
+  animation-fill-mode: backwards;
 `;
 
 const LogoLetiste = () => {

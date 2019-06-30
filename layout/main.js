@@ -16,7 +16,7 @@ export default ({ children }) => (
         font-weight: 800;
         letter-spacing: 0.8px;
         box-sizing: border-box;
-        // background-color: black;
+        background-color: black;
         // height: 100vh;
       }
       *,
