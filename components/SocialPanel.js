@@ -16,6 +16,13 @@ const Socials = styled.div`
 
   background-color: rgba(0, 0, 0, 0.9);
   z-index: 10000;
+
+  @media (max-width: 700px) {
+    right: auto;
+    /* bottom: 0; */
+    right: 0;
+    flex-direction: row;
+  }
 `;
 
 const SocialPanel = () => {

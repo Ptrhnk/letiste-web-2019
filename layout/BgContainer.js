@@ -50,7 +50,7 @@ const BgContainer = ({ trip }) => {
         <SpringContainer reset config={{ duration: 6000 }} trip={trip}>
           {spring => (
             <Container trip={trip}>
-              <Svg width="0" height="0">
+              <Svg xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <filter id="tripFilter">
                     <feTurbulence

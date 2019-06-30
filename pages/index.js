@@ -8,6 +8,7 @@ import SocialPanel from "../components/SocialPanel";
 import Menu from "../components/Menu";
 import BgContainer from "../layout/BgContainer";
 import TripButton from "../components/TripButton";
+import LogoLetiste from "../components/LogoLetiste";
 
 import pismena from "../img/grafika/pismena-karneval.png";
 import symbols from "../img/grafika/symboly.png";
@@ -34,7 +35,7 @@ const Letters = styled.div`
   /* background-size: cover; */
 
   @media (max-width: 700px) {
-    background-size: auto 60%;
+    background-size: auto 70%;
   }
 `;
 
@@ -51,7 +52,7 @@ const Symbols = styled.div`
   z-index: 3000;
 
   @media (max-width: 700px) {
-    background-size: auto 60%;
+    background-size: auto 70%;
   }
 `;
 
@@ -68,28 +69,38 @@ const Logo = styled.div`
   z-index: 4000;
 
   @media (max-width: 700px) {
-    background-size: auto 14%;
+    background-size: auto 18%;
     background-position: 50% 38%;
   }
+`;
+
+const Page = styled.div`
+  height: 100vh;
+  /* display: flex;
+  flex-direction: column;
+  align-items: flex-start; */
 `;
 
 const Home = () => {
   const [trip, setTrip] = useState(false);
   return (
     <Main>
-      <BgContainer trip={trip} />
-      <Relative>
-        <SocialPanel />
-        {/* <Menu onClick={() => setTrip(!trip)} /> */}
-        <TripButton onClick={() => setTrip(!trip)} name={"LET 19"} />
-        {/* <TripButton
-          href="https://goout.net/cs/festivaly/letiste-karneval-2019/cwyxd/+jxgql/"
-          name={"LET 19"}
-        /> */}
-        <Letters />
-        <Symbols />
-        <Logo />
-      </Relative>
+      <Page>
+        <BgContainer trip={trip} />
+        <Relative>
+          <SocialPanel />
+          <TripButton
+            href={
+              "https://goout.net/cs/festivaly/letiste-karneval-2019/cwyxd/+jxgql/"
+            }
+            name={"LET 19"}
+          />
+          <Letters />
+          <Symbols />
+          {/* <Logo /> */}
+          <LogoLetiste />
+        </Relative>
+      </Page>
     </Main>
   );
 };

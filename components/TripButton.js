@@ -11,6 +11,7 @@ const Button = styled(animated.a)`
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10000;
+  text-decoration: none;
 
   padding: 0.6rem 0.9rem;
   color: rgba(255, 255, 255, 1);
@@ -29,24 +30,39 @@ const Button = styled(animated.a)`
 
   transition: all 0.5s ease;
 
-  :hover {
-    padding: 1.2rem 1.4rem;
-    background-size: 160% 160%;
-    transform: scale(10) translate(-5%, -5%);
-    border: 1px solid rgba(44, 42, 36, 1);
+  @media (max-width: 700px) {
     font-size: 0.8rem;
-    opacity: 1;
-    color: rgba(44, 42, 36, 1);
+    padding: 0.4rem 0.7rem;
+
+    :hover {
+      padding: 1.2rem 1.4rem;
+      background-size: 110% 110%;
+      transform: scale(10) translate(-5%, -5%);
+      border: 1px solid rgba(44, 42, 36, 1);
+      font-size: 0.8rem;
+      opacity: 1;
+      color: rgba(44, 42, 36, 1);
+    }
   }
 
-  @media (min-width: 1400px) {
+  @media (min-width: 1000px) {
     :hover {
-      background-size: 200% 200%;
+      background-size: 110% 110%;
     }
   }
   @media (min-width: 1200px) {
     :hover {
-      background-size: 180% 180%;
+      background-size: 130% 130%;
+    }
+  }
+  @media (min-width: 1400px) {
+    :hover {
+      background-size: 160% 160%;
+    }
+  }
+  @media (min-width: 1600px) {
+    :hover {
+      background-size: 190% 190%;
     }
   }
 
@@ -55,7 +71,7 @@ const Button = styled(animated.a)`
   } */
 `;
 
-const TripButton = ({ onClick, name }) => {
+const TripButton = ({ onClick, name, href }) => {
   // const [hovered, setHovered] = useState(true);
 
   // const hoverState = useSpring({
@@ -67,6 +83,8 @@ const TripButton = ({ onClick, name }) => {
     <>
       <Button
         onClick={onClick}
+        href={href}
+        target="_blank"
         // onMouseEnter={() => setHovered(true)}
         // onMouseLeave={() => setHovered(false)}
       >
