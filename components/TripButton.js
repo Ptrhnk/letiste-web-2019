@@ -33,7 +33,8 @@ const Button = styled(animated.a)`
   @media (max-width: 700px) {
     font-size: 0.8rem;
     padding: 0.4rem 0.7rem;
-
+  }
+  @media (min-width: 700px) {
     :hover {
       padding: 1.2rem 1.4rem;
       background-size: 110% 110%;

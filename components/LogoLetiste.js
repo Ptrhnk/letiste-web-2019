@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 const Container = styled.div`
   position: absolute;
@@ -7,10 +7,13 @@ const Container = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   height: 13rem;
-  /* width: 10rem; */
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 700px) {
+    height: 5rem;
+  }
 `;
 
 const StyledSvg = styled.svg`
@@ -19,30 +22,102 @@ const StyledSvg = styled.svg`
   z-index: 10000;
 `;
 
-const Polyline = styled.polyline`
+const move = keyframes`
+  0%, 20% {
+    /* stroke-dashoffset: 400; */
+  }
+  80%, 100% {
+    stroke-dashoffset: 0;
+  }
+`;
+
+const movePoly1 = keyframes`
+  0%, 30% {
+    stroke-dashoffset: 0;
+  }
+  70%, 100% {
+    stroke-dashoffset: -200;
+  }
+`;
+const movePoly2 = keyframes`
+  0%, 30% {
+    stroke-dashoffset: 0;
+  }
+  70%, 100% {
+    stroke-dashoffset: 220;
+  }
+`;
+const movePoly3 = keyframes`
+  0%, 30% {
+    stroke-dashoffset: 0;
+  }
+  70%, 100% {
+    stroke-dashoffset: 400;
+  }
+`;
+const moveLine = keyframes`
+  0%, 30% {
+    stroke-dashoffset: 0;
+  }
+  70%, 100% {
+    stroke-dashoffset: -200;
+  }
+`;
+
+const Polyline1 = styled.polyline`
   fill: none;
   stroke: rgba(44, 42, 36, 1);
-  /* stroke: pink; */
   stroke-linejoin: round;
   stroke-width: 9px;
   stroke-linecap: round;
+  stroke-dasharray: 20;
+
+  stroke-dasharray: 200;
+  /* stroke-dashoffset: -200; */
+
+  animation: ${movePoly1} 4s ease infinite alternate;
+  /* animation-fill-mode: forwards; */
 `;
-const Polygon = styled.polygon`
+const Polyline2 = styled.polyline`
   fill: none;
   stroke: rgba(44, 42, 36, 1);
-  /* stroke: blue; */
   stroke-linejoin: round;
   stroke-width: 9px;
-  /* stroke-dashoffset: 1rem; */
-  /* stroke-dasharray: 2rem; */
+  stroke-linecap: round;
+
+  stroke-dasharray: 220;
+  /* stroke-dashoffset: 220; */
+
+  animation: ${movePoly2} 4s ease infinite alternate;
+  animation-delay: 0.5s;
+  /* animation-fill-mode: forwards; */
 `;
+const Polyline3 = styled.polyline`
+  fill: none;
+  stroke: rgba(44, 42, 36, 1);
+  stroke-linejoin: round;
+  stroke-width: 9px;
+  stroke-linecap: round;
+  stroke-dasharray: 400;
+  /* stroke-dashoffset: 400; */
+
+  animation: ${movePoly3} 4s ease infinite alternate;
+  animation-delay: 1s;
+  /* animation-fill-mode: forwards; */
+`;
+
 const Line = styled.line`
   fill: none;
   stroke: rgba(44, 42, 36, 1);
-  /* stroke: red; */
   stroke-linejoin: round;
   stroke-width: 9px;
   stroke-linecap: round;
+  stroke-dasharray: 200;
+  /* stroke-dashoffset: -200; */
+
+  animation: ${moveLine} 4s ease infinite alternate;
+  animation-delay: 1.5s;
+  /* animation-fill-mode: forwards; */
 `;
 
 const LogoLetiste = () => {
@@ -55,11 +130,10 @@ const LogoLetiste = () => {
         >
           <g id="Layer_2" data-name="Layer 2">
             <g id="Layer_1-2" data-name="Layer 1">
-              <Polyline points="163.48 186.82 83.99 175.51 4.5 186.82" />
-              <Polyline points="4.5 186.82 83.99 112.31 163.48 186.82" />
-              <Polyline points="4.5 186.82 83.99 4.5 163.48 186.82" />
+              <Polyline1 points="163.48 186.82 83.99 175.51 4.5 186.82" />
+              <Polyline2 points="4.5 186.82 83.99 112.31 163.48 186.82" />
+              <Polyline3 points="4.5 186.82 83.99 4.5 163.48 186.82" />
               <Line x1="83.99" y1="4.5" x2="83.99" y2="175.51" />
-              {/* <Polygon points="4.5 186.82 83.99 4.5 163.48 186.82 83.99 175.51 4.5 186.82" /> */}
             </g>
           </g>
         </StyledSvg>
