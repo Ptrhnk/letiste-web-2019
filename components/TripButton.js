@@ -1,11 +1,28 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 // import { Spring, config } from "react-spring/renderprops.cjs";
 import { animated, useSpring, config } from "react-spring";
 
-import layerOne from "../img/grafika/background.png";
+import layerOne from "../img/grafika/pozadi-02.jpeg";
+
+const initScale = keyframes`
+  0% {
+    transform: scale(0) translate(-300%, -300%);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) translate(-50%, -50%);
+    opacity: 1;
+  }
+`;
 
 const Button = styled(animated.a)`
+  /* filter: none;
+  -webkit-filter: blur(0px);
+  -moz-filter: blur(0px);
+  -ms-filter: blur(0px);
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='0'); */
+
   position: absolute;
   top: 50%;
   left: 50%;
@@ -23,10 +40,14 @@ const Button = styled(animated.a)`
   outline: none;
   box-shadow: none;
   background-image: url(${layerOne});
-  background-size: 3000% 3000%;
+  background-size: 2000% 2000%;
   background-position: center;
   cursor: pointer;
   box-shadow: 0rem 0rem 0.6rem rgba(0, 0, 0, 0.3);
+
+  animation: ${initScale} 1s ease-in-out;
+  animation-fill-mode: backwards;
+  animation-delay: 7s;
 
   transition: all 0.5s ease;
 

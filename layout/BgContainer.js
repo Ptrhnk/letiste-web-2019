@@ -1,8 +1,17 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { animated, Keyframes } from "react-spring/renderprops.cjs";
 
-import background from "../img/grafika/background.png";
+import background from "../img/grafika/pozadi-02.jpeg";
+
+const initOpacity = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
 
 const Container = styled(animated.div)`
   position: fixed;
@@ -22,7 +31,11 @@ const Container = styled(animated.div)`
 
   z-index: 0;
 
-  filter: url(#tripFilter);
+  animation: ${initOpacity} 2s ease-in-out;
+  animation-fill-mode: backwards;
+  /* animation-delay: .5s; */
+
+  /* filter: url(#tripFilter); */
   /* filter: url(#colorFilter); */
 `;
 

@@ -1,7 +1,16 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 import SocialButton from "./SocialButton";
+
+const initOpacity = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
 
 const Socials = styled.div`
   position: absolute;
@@ -13,6 +22,10 @@ const Socials = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  animation: ${initOpacity} 1s ease-in-out;
+  animation-fill-mode: backwards;
+  animation-delay: 8s;
 
   background-color: rgba(0, 0, 0, 0.9);
   z-index: 10000;

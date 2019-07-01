@@ -22,48 +22,14 @@ const StyledSvg = styled.svg`
   z-index: 10000;
 `;
 
-const move = keyframes`
-  0%, 20% {
-    /* stroke-dashoffset: 400; */
-  }
-  80%, 100% {
-    stroke-dashoffset: 0;
-  }
-`;
-
 const movePoly1 = keyframes`
   0%, 30% {
-    stroke-dashoffset: -200;
+    stroke-dashoffset: 200;
   }
   70%, 100% {
     stroke-dashoffset: 0;
   }
 `;
-const movePoly2 = keyframes`
-  0%, 30% {
-    stroke-dashoffset: 220;
-  }
-  70%, 100% {
-    stroke-dashoffset: 0;
-  }
-`;
-const movePoly3 = keyframes`
-  0%, 30% {
-    stroke-dashoffset: 400;
-  }
-  70%, 100% {
-    stroke-dashoffset: 0;
-  }
-`;
-const moveLine = keyframes`
-  0%, 30% {
-    stroke-dashoffset: -200;
-  }
-  70%, 100% {
-    stroke-dashoffset: 0;
-  }
-`;
-
 const Polyline1 = styled.polyline`
   fill: none;
   stroke: rgba(44, 42, 36, 1);
@@ -73,10 +39,20 @@ const Polyline1 = styled.polyline`
   stroke-dasharray: 20;
 
   stroke-dasharray: 200;
-  /* stroke-dashoffset: -200; */
+  /* stroke-dashoffset: 0; */
 
-  animation: ${movePoly1} 3s ease-out alternate;
+  animation: ${movePoly1} 1s ease-in-out;
+  animation-delay: 1s;
   animation-fill-mode: backwards;
+`;
+
+const movePoly2 = keyframes`
+  0%, 30% {
+    stroke-dashoffset: 220;
+  }
+  70%, 100% {
+    stroke-dashoffset: 0;
+  }
 `;
 const Polyline2 = styled.polyline`
   fill: none;
@@ -88,9 +64,18 @@ const Polyline2 = styled.polyline`
   stroke-dasharray: 220;
   /* stroke-dashoffset: 220; */
 
-  animation: ${movePoly2} 3s ease-out alternate;
-  animation-delay: 0.7s;
+  animation: ${movePoly2} 1.5s ease-in-out;
+  animation-delay: 1.4s;
   animation-fill-mode: backwards;
+`;
+
+const movePoly3 = keyframes`
+  0%, 30% {
+    stroke-dashoffset: 400;
+  }
+  70%, 100% {
+    stroke-dashoffset: 0;
+  }
 `;
 const Polyline3 = styled.polyline`
   fill: none;
@@ -101,11 +86,19 @@ const Polyline3 = styled.polyline`
   stroke-dasharray: 400;
   /* stroke-dashoffset: 400; */
 
-  animation: ${movePoly3} 3s ease-out alternate;
-  animation-delay: 1.4s;
+  animation: ${movePoly3} 2s ease-in-out;
+  animation-delay: 2.1s;
   animation-fill-mode: backwards;
 `;
 
+const moveLine = keyframes`
+  0%, 30% {
+    stroke-dashoffset: 200;
+  }
+  70%, 100% {
+    stroke-dashoffset: 0;
+  }
+`;
 const Line = styled.line`
   fill: none;
   stroke: rgba(44, 42, 36, 1);
@@ -115,8 +108,8 @@ const Line = styled.line`
   stroke-dasharray: 200;
   /* stroke-dashoffset: -200; */
 
-  animation: ${moveLine} 3s ease-out alternate;
-  animation-delay: 2.1s;
+  animation: ${moveLine} 1.5s ease-in-out;
+  animation-delay: 3.2s;
   animation-fill-mode: backwards;
 `;
 
@@ -130,10 +123,10 @@ const LogoLetiste = () => {
         >
           <g id="Layer_2" data-name="Layer 2">
             <g id="Layer_1-2" data-name="Layer 1">
-              <Polyline1 points="163.48 186.82 83.99 175.51 4.5 186.82" />
+              <Polyline1 points="4.5 186.82 83.99 175.51 163.48 186.82" />
               <Polyline2 points="4.5 186.82 83.99 112.31 163.48 186.82" />
               <Polyline3 points="4.5 186.82 83.99 4.5 163.48 186.82" />
-              <Line x1="83.99" y1="4.5" x2="83.99" y2="175.51" />
+              <Line x1="83.99" y1="175.51" x2="83.99" y2="4.5" />
             </g>
           </g>
         </StyledSvg>

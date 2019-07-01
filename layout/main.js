@@ -39,8 +39,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Poppins', sans-serif;
     letter-spacing: .8px;
     box-sizing: border-box;
-    background-image: linear-gradient(to right bottom, palevioletred, pink);
-    /* background-color: black; */
+    background-color: black;
     /* height: 100vh; */
   }
   *, *::after, *::before {

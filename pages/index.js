@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { animated, Keyframes } from "react-spring/renderprops.cjs";
 
 import Main from "../layout/main";
@@ -12,13 +12,21 @@ import LogoLetiste from "../components/LogoLetiste";
 
 import pismena from "../img/grafika/pismena-karneval.png";
 import symbols from "../img/grafika/symboly.png";
-import logo from "../img/grafika/logo.png";
 import corner from "../img/grafika/corner.png";
 import rightSide from "../img/grafika/right-side.png";
 
 const Relative = styled.div`
   position: relative;
   height: 100vh;
+`;
+
+const initOpacity = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 `;
 
 // Písmena a Karneval
@@ -32,7 +40,10 @@ const Letters = styled.div`
   background-repeat: no-repeat;
   background-position: 50% 50%;
   z-index: 2000;
-  /* background-size: cover; */
+
+  animation: ${initOpacity} 1s ease-in-out;
+  animation-fill-mode: backwards;
+  animation-delay: 4.5s;
 
   @media (max-width: 700px) {
     background-size: auto 70%;
@@ -51,26 +62,12 @@ const Symbols = styled.div`
   background-position: 50% 50%;
   z-index: 3000;
 
+  animation: ${initOpacity} 1.3s ease-in-out;
+  animation-fill-mode: backwards;
+  animation-delay: 5.5s;
+
   @media (max-width: 700px) {
     background-size: auto 70%;
-  }
-`;
-
-// Logo
-const Logo = styled.div`
-  position: absolute;
-  height: 100%;
-  width: 100%;
-
-  background-image: url(${logo});
-  background-size: auto 25%;
-  background-repeat: no-repeat;
-  background-position: 50% 28%;
-  z-index: 4000;
-
-  @media (max-width: 700px) {
-    background-size: auto 18%;
-    background-position: 50% 38%;
   }
 `;
 
@@ -85,22 +82,19 @@ const Home = () => {
   const [trip, setTrip] = useState(false);
   return (
     <Main>
-      <Page>
-        <BgContainer trip={trip} />
-        <Relative>
-          <SocialPanel />
-          <TripButton
-            href={
-              "https://goout.net/cs/festivaly/letiste-karneval-2019/cwyxd/+jxgql/"
-            }
-            name={"LET 19"}
-          />
-          <Letters />
-          <Symbols />
-          {/* <Logo /> */}
-          <LogoLetiste />
-        </Relative>
-      </Page>
+      <BgContainer trip={trip} />
+      <Relative>
+        <SocialPanel />
+        <TripButton
+          href={
+            "https://goout.net/cs/festivaly/letiste-karneval-2019/cwyxd/+jxgql/"
+          }
+          name={"LET 19"}
+        />
+        <Letters />
+        <Symbols />
+        <LogoLetiste />
+      </Relative>
     </Main>
   );
 };
