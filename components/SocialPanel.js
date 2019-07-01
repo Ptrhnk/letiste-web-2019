@@ -23,9 +23,9 @@ const Socials = styled.div`
   align-items: center;
   flex-direction: column;
 
-  animation: ${initOpacity} 1s ease-in-out;
+  animation: ${initOpacity} 0.6s ease-in-out;
   animation-fill-mode: backwards;
-  animation-delay: 8s;
+  animation-delay: 7.6s;
 
   background-color: rgba(0, 0, 0, 0.9);
   z-index: 10000;

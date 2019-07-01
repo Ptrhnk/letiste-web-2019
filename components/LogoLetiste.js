@@ -6,19 +6,16 @@ const Container = styled.div`
   top: 34%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 13rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 26%;
 
   @media (max-width: 700px) {
-    height: 5rem;
+    height: 20%;
+    top: 40%;
   }
 `;
 
 const StyledSvg = styled.svg`
   height: 100%;
-  width: 100%;
   z-index: 10000;
 `;
 
@@ -41,8 +38,8 @@ const Polyline1 = styled.polyline`
   stroke-dasharray: 200;
   /* stroke-dashoffset: 0; */
 
-  animation: ${movePoly1} 1s ease-in-out;
-  animation-delay: 1s;
+  animation: ${movePoly1} 1.6s ease-in-out;
+  animation-delay: 1.3s;
   animation-fill-mode: backwards;
 `;
 
@@ -64,8 +61,8 @@ const Polyline2 = styled.polyline`
   stroke-dasharray: 220;
   /* stroke-dashoffset: 220; */
 
-  animation: ${movePoly2} 1.5s ease-in-out;
-  animation-delay: 1.4s;
+  animation: ${movePoly2} 1.6s ease-in-out;
+  animation-delay: 1.8s;
   animation-fill-mode: backwards;
 `;
 
@@ -87,7 +84,7 @@ const Polyline3 = styled.polyline`
   /* stroke-dashoffset: 400; */
 
   animation: ${movePoly3} 2s ease-in-out;
-  animation-delay: 2.1s;
+  animation-delay: 2.4s;
   animation-fill-mode: backwards;
 `;
 
@@ -108,8 +105,8 @@ const Line = styled.line`
   stroke-dasharray: 200;
   /* stroke-dashoffset: -200; */
 
-  animation: ${moveLine} 1.5s ease-in-out;
-  animation-delay: 3.2s;
+  animation: ${moveLine} 3s ease-in-out;
+  animation-delay: 2.8s;
   animation-fill-mode: backwards;
 `;
 

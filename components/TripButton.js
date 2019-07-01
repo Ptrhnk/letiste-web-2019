@@ -7,26 +7,21 @@ import layerOne from "../img/grafika/pozadi-02.jpeg";
 
 const initScale = keyframes`
   0% {
-    transform: scale(0) translate(-300%, -300%);
+    /* transform: scale(0.5) translate(-50%, -50%); */
     opacity: 0;
   }
   100% {
-    transform: scale(1) translate(-50%, -50%);
+    /* transform: scale(1) translate(-50%, -50%); */
     opacity: 1;
   }
 `;
 
 const Button = styled(animated.a)`
-  /* filter: none;
-  -webkit-filter: blur(0px);
-  -moz-filter: blur(0px);
-  -ms-filter: blur(0px);
-  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='0'); */
-
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -webkit-backface-visibility: hidden;
   z-index: 10000;
   text-decoration: none;
 
@@ -51,9 +46,13 @@ const Button = styled(animated.a)`
 
   transition: all 0.5s ease;
 
+  @media (max-width: 1200px) {
+    top: 52%;
+  }
   @media (max-width: 700px) {
     font-size: 0.8rem;
     padding: 0.4rem 0.7rem;
+    top: 54%;
   }
   @media (min-width: 700px) {
     :hover {

@@ -31,9 +31,9 @@ const Container = styled(animated.div)`
 
   z-index: 0;
 
-  animation: ${initOpacity} 2s ease-in-out;
+  animation: ${initOpacity} 1.6s ease-in-out;
   animation-fill-mode: backwards;
-  /* animation-delay: .5s; */
+  animation-delay: 0.2s;
 
   /* filter: url(#tripFilter); */
   /* filter: url(#colorFilter); */

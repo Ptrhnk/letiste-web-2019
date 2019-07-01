@@ -18,6 +18,7 @@ import rightSide from "../img/grafika/right-side.png";
 const Relative = styled.div`
   position: relative;
   height: 100vh;
+  transform: translateZ(0);
 `;
 
 const initOpacity = keyframes`
