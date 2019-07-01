@@ -1,7 +1,7 @@
 export default () => (
   <>
-    <meta name={"viewport"} content={"width=device-width, initial-scale=1"} />
-    <meta name={"robots"} content={"all"} />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="all" />
     <meta
       name="keywords"
       content="letište, letište festival, letište 2019, letište hranice, letište fest, letiste2019, letiste2019.cz, JAZZ, ELEKTRONIKA, DIVADLO"
@@ -53,7 +53,6 @@ export default () => (
       sizes="16x16"
       href="favicons/favicon-16x16.png"
     />
-    <link rel="manifest" href="favicons/site.webmanifest" />
     <link
       rel="mask-icon"
       href="favicons/safari-pinned-tab.svg"

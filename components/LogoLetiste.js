@@ -1,6 +1,8 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 
+import { globalBlack } from "../constants";
+
 const Container = styled.div`
   position: absolute;
   top: 34%;
@@ -29,7 +31,7 @@ const movePoly1 = keyframes`
 `;
 const Polyline1 = styled.polyline`
   fill: none;
-  stroke: rgba(44, 42, 36, 1);
+  stroke: ${globalBlack};
   stroke-linejoin: round;
   stroke-width: 9px;
   stroke-linecap: round;
@@ -53,7 +55,7 @@ const movePoly2 = keyframes`
 `;
 const Polyline2 = styled.polyline`
   fill: none;
-  stroke: rgba(44, 42, 36, 1);
+  stroke: ${globalBlack};
   stroke-linejoin: round;
   stroke-width: 9px;
   stroke-linecap: round;
@@ -76,7 +78,7 @@ const movePoly3 = keyframes`
 `;
 const Polyline3 = styled.polyline`
   fill: none;
-  stroke: rgba(44, 42, 36, 1);
+  stroke: ${globalBlack};
   stroke-linejoin: round;
   stroke-width: 9px;
   stroke-linecap: round;
@@ -98,7 +100,7 @@ const moveLine = keyframes`
 `;
 const Line = styled.line`
   fill: none;
-  stroke: rgba(44, 42, 36, 1);
+  stroke: ${globalBlack};
   stroke-linejoin: round;
   stroke-width: 9px;
   stroke-linecap: round;

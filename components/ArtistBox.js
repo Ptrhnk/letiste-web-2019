@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-
 import { Spring } from "react-spring/renderprops.cjs";
+
 import logo from "../img/grafika/logo.png";
+import { globalBorder } from "../constants";
 
 const Svg = styled.svg`
   display: none;
@@ -29,7 +30,7 @@ const ImageBox = styled.div`
   filter: url(#linear);
   background-size: cover;
   background-position: center;
-  border: 6px solid black;
+  border: ${globalBorder};
   margin-bottom: 2rem;
   color: white;
   cursor: pointer;
@@ -48,7 +49,7 @@ const ArtistNameBox = styled.div`
   justify-content: center;
   align-items: center;
 
-  border: 6px solid black;
+  border: ${globalBorder};
   background-color: white;
   color: black;
   text-transform: uppercase;

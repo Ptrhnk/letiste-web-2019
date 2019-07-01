@@ -4,12 +4,13 @@ import styled from "styled-components";
 import { animated, useSpring, config } from "react-spring";
 
 import layerOne from "../img/grafika/background.png";
+import { globalBlack, globalBorder } from "../constants";
 
 const Button = styled(animated.div)`
   margin: 0.4rem;
   padding: 0.6rem 0.9rem;
-  color: rgba(255, 255, 255, 1);
-  border: 2px solid rgba(255, 255, 255, 1);
+  color: ${globalBlack};
+  border: ${globalBorder};
   letter-spacing: 0.2rem;
   border-radius: 2rem;
   font-size: 1rem;
@@ -25,42 +26,19 @@ const Button = styled(animated.div)`
   transition: all 0.5s ease;
 
   :hover {
-    padding: 1.2rem 1.4rem;
+    /* padding: 1.2rem 1.4rem;
     background-size: 150% 150%;
-    transform: scale(6);
     border: 1px solid rgba(44, 42, 36, 1);
-    font-size: 0.8rem;
-    opacity: 1;
-    color: rgba(44, 42, 36, 1);
+    font-size: 0.8rem; */
   }
-
-  /* :focus :active {
-    box-shadow: 0rem 0rem 0.2rem rgba(0, 0, 0, 0.3);
-    transform: scale(9.9);
-  } */
 `;
 
-const TripButton = ({ onClick, name }) => {
-  const [hovered, setHovered] = useState(false);
-
-  const hoverState = useSpring({
-    transform: hovered
-      ? "translate3d(0px, 0px, 0px) scale(2)"
-      : "translate3d(0px, 0px, 0px) scale(1)",
-    config: { tension: 550, friction: 2 }
-  });
-
+const MenuButton = ({ onClick, name }) => {
   return (
     <>
-      <Button
-        onClick={onClick}
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
-      >
-        {name}
-      </Button>
+      <Button onClick={onClick}>{name}</Button>
     </>
   );
 };
 
-export default TripButton;
+export default MenuButton;

@@ -2,6 +2,7 @@ import { ServerStyleSheet, createGlobalStyle } from "styled-components";
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
 import Meta from "../layout/meta";
+import BgContainer from "../layout/BgContainer";
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -53,9 +54,11 @@ export default class MyDocument extends Document {
       <Html>
         <Head>
           <Meta />
+          <title>Letiště Karneval</title>
         </Head>
         <body>
           <GlobalStyle />
+          <BgContainer />
           <Main />
           <NextScript />
         </body>

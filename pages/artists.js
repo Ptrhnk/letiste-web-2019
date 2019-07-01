@@ -37,7 +37,6 @@ const StyledLink = styled.a`
 const Artists = () => {
   return (
     <>
-      <BgContainer trip={false} />
       <Page>
         <Link href="/">
           <StyledLink>go home</StyledLink>

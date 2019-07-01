@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import styled, { keyframes } from "styled-components";
-// import { Spring, config } from "react-spring/renderprops.cjs";
-import { animated, useSpring, config } from "react-spring";
+import { animated } from "react-spring";
 
 import layerOne from "../img/grafika/pozadi-02.jpeg";
+import { globalBlack } from "../constants";
 
 const initScale = keyframes`
   0% {
@@ -24,13 +24,13 @@ const Button = styled(animated.a)`
   z-index: 10000;
   text-decoration: none;
 
-  padding: 0.6rem 0.9rem;
+  padding: 0.5rem 0.9rem;
   color: rgba(255, 255, 255, 1);
   border: 2px solid rgba(255, 255, 255, 1);
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.4rem;
   border-radius: 2rem;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 800;
   outline: none;
   box-shadow: none;
   background-image: url(${layerOne});
@@ -41,7 +41,7 @@ const Button = styled(animated.a)`
 
   animation: ${initScale} 1s ease-in-out;
   animation-fill-mode: backwards;
-  /* animation-delay: 7s; */
+  animation-delay: 7s;
 
   transition: all 0.5s ease;
 
@@ -58,10 +58,10 @@ const Button = styled(animated.a)`
       padding: 1.2rem 1.4rem;
       background-size: 110% 110%;
       transform: scale(10) translate(-5%, -5%);
-      border: 1px solid rgba(44, 42, 36, 1);
+      border: 1px solid ${globalBlack};
       font-size: 0.8rem;
       opacity: 1;
-      color: rgba(44, 42, 36, 1);
+      color: ${globalBlack};
     }
   }
 
@@ -85,28 +85,17 @@ const Button = styled(animated.a)`
       background-size: 190% 190%;
     }
   }
-
-  /* :focus :active {
-    transform: scale(9.9);
-  } */
 `;
 
-const TripButton = ({ onClick, name, href }) => {
-  // const [hovered, setHovered] = useState(true);
-
-  // const hoverState = useSpring({
-  //   transform: hovered ? "scale(2)" : "scale(1)",
-  //   config: { tension: 550, friction: 2, mass: 1 }
-  // });
-
+const TripButton = ({ onClick, name, href, onMouseEnter, onMouseLeave }) => {
   return (
     <>
       <Button
         onClick={onClick}
         href={href}
         target="_blank"
-        // onMouseEnter={() => setHovered(true)}
-        // onMouseLeave={() => setHovered(false)}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
       >
         {name}
       </Button>

@@ -7,6 +7,7 @@ import SocialPanel from "../components/SocialPanel";
 import BgContainer from "../layout/BgContainer";
 import TripButton from "../components/TripButton";
 import LogoLetiste from "../components/LogoLetiste";
+import DescriptionBox from "../components/DescriptionBox";
 import Menu from "../components/Menu";
 
 import pismena from "../img/grafika/pismena-karneval.png";
@@ -18,6 +19,7 @@ const Relative = styled.div`
   position: relative;
   height: 100vh;
   transform: translateZ(0);
+  /* z-index: 10000; */
 `;
 
 const initOpacity = keyframes`
@@ -71,18 +73,11 @@ const Symbols = styled.div`
   }
 `;
 
-const Page = styled.div`
-  height: 100vh;
-  /* display: flex;
-  flex-direction: column;
-  align-items: flex-start; */
-`;
-
 const Home = () => {
-  const [trip, setTrip] = useState(false);
+  const [visible, setVisible] = useState(true);
+
   return (
     <>
-      <BgContainer trip={trip} />
       <Relative>
         <SocialPanel />
         <TripButton
@@ -90,11 +85,14 @@ const Home = () => {
             "https://goout.net/cs/festivaly/letiste-karneval-2019/cwyxd/+jxgql/"
           }
           name={"LET 19"}
+          onMouseEnter={() => setVisible(false)}
+          onMouseLeave={() => setVisible(true)}
         />
         <Letters />
         <Symbols />
         <LogoLetiste />
       </Relative>
+      {/* <DescriptionBox visible={visible} /> */}
     </>
   );
 };
