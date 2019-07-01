@@ -105,7 +105,7 @@ const Line = styled.line`
   stroke-dasharray: 200;
   /* stroke-dashoffset: -200; */
 
-  animation: ${moveLine} 3s ease-in-out;
+  animation: ${moveLine} 2.8s ease-in-out;
   animation-delay: 2.8s;
   animation-fill-mode: backwards;
 `;

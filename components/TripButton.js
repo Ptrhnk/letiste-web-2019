@@ -21,14 +21,13 @@ const Button = styled(animated.a)`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  -webkit-backface-visibility: hidden;
   z-index: 10000;
   text-decoration: none;
 
   padding: 0.6rem 0.9rem;
   color: rgba(255, 255, 255, 1);
   border: 2px solid rgba(255, 255, 255, 1);
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.3rem;
   border-radius: 2rem;
   font-size: 1rem;
   font-weight: 400;
@@ -42,7 +41,7 @@ const Button = styled(animated.a)`
 
   animation: ${initScale} 1s ease-in-out;
   animation-fill-mode: backwards;
-  animation-delay: 7s;
+  /* animation-delay: 7s; */
 
   transition: all 0.5s ease;
 

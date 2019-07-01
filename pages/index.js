@@ -3,12 +3,11 @@ import Link from "next/link";
 import styled, { keyframes } from "styled-components";
 import { animated, Keyframes } from "react-spring/renderprops.cjs";
 
-import Main from "../layout/main";
 import SocialPanel from "../components/SocialPanel";
-import Menu from "../components/Menu";
 import BgContainer from "../layout/BgContainer";
 import TripButton from "../components/TripButton";
 import LogoLetiste from "../components/LogoLetiste";
+import Menu from "../components/Menu";
 
 import pismena from "../img/grafika/pismena-karneval.png";
 import symbols from "../img/grafika/symboly.png";
@@ -82,7 +81,7 @@ const Page = styled.div`
 const Home = () => {
   const [trip, setTrip] = useState(false);
   return (
-    <Main>
+    <>
       <BgContainer trip={trip} />
       <Relative>
         <SocialPanel />
@@ -96,7 +95,7 @@ const Home = () => {
         <Symbols />
         <LogoLetiste />
       </Relative>
-    </Main>
+    </>
   );
 };
 

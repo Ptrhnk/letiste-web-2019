@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import styled from "styled-components";
 
-import Main from "../layout/main";
 import ArtistContainer from "../components/ArtistContainer";
 import BgContainer from "../layout/BgContainer";
 
@@ -37,7 +36,7 @@ const StyledLink = styled.a`
 
 const Artists = () => {
   return (
-    <Main>
+    <>
       <BgContainer trip={false} />
       <Page>
         <Link href="/">
@@ -45,7 +44,7 @@ const Artists = () => {
         </Link>
         <ArtistContainer artists={artists} />
       </Page>
-    </Main>
+    </>
   );
 };
 

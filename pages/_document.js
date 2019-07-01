@@ -1,5 +1,27 @@
-import Document from "next/document";
-import { ServerStyleSheet } from "styled-components";
+import { ServerStyleSheet, createGlobalStyle } from "styled-components";
+import Document, { Html, Head, Main, NextScript } from "next/document";
+
+import Meta from "../layout/meta";
+
+const GlobalStyle = createGlobalStyle`
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @import url('https://fonts.googleapis.com/css?family=Poppins');
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    letter-spacing: .8px;
+    box-sizing: border-box;
+    background-color: black;
+    /* height: 100vh; */
+  }
+  *, *::after, *::before {
+      margin: 0;
+      padding: 0;
+      box-sizing: inherit;
+  }
+`;
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -25,5 +47,19 @@ export default class MyDocument extends Document {
     } finally {
       sheet.seal();
     }
+  }
+  render() {
+    return (
+      <Html>
+        <Head>
+          <Meta />
+        </Head>
+        <body>
+          <GlobalStyle />
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
   }
 }
