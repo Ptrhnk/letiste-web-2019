@@ -5,6 +5,9 @@ import { useTransition, animated, config, useSpring } from "react-spring";
 
 import { globalBorder } from "../constants";
 
+const description =
+  "Co je důležitější - diverzita nebo unita? Mohou tyto dva pojmy existovat zároveň? Letiště Karneval skýtá odpovědi. Místo standardní divadelní formy představíme site-specific koncept přesahující až do imerzivního divadla. Spolu s nejrůznějšími umělci z celé republiky vytvoříme alternativní svět mystického karnevalu. Prožij s námi příběh extravagance a jednoty. Pronikneme do setkání rozumných lidí a staneme se součástí elitního společenství.";
+
 const descriptionArr = [
   {
     id: 0,
@@ -37,7 +40,7 @@ const Box = styled(animated.div)`
   /* margin: 1rem; */
   width: 20rem;
 
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 1);
   border: ${globalBorder};
   font-size: 0.8rem;
   border-radius: 1rem;
@@ -53,20 +56,21 @@ const Box = styled(animated.div)`
 const Container = styled.div`
   position: absolute;
   left: 50%;
-  bottom: 18%;
+  top: 50%;
   height: 10rem;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
   align-items: center;
   perspective: 50rem;
+  z-index: 10000;
 
   @media (max-width: 700px) {
     bottom: 0;
   }
 `;
 
-const DescriptionBox = ({ visible }) => {
+const DescriptionBox = ({ visible, animated }) => {
   const [index, set] = useState(4);
   const transitions = useTransition(descriptionArr[index], item => item.id, {
     from: {
@@ -92,16 +96,24 @@ const DescriptionBox = ({ visible }) => {
   );
 
   return (
-    <animated.div style={{ ...opacityAnimation }}>
-      {visible &&
-        transitions.map(({ item, props, key }) => (
-          <Container key={key}>
-            <Box key={key} style={{ ...props }}>
-              {item.text}
-            </Box>
-          </Container>
-        ))}
-    </animated.div>
+    <>
+      {animated ? (
+        <animated.div style={{ ...opacityAnimation }}>
+          {visible &&
+            transitions.map(({ item, props, key }) => (
+              <Container key={key}>
+                <Box key={key} style={{ ...props }}>
+                  {item.text}
+                </Box>
+              </Container>
+            ))}
+        </animated.div>
+      ) : (
+        <Container>
+          <Box>{description}</Box>
+        </Container>
+      )}
+    </>
   );
 };
 

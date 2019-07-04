@@ -16,6 +16,7 @@ const Container = styled.div`
   flex-direction: column;
 
   margin: 3rem;
+  z-index: 1000;
 `;
 
 const ImageBox = styled.div`
@@ -27,7 +28,6 @@ const ImageBox = styled.div`
   align-items: flex-end;
 
   background-image: ${({ image }) => (image ? `url(${image})` : "none")};
-  /* filter: url(#linear); */
   filter: grayscale();
   background-size: cover;
   background-position: center;
@@ -37,7 +37,7 @@ const ImageBox = styled.div`
   cursor: pointer;
 `;
 
-const ArtistNameBox = styled.div`
+const PartnerNameBox = styled.div`
   padding: 1rem 1rem;
   /* width: 100%; */
   /* width: 20rem; */
@@ -60,47 +60,15 @@ const ArtistNameBox = styled.div`
   }
 `;
 
-const ArtistTextBox = styled.div`
-  border: ${globalBorder};
-  background-color: white;
-  width: 30rem;
-  padding: 1rem;
-  margin-top: 2rem;
-  cursor: pointer;
-`;
-
-const ArtistBox = ({ artist, handleClick, showText, showArtist }, key) => {
+const PartnerBox = ({ partner }, key) => {
   return (
     <>
-      <Spring
-        config={{ tension: 250, friction: 100, mass: 20 }}
-        from={{ opacity: 0, value: 180 }}
-        to={{ opacity: 1, value: 0 }}
-      >
-        {spring => (
-          <div style={spring}>
-            {showArtist && (
-              <Container>
-                <ImageBox
-                  key={key}
-                  image={artist.image}
-                  onClick={handleClick}
-                />
-                <ArtistNameBox onClick={handleClick}>
-                  {artist.name}
-                </ArtistNameBox>
-                {showText && (
-                  <ArtistTextBox onClick={handleClick}>
-                    {artist.text}
-                  </ArtistTextBox>
-                )}
-              </Container>
-            )}
-          </div>
-        )}
-      </Spring>
+      <Container key={key}>
+        {/* <ImageBox key={key} image={partner.image} /> */}
+        <PartnerNameBox>{partner.name}</PartnerNameBox>
+      </Container>
     </>
   );
 };
 
-export default ArtistBox;
+export default PartnerBox;

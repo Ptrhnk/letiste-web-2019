@@ -1,10 +1,7 @@
-import React, { useState } from "react";
-import Link from "next/link";
+import React, { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
-import { animated, Keyframes } from "react-spring/renderprops.cjs";
 
 import SocialPanel from "../components/SocialPanel";
-import BgContainer from "../layout/BgContainer";
 import TripButton from "../components/TripButton";
 import LogoLetiste from "../components/LogoLetiste";
 import DescriptionBox from "../components/DescriptionBox";
@@ -19,7 +16,6 @@ const Relative = styled.div`
   position: relative;
   height: 100vh;
   transform: translateZ(0);
-  /* z-index: 10000; */
 `;
 
 const initOpacity = keyframes`
@@ -74,19 +70,16 @@ const Symbols = styled.div`
 `;
 
 const Home = () => {
-  const [visible, setVisible] = useState(true);
-
   return (
     <>
       <Relative>
+        <Menu />
         <SocialPanel />
         <TripButton
           href={
             "https://goout.net/cs/festivaly/letiste-karneval-2019/cwyxd/+jxgql/"
           }
           name={"LET 19"}
-          onMouseEnter={() => setVisible(false)}
-          onMouseLeave={() => setVisible(true)}
         />
         <Letters />
         <Symbols />

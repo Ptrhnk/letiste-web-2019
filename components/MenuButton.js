@@ -12,12 +12,11 @@ const Button = styled(animated.div)`
   color: ${globalBlack};
   border: ${globalBorder};
   letter-spacing: 0.2rem;
-  border-radius: 2rem;
   font-size: 1rem;
   font-weight: 400;
   outline: none;
   box-shadow: none;
-  background-image: url(${layerOne});
+  background-color: white;
   background-size: 3000% 3000%;
   background-position: center;
   cursor: pointer;
@@ -26,10 +25,8 @@ const Button = styled(animated.div)`
   transition: all 0.5s ease;
 
   :hover {
-    /* padding: 1.2rem 1.4rem;
-    background-size: 150% 150%;
-    border: 1px solid rgba(44, 42, 36, 1);
-    font-size: 0.8rem; */
+    background-color: ${globalBlack};
+    color: white;
   }
 `;
 

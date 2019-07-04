@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import Link from "next/link";
 import styled from "styled-components";
 
-import TripButton from "./TripButton";
 import MenuButton from "./MenuButton";
 
 const Panel = styled.div`
   position: absolute;
-  top: 50%;
+  top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10000;
@@ -17,14 +16,21 @@ const Panel = styled.div`
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
+
+  border: 1px solid black;
 `;
 
 const Menu = ({ onClick }) => {
   return (
     <Panel>
-      <TripButton onClick={onClick} name={"LET 19"} />
       <Link href="/artists">
-        <MenuButton name={"ARTISTS"} />
+        <MenuButton name={"KAPELY"} />
+      </Link>
+      <Link href="/karneval">
+        <MenuButton name={"KARNEVAL"} />
+      </Link>
+      <Link href="/partners">
+        <MenuButton name={"MECENÁŠI"} />
       </Link>
     </Panel>
   );

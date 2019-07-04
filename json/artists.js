@@ -11,6 +11,7 @@ import mono_chrome from "../img/artists/mono-chrome.png";
 // -------------------- ARTISTS --------------------
 const artists = [
   {
+    id: 1,
     code: "Nylon_Jail",
     name: "Nylon Jail",
     text:
@@ -24,6 +25,7 @@ const artists = [
     ]
   },
   {
+    id: 2,
     code: "Gerald_Clark",
     name: "Gerald Clark",
     text:
@@ -38,6 +40,7 @@ const artists = [
     ]
   },
   {
+    id: 3,
     code: "Nina_Rosa",
     name: "Nina Rosa",
     text:
@@ -52,6 +55,7 @@ const artists = [
     ]
   },
   {
+    id: 4,
     code: "Zorba_ze_ja_Buddha",
     name: "Zorba že ja Buddha",
     text:
@@ -65,8 +69,9 @@ const artists = [
     ]
   },
   {
+    id: 5,
     code: "Used_To_Be_a_Sofa",
-    name: "Used To Be<br>a Sofa",
+    name: "Used To Be a Sofa",
     text:
       "Trio exgaučových posedávačů ve složení Sisa Feherová, Vladko Mikláš a Lukáš Mutňanský spojují svoje hlasy, zvuky, skills a myšlenky do lehkého společensko-kriticko-tragického postoje zaobaleného do alternativního popu cestujícího z minulosti do budoucnosti.",
     image: Used_To_Be_a_Sofa,
@@ -76,6 +81,7 @@ const artists = [
     ]
   },
   {
+    id: 6,
     code: "Viktor_Lesque",
     name: "Viktor Lesque",
     text:
@@ -88,6 +94,7 @@ const artists = [
     ]
   },
   {
+    id: 7,
     code: "Nvmeri",
     name: "Nvmeri",
     text:
@@ -105,6 +112,7 @@ const artists = [
     ]
   },
   {
+    id: 8,
     code: "mono-chrome",
     name: "mono/chrome",
     text:
@@ -116,165 +124,5 @@ const artists = [
     ]
   }
 ];
-
-//   elektronika: [
-//     {
-//       name: "Nvmeri",
-//       title: "Nvmeri",
-//       text:
-//         'Math / progrockové trio NVMERI jsou Pišta Královič, Palo Javorník a Miro Tuchyňa. Hudba NVMERI je plná matematických beatů a chytlavých melodií inspirovaných skandinávským indie popem. Spojením komplexních a přitom lehko stravitelných aranží, šumivých synťákových ploch, psychedelických sólových úletů nebo Pištova výše položeného hlasu, se zařaďují k pozoruhodným zjevům na hudební scéně. Jejich první album "From The Dust", který vydali ještě jako The Uniques, si vysloužilp hodně pozornosti a také cenu za Nejlepší alternativní album podle kritiků Radio_Head Awards. Minulý rok vydali svůj třetí album "I don\'t think so", s kterým opět získali Cenu kritiků RHA za album roku 2017. Z tohoto alba pocházejí i úspěšné singly Art Of The Trial, Blue Church, Dynamite nebo Short Of Oxygen.',
-//       website: "https://nvmeri.com/",
-//       links: [
-//         "https://open.spotify.com/artist/651deX35D6JZDAsFnu2VXN",
-//         "https://www.facebook.com/Nvmeri/",
-//         "https://www.youtube.com/c/nvmerivids",
-//         "https://soundcloud.com/nvmeri/",
-//         "http://music.nvmeri.com/",
-//         "https://www.deezer.com/en/artist/4799459",
-//         "https://itunes.apple.com/sk/album/i-dont-think-so/id1262178463?l=sk&amp;ls=1&amp;app=music&amp;at=11lEW&amp;ct=kypx9l"
-//       ]
-//     },
-//     {
-//       name: "Never_Sol",
-//       title: "Never Sol",
-//       text:
-//         "Silný vztah k písničkářství, spletité akordické postupy, syntetizéry a hlas jsou základními atributy hudby Never Sol. Po úspěšném vydání debutového alba Under Quiet následovala reedice alba u prestižního německého labelu Denovali, který otevřel Never Sol cestu do Evropy. Sára Vondrášková alias Never Sol reprezentovala Českou republiku například na měsíčním workshopu Red Bull Music Academy v Tokiu, složila hudbu pro dvě úspěšná divadelní představení Jany Burkiewiczové, byla součástí elektroakustického projektu Tomáše Dvořáka Floex. Pravidelně vystupuje v Čechách i v zahraničí, v lednu 2018 vystoupila na nejznámějším mezinárodním show-case festivalu EuroSonic v Groningenu a momentálně nahrává nové album, které spatří světlo světa na podzim 2018. Never Sol vystupuje sólově i s kapelou, má za sebou multimediální show, či úspěšný koncert v doprovodu desetičlenného filharmonického orchestru v Praze.",
-//       website: "http://www.neversol.cz/",
-//       links: [
-//         "https://open.spotify.com/artist/0KDkgeLAHQXrLiasVK1h5g?si=TRHMxQGTR5ST7h5Jwu2xNw",
-//         "https://www.facebook.com/NeverSol/",
-//         "https://www.youtube.com/watch?v=ksn4nKKoCkg",
-//         "https://soundcloud.com/neversol"
-//         // "https://www.youtube.com/watch?v=6pNkZ85yAb0"
-//       ]
-//     },
-//     {
-//       name: "Develooper",
-//       title: "Develooper",
-//       text:
-//         "Develooper je jednočlenný hudební projekt Petra Wajsara, využívající lidský hlas ve spojení s takřka nekonečnými možnostmi hudebního software a počítačové techniky. Kromě hudební složky, určené primárně k tanci a odreagování, je charakteristický též synchronní autorskou videoprojekcí, ve které s sebou kromě sebe přináší mnoho dalších interpretů, např. hráče na lesní marimbu, štěkající psy nebo rapujícího Donalda Trumpa!",
-//       links: [
-//         "https://www.facebook.com/develooperwajsar/",
-//         "https://www.youtube.com/watch?v=WT4ZiqTVuiU"
-//       ]
-//     },
-//     {
-//       name: "mono-chrome",
-//       title: "mono/chrome",
-//       text:
-//         "Důsledně anonymní audiovizuální projekt mono/chrome se věnuje precizní synchronizaci obrazu a zvuku, pro kterou používá především analogové nástroje. Po několika kolaboracích a předchozích projektech se vydal na sólovou dráhu a připravuje svou debutovou desku, která právě vzniká v německém pohraničí. Hlavní důraz je kladený na generování zvuku, vytváření vlastních nástrojů či efektů, sbírání nánosů z okolního světa a vrstvení těchto komponentů do jednotného celku.",
-//       links: [
-//         "https://www.youtube.com/watch?v=GFQ79S3hr5E",
-//         "https://soundcloud.com/mnchrme"
-//       ]
-//     }
-//   ],
-//   divadlo: [
-//     {
-//       name: "Impra",
-//       title: "Impra",
-//       text:
-//         "Jediný divadelní projekt svého druhu na české divadelní scéně. Po tom co našli Hanny Firla a Ondřej Král během společného studia herectví, zpěvu a tance jedinečné spojení v rámci své kooperace na jevišti, přizvali do svého počínání instrumentalistu Igora Ochepovskeho. Započali realizaci divadelních představení bez přípravy, se kterými už čtvrtým rokem objíždění celou republiku i krajiny za hranicemi. Snaží se neustále posouvat své hranice a proto jejich představení nikdy nemá pevný záchytný bod. Vše vzniká až přímo na jevišti, kam se snaží jít s co nejčistším stavem své jednoty těla a duše. Žánr i jakákoliv dílčí část představení tedy zůstává až do poslední chvíle tajemstvím.",
-//       website: "http://www.hereckaimprovizace.cz"
-//     }
-//   ]
-// };
-
-const partners = {
-  financne: [
-    {
-      name: "Město Hranice",
-      icon: "financne/mesto_hranice.png"
-    },
-    {
-      name: "Ministerstvo kultury",
-      icon: "financne/ministersto_kultury.png"
-    },
-    {
-      name: "Olomoucký kraj",
-      icon: "financne/olomoucky_kraj.png"
-    },
-    {
-      name: "Nadace život umělce",
-      icon: "financne/nzu.png"
-    },
-    {
-      name: "Aura",
-      icon: "financne/aura.png"
-    },
-    {
-      name: "Auto Drei",
-      icon: "financne/auto_drei.png"
-    },
-    {
-      name: "Lumen",
-      icon: "financne/lumen.png"
-    },
-    {
-      name: "Maléř Group",
-      icon: "financne/maler_group.png"
-    }
-  ],
-  medialni: [
-    {
-      name: "ihranice.cz",
-      icon: "medialni/ihranice_cz.png"
-    },
-    {
-      name: "Olomoucká drbna",
-      icon: "medialni/olomoucka_drbna.png"
-    },
-    {
-      name: "Swine Daily",
-      icon: "medialni/swine_daily.png"
-    },
-    {
-      name: "Hranický deník",
-      icon: "partneri/hranicky_denik.png"
-    }
-  ],
-  partneri: [
-    {
-      name: "Astra",
-      icon: "partneri/astra.png"
-    },
-    {
-      name: "Epava",
-      icon: "partneri/epava.png"
-    },
-    {
-      name: "Frida taxi Hranice",
-      icon: "partneri/taxi_frida.png"
-    },
-    {
-      name: "GroundSound",
-      icon: "partneri/ground_sound.png"
-    },
-    {
-      name: "Lázeňská káva",
-      icon: "partneri/kava_white.png"
-    },
-    {
-      name: "Metro Chill Out Club",
-      icon: "partneri/Metro_transp_white.png"
-    },
-    {
-      name: "Pivovar Zašová",
-      icon: "partneri/pivovar_zasova_white.png"
-    },
-    {
-      name: "Mlékárna Valašské Meziříčí",
-      icon: "partneri/mlekarny_valmez_white.png"
-    },
-    {
-      name: "Vault 42",
-      icon: "partneri/Vault42_logotyp_white.png"
-    },
-    {
-      name: "Zeal",
-      icon: "partneri/zeal_white.png"
-    }
-  ]
-};
 
 export default artists;

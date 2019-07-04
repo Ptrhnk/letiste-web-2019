@@ -3,7 +3,6 @@ import Link from "next/link";
 import styled from "styled-components";
 
 import ArtistContainer from "../components/ArtistContainer";
-import BgContainer from "../layout/BgContainer";
 
 import artists from "../json/artists";
 
