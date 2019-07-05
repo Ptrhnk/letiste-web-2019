@@ -1,12 +1,27 @@
 import React, { useState } from "react";
-import styled from "styled-components";
-import { Spring } from "react-spring/renderprops.cjs";
+import styled, { keyframes } from "styled-components";
+import { useSpring, animated } from "react-spring";
 
 import logo from "../img/grafika/logo.png";
-import { globalBorder } from "../constants";
+import { globalBorder, globalBlack } from "../constants";
+import ArtistTextBox from "./ArtistTextBox";
+import ArtistNameBox from "./ArtistNameBox";
 
-const Svg = styled.svg`
-  display: none;
+const showLogo = keyframes`
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: .8;
+    transform: scale(1);
+  }
+`;
+
+const Logo = styled.img`
+  height: 50%;
+  animation: ${showLogo} 0.3s ease;
+  animation-fill-mode: forwards;
 `;
 
 const Container = styled.div`
@@ -24,10 +39,9 @@ const ImageBox = styled.div`
 
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
 
   background-image: ${({ image }) => (image ? `url(${image})` : "none")};
-  /* filter: url(#linear); */
   filter: grayscale();
   background-size: cover;
   background-position: center;
@@ -37,68 +51,27 @@ const ImageBox = styled.div`
   cursor: pointer;
 `;
 
-const ArtistNameBox = styled.div`
-  padding: 1rem 1rem;
-  /* width: 100%; */
-  /* width: 20rem; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  border: ${globalBorder};
-  background-color: white;
-  color: black;
-  text-transform: uppercase;
-  cursor: pointer;
-  white-space: pre-wrap;
-
-  transition: all 0.5s ease;
-
-  :hover {
-    background-color: black;
-    color: white;
-  }
-`;
-
-const ArtistTextBox = styled.div`
-  border: ${globalBorder};
-  background-color: white;
-  width: 30rem;
-  padding: 1rem;
-  margin-top: 2rem;
-  cursor: pointer;
-`;
-
 const ArtistBox = ({ artist, handleClick, showText, showArtist }, key) => {
+  const [hover, setHover] = useState(false);
+  const { name, image, text } = artist;
+
   return (
     <>
-      <Spring
-        config={{ tension: 250, friction: 100, mass: 20 }}
-        from={{ opacity: 0, value: 180 }}
-        to={{ opacity: 1, value: 0 }}
-      >
-        {spring => (
-          <div style={spring}>
-            {showArtist && (
-              <Container>
-                <ImageBox
-                  key={key}
-                  image={artist.image}
-                  onClick={handleClick}
-                />
-                <ArtistNameBox onClick={handleClick}>
-                  {artist.name}
-                </ArtistNameBox>
-                {showText && (
-                  <ArtistTextBox onClick={handleClick}>
-                    {artist.text}
-                  </ArtistTextBox>
-                )}
-              </Container>
-            )}
-          </div>
-        )}
-      </Spring>
+      {showArtist && (
+        <Container>
+          <ImageBox
+            key={key}
+            image={image}
+            onClick={handleClick}
+            onMouseEnter={() => setHover(true)}
+            onMouseLeave={() => setHover(false)}
+          >
+            {hover && !showText && <Logo src={logo} />}
+          </ImageBox>
+          <ArtistNameBox onClick={handleClick} name={name} />
+          {showText && <ArtistTextBox onClick={handleClick} text={text} />}
+        </Container>
+      )}
     </>
   );
 };

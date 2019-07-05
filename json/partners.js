@@ -1,96 +1,103 @@
+// Hlavni
+import afp from "../img/partners/hlavni/afp_logo_black.png";
+
+// Finančně
+import aqp from "../img/partners/financne/aqp_logo_inverse_v01.png";
+import maler from "../img/partners/financne/maler_group.png";
+import ministersto_kultury from "../img/partners/financne/ministerstvo_kultury.jpg";
+import mesto_hranice from "../img/partners/financne/mesto_hranice.png";
+import olomoucky_kraj from "../img/partners/financne/olomoucky_kraj.png";
+
+// Partneri
+import astra from "../img/partners/partneri/astra_logo.png";
+import ground_sound from "../img/partners/partneri/Ground-sound.png";
+import mlekarny_valmez from "../img/partners/partneri/Mlekarna-Valmez.png";
+import zeal from "../img/partners/partneri/zeal.png";
+import graficke_papiry from "../img/partners/partneri/graficke-papiry.png";
+import pivovar_zasova from "../img/partners/partneri/Pivovar_zasova.png";
+import stavby_stroje from "../img/partners/partneri/Stavby-stroje-Slavic.png";
+
+// Medialni
+import hranicky_denik from "../img/partners/medialni/hranicky_denik.png";
+import fmzine from "../img/partners/medialni/logo-fmzine-w.png";
+import olomoucka_drbna from "../img/partners/medialni/logo-header-bd.png";
+import proti_sedi from "../img/partners/medialni/protisedi_logo.png";
+
 const partners = {
+  hlavni: [
+    {
+      name: "Air Force Production",
+      image: afp
+    }
+  ],
   financne: [
     {
+      name: "AQ Pumpy",
+      image: aqp
+    },
+    {
       name: "Město Hranice",
-      icon: "financne/mesto_hranice.png"
+      image: mesto_hranice
     },
     {
       name: "Ministerstvo kultury",
-      icon: "financne/ministersto_kultury.png"
+      image: ministersto_kultury
     },
     {
       name: "Olomoucký kraj",
-      icon: "financne/olomoucky_kraj.png"
-    },
-    {
-      name: "Nadace život umělce",
-      icon: "financne/nzu.png"
-    },
-    {
-      name: "Aura",
-      icon: "financne/aura.png"
-    },
-    {
-      name: "Auto Drei",
-      icon: "financne/auto_drei.png"
-    },
-    {
-      name: "Lumen",
-      icon: "financne/lumen.png"
+      image: olomoucky_kraj
     },
     {
       name: "Maléř Group",
-      icon: "financne/maler_group.png"
+      image: maler
     }
   ],
   medialni: [
     {
-      name: "ihranice.cz",
-      icon: "medialni/ihranice_cz.png"
+      name: "Fullmoonzine.cz",
+      image: fmzine
     },
     {
       name: "Olomoucká drbna",
-      icon: "medialni/olomoucka_drbna.png"
+      image: olomoucka_drbna
     },
     {
-      name: "Swine Daily",
-      icon: "medialni/swine_daily.png"
+      name: "Proti Šedi",
+      image: proti_sedi
     },
     {
       name: "Hranický deník",
-      icon: "partneri/hranicky_denik.png"
+      image: hranicky_denik
     }
   ],
   partneri: [
     {
       name: "Astra",
-      icon: "partneri/astra.png"
+      image: astra
     },
     {
-      name: "Epava",
-      icon: "partneri/epava.png"
-    },
-    {
-      name: "Frida taxi Hranice",
-      icon: "partneri/taxi_frida.png"
+      name: "Stavby stroje Tvrdoň",
+      image: stavby_stroje
     },
     {
       name: "GroundSound",
-      icon: "partneri/ground_sound.png"
-    },
-    {
-      name: "Lázeňská káva",
-      icon: "partneri/kava_white.png"
-    },
-    {
-      name: "Metro Chill Out Club",
-      icon: "partneri/Metro_transp_white.png"
+      image: ground_sound
     },
     {
       name: "Pivovar Zašová",
-      icon: "partneri/pivovar_zasova_white.png"
+      image: pivovar_zasova
     },
     {
       name: "Mlékárna Valašské Meziříčí",
-      icon: "partneri/mlekarny_valmez_white.png"
+      image: mlekarny_valmez
     },
     {
-      name: "Vault 42",
-      icon: "partneri/Vault42_logotyp_white.png"
+      name: "Grafické papíry",
+      image: graficke_papiry
     },
     {
       name: "Zeal",
-      icon: "partneri/zeal_white.png"
+      image: zeal
     }
   ]
 };

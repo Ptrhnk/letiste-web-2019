@@ -14,7 +14,7 @@ import rightSide from "../img/grafika/right-side.png";
 
 const Relative = styled.div`
   position: relative;
-  height: 100vh;
+  /* height: 100vh; */
   transform: translateZ(0);
 `;
 
@@ -70,22 +70,27 @@ const Symbols = styled.div`
 `;
 
 const Home = () => {
+  const [showMenu, setShowMenu] = useState(false);
   return (
     <>
       <Relative>
-        <Menu />
         <SocialPanel />
-        <TripButton
-          href={
-            "https://goout.net/cs/festivaly/letiste-karneval-2019/cwyxd/+jxgql/"
-          }
-          name={"LET 19"}
-        />
+
         <Letters />
         <Symbols />
-        <LogoLetiste />
+        {!showMenu && (
+          <>
+            <LogoLetiste />
+            <TripButton
+              href={
+                "https://goout.net/cs/festivaly/letiste-karneval-2019/cwyxd/+jxgql/"
+              }
+              name={"LET 19"}
+            />
+          </>
+        )}
+        <Menu onHamburgerClick={() => setShowMenu(!showMenu)} />
       </Relative>
-      {/* <DescriptionBox visible={visible} /> */}
     </>
   );
 };

@@ -11,13 +11,22 @@ const Container = styled.div`
   align-items: center;
 `;
 
+const Page = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
 const Karneval = () => {
   return (
     <>
-      <GoHomeButton />
-      <Container>
-        <DescriptionBox visible={true} />
-      </Container>
+      <Page>
+        <GoHomeButton />
+        <Container>
+          <DescriptionBox />
+        </Container>
+      </Page>
     </>
   );
 };

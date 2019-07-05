@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
-import { useTransition, animated, config, useSpring } from "react-spring";
-
 import { globalBorder } from "../constants";
 
 const description =
@@ -35,14 +33,14 @@ const descriptionArr = [
   }
 ];
 
-const Box = styled(animated.div)`
+const Box = styled.p`
   padding: 1rem;
   /* margin: 1rem; */
-  width: 20rem;
+  width: 26rem;
 
   background-color: rgba(255, 255, 255, 1);
   border: ${globalBorder};
-  font-size: 0.8rem;
+  font-size: 1rem;
   border-radius: 1rem;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 
@@ -51,13 +49,18 @@ const Box = styled(animated.div)`
   align-items: center;
   text-align: center;
   white-space: pre-wrap;
+
+  ::first-letter {
+    font-weight: bold;
+    color: red;
+    initial-letter: 2;
+  }
 `;
 
 const Container = styled.div`
   position: absolute;
   left: 50%;
   top: 50%;
-  height: 10rem;
   transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
@@ -70,49 +73,12 @@ const Container = styled.div`
   }
 `;
 
-const DescriptionBox = ({ visible, animated }) => {
-  const [index, set] = useState(4);
-  const transitions = useTransition(descriptionArr[index], item => item.id, {
-    from: {
-      opacity: 0.2,
-      transform: "rotateY(180deg)"
-    },
-    enter: {
-      opacity: 1,
-      transform: "rotateY(0deg)"
-    },
-    leave: {
-      opacity: 0.2,
-      transform: "rotateY(-180deg)",
-      visibility: "hidden"
-    },
-    config: { tension: 450, friction: 30, mass: 3 }
-  });
-  const opacityAnimation = useSpring({ opacity: visible ? 1 : 0 });
-
-  useEffect(
-    () => void setInterval(() => set(state => (state + 1) % 5), 3000),
-    []
-  );
-
+const DescriptionBox = () => {
   return (
     <>
-      {animated ? (
-        <animated.div style={{ ...opacityAnimation }}>
-          {visible &&
-            transitions.map(({ item, props, key }) => (
-              <Container key={key}>
-                <Box key={key} style={{ ...props }}>
-                  {item.text}
-                </Box>
-              </Container>
-            ))}
-        </animated.div>
-      ) : (
-        <Container>
-          <Box>{description}</Box>
-        </Container>
-      )}
+      <Container>
+        <Box>{description}</Box>
+      </Container>
     </>
   );
 };

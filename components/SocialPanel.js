@@ -15,15 +15,15 @@ const initOpacity = keyframes`
 const Socials = styled.div`
   position: absolute;
   top: 0;
-  right: 0;
-  border-radius: 0 0 0 0.7rem;
+  left: 0;
+  border-radius: 0 0 0.7rem 0;
 
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 
-  animation: ${initOpacity} 0.6s ease-in-out;
+  /* animation: ${initOpacity} 0.6s ease-in-out; */
   animation-fill-mode: backwards;
   animation-delay: 7.6s;
 
@@ -31,9 +31,7 @@ const Socials = styled.div`
   z-index: 10000;
 
   @media (max-width: 700px) {
-    right: auto;
-    /* bottom: 0; */
-    right: 0;
+    left: 0;
     flex-direction: row;
   }
 `;

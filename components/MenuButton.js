@@ -1,12 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
-// import { Spring, config } from "react-spring/renderprops.cjs";
-import { animated, useSpring, config } from "react-spring";
 
-import layerOne from "../img/grafika/background.png";
 import { globalBlack, globalBorder } from "../constants";
 
-const Button = styled(animated.div)`
+const Button = styled.div`
   margin: 0.4rem;
   padding: 0.6rem 0.9rem;
   color: ${globalBlack};

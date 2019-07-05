@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Trail } from "react-spring/renderprops.cjs";
 
@@ -50,9 +50,9 @@ const ArtistContainer = ({ artists }) => {
           reverse={false}
           items={artists}
           keys={item => item.id}
-          from={{ transform: "translate3d(0px,-150px,0)" }}
-          to={{ transform: "translate3d(0,0px,0)" }}
-          config={{ tension: 260, friction: 16, mass: 1, delay: 400 }}
+          from={{ transform: "translate3d(0px,-150px,0)", opacity: 0 }}
+          to={{ transform: "translate3d(0,0px,0)", opacity: 1 }}
+          config={{ tension: 260, friction: 20, mass: 1, delay: 400 }}
         >
           {item => props => (
             <div style={props}>

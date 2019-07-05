@@ -1,18 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import { Spring } from "react-spring/renderprops.cjs";
 
-import logo from "../img/grafika/logo.png";
-import { globalBorder } from "../constants";
-
-const Svg = styled.svg`
-  display: none;
-`;
+import { globalBorder, globalBlack } from "../constants";
 
 const Container = styled.div`
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
 
   margin: 3rem;
@@ -20,52 +14,39 @@ const Container = styled.div`
 `;
 
 const ImageBox = styled.div`
-  width: 20rem;
-  height: 16rem;
-
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  width: 26rem;
+  height: 14rem;
 
   background-image: ${({ image }) => (image ? `url(${image})` : "none")};
-  filter: grayscale();
-  background-size: cover;
+  background-size: contain;
   background-position: center;
-  border: ${globalBorder};
-  margin-bottom: 2rem;
-  color: white;
-  cursor: pointer;
+  background-repeat: no-repeat;
 `;
 
 const PartnerNameBox = styled.div`
   padding: 1rem 1rem;
-  /* width: 100%; */
-  /* width: 20rem; */
+  margin-top: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
 
   border: ${globalBorder};
+  color: ${globalBlack};
   background-color: white;
-  color: black;
   text-transform: uppercase;
-  cursor: pointer;
   white-space: pre-wrap;
 
   transition: all 0.5s ease;
-
-  :hover {
-    background-color: black;
-    color: white;
-  }
 `;
 
 const PartnerBox = ({ partner }, key) => {
+  const { name, image } = partner;
+
   return (
     <>
       <Container key={key}>
-        {/* <ImageBox key={key} image={partner.image} /> */}
-        <PartnerNameBox>{partner.name}</PartnerNameBox>
+        {image && <ImageBox image={image} />}
+        <PartnerNameBox>{name}</PartnerNameBox>
       </Container>
     </>
   );

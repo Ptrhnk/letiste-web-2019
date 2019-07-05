@@ -41,7 +41,7 @@ const Button = styled(animated.a)`
 
   animation: ${initScale} 1s ease-in-out;
   animation-fill-mode: backwards;
-  animation-delay: 7s;
+  animation-delay: 1s;
 
   transition: all 0.5s ease;
 

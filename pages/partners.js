@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import styled from "styled-components";
 
 import PartnersContainer from "../components/PartnersContainer";
@@ -8,26 +7,22 @@ import GoHomeButton from "../components/GoHomeButton";
 import partners from "../json/partners";
 
 const Page = styled.div`
-  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 `;
 
 const Partners = () => {
+  const { hlavni, medialni, financne, partneri } = partners;
+
   return (
     <>
       <Page>
         <GoHomeButton />
-        <PartnersContainer
-          partners={partners.medialni}
-          name={"Mediální partneři"}
-        />
-        <PartnersContainer
-          partners={partners.financne}
-          name={"Finančně podpořili"}
-        />
-        <PartnersContainer partners={partners.partneri} name={"Partneři"} />
+        <PartnersContainer partners={hlavni} name={"Hlavní partner"} />
+        <PartnersContainer partners={financne} name={"Finančně podpořili"} />
+        <PartnersContainer partners={partneri} name={"Partneři"} />
+        <PartnersContainer partners={medialni} name={"Mediální partneři"} />
       </Page>
     </>
   );

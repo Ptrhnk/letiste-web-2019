@@ -6,16 +6,14 @@ import Zorba_ze_ja_Buddha from "../img/artists/Zorba_ze_ja_Buddha.png";
 import Used_To_Be_a_Sofa from "../img/artists/Used_To_Be_a_Sofa.png";
 import Viktor_Lesque from "../img/artists/Viktor_Lesque.png";
 import Nvmeri from "../img/artists/Nvmeri.png";
-import mono_chrome from "../img/artists/mono-chrome.png";
 
 // -------------------- ARTISTS --------------------
 const artists = [
   {
     id: 1,
-    code: "Nylon_Jail",
-    name: "Nylon Jail",
+    name: "Prago Union",
     text:
-      "Olomoučtí Nylon Jail se po tříleté pauze a personální obměně vrátili na koncertní pódia. Syrovější, vyzrálejší. 10. května otevřeli v Olomouci svým vystoupením 22. ročník festivalu Divadelní flora na parkánu zdejšího Konviktu. V létě pak budou pokračovat sérií vystoupení na tuzemských festivalech (např. Metronome Praha, Boskovice, Pelhřimovy, Banát). Na podzim 2018 chtějí vydat slíbené album Irreversible Changes a podpořit ho dalšími koncerty.",
+      "Nehrajou je rádia a na trpitele to neuhrají – dramaturgové je nebojkotují, tyhle dva světy se prostě jen naprosto míjí. Jejich muzika tam nepatří, má tak daleko k “populární”, jak to jen jde. Nemají hit a pozor: nemají ani pořádný skandál. Jsou dřevní, jsou zemitý, páchnou člověčinou a fanoušky maj skalní. Na těch Prago Union musí něco bejt. Přijďte se na ně podívat.",
     image: Nylon_Jail,
     links: [
       "https://open.spotify.com/artist/6A7jlu6UhyWbGkFB0fblZF?si=AIkB5QyhQfC3et8d-TtY4Q",
@@ -26,10 +24,9 @@ const artists = [
   },
   {
     id: 2,
-    code: "Gerald_Clark",
-    name: "Gerald Clark",
+    name: "Kittchen",
     text:
-      "Gerald Clark je jeden z nejuznávanějších jihoafrických muzikantů, jež je proslaven kombinací svých vlastních skladeb s vyprávěním humorných příběhů o jejich vzniku. Není to jen jeden z dalších zpěváků / skladatelů nebo bluesových hudebníků. Svým originálním projevem, neskutečnou vášní k hudbě a smyslem pro humor nikdy nezklame. Je to dobrodruh – to je jeho inspirace. Cestoval a hrál ve více než 14 zemích a dobrodružství hledá na každém kroku.",
+      "Kuchyňský industriál mixnutý s postapo folkem. To je tajemný hrající anonym KITTCHEN, který vznikl v roce 2011 jako jednočlenný anonymní hudební projekt. Se svou druhou upečenou deskou RADIO vyhrál v roce 2013 Ceny Anděl. Na Letiště Karnevalu uvaří v pátek večer před půlnocí.",
     image: Gerald_Clark,
     website: "http://www.thegeraldclark.com/",
     links: [
@@ -41,10 +38,9 @@ const artists = [
   },
   {
     id: 3,
-    code: "Nina_Rosa",
-    name: "Nina Rosa",
+    name: "Aid Kid",
     text:
-      "Pražské trio založené zpěvačkou a houslistkou Ninou Marinovou. Po kratších i delších cestách se Nina vrátila do Prahy, kde spolu s muzikanty, které obdivovala, založila kapelu a pojmenovala ji po svém největším fanouškovi – svojí babičce. Přes krátkou existenci má kapela již za sebou koncerty a festivaly v Čechách, na Slovensku a v Rakousku, živé vysílání Českého rozhlasu v rámci Pražského jara, vydání dvou singlů a nominaci na Objev roku v Radio_Head Awards. Láska k hudbě a cestování je citelná v písních, které jsou rozmanité stylem i jazykem, v němž jsou zpívané. Žánrově je kapela ovlivněna jazzem, swingem, reggae a folkem.",
+      "Ondra Mikula aka Aid Kid staví své živé sety na improvizaci vlastních tracků, na kombinaci emotivních beatů a gradujících struktur. Hraje živě, vystupuje jako DJ, věnuje se scénické hudbě, skládá spoty, znělky, hudbu pro videomapping a interaktivní instalace. ",
     image: Nina_Rosa,
     website: "https://www.ninarosa.cz/",
     links: [
@@ -56,10 +52,9 @@ const artists = [
   },
   {
     id: 4,
-    code: "Zorba_ze_ja_Buddha",
-    name: "Zorba že ja Buddha",
+    name: "Miltz",
     text:
-      "Zorba že ja Buddha je nový hudební projekt, jehož základem je spojení dvou individualit Ashley Sarah Abrman & Ondřeje Hausera. Ashley (známá např. jako frontwoman z formace The High Corporation) je dcerou pastora, která vyrostla po kostelech, není tedy překvapivé, že si do jejího charismatickém projevu našli cestu gospelové licky & témata. Ondřej, baskytarista & producent, který působí již několik let v Praze může být znám publiku z formací jako Prago Union Live Band, Kapela Davida Krause anebo z projektu Ochepovsky. Jejich spojením pak vzniká originální repertoár hybridní fúze elektroniky s hudbou akustickou v autentický nadžánrový průlet, který je zaznamenám na debutovém EP 'Rosedout Lambada’, jenž vyšlo pod značkou slovenského labelu Gergaz, který již úspěšně vydal desky např. Fallgrapu anebo Jimmy Pé. Kapela má na svém kontě krom debutového EP taktéž 4 live video sessions se záznamem několika skladeb v živém provedeni. V rámci své koncertní aktivity už stihl tento širokospektrální kolektiv předskakovat také např. The Submotion Orchestra v Divadle Archa.",
+      "Členka brněnského ÉTERu s přesahem i za hranici své domoviny. Tato čarodějnice svou hudbou a rituály zpomaluje tok času. Uleťte si s námi do jiného prostoru. Jane zahraje nad legendárním nedělním ránem. Na samotném vrcholu letošního karnevalu.",
     image: Zorba_ze_ja_Buddha,
     links: [
       "https://open.spotify.com/artist/6tOFa1uX4hiFtZrF8Ykofh?si=MCEcQ-exSMq1bgVvbK1qEg",
@@ -70,10 +65,9 @@ const artists = [
   },
   {
     id: 5,
-    code: "Used_To_Be_a_Sofa",
-    name: "Used To Be a Sofa",
+    name: "Prozac",
     text:
-      "Trio exgaučových posedávačů ve složení Sisa Feherová, Vladko Mikláš a Lukáš Mutňanský spojují svoje hlasy, zvuky, skills a myšlenky do lehkého společensko-kriticko-tragického postoje zaobaleného do alternativního popu cestujícího z minulosti do budoucnosti.",
+      "Kdo zná Brno, zná i Bastl Instruments. A právě z tohoto kolektivu k nám zavítá modulárový mág PROZAC a představí znovuobjevený styl EBM s prvky chytlavého acidu. Na závěr akce bude liveshow na modulární syntezátor! Odpálí tím nedělní ÉTER afterparty ve stanu.",
     image: Used_To_Be_a_Sofa,
     links: [
       "https://www.facebook.com/usedtobeasofa/",
@@ -82,10 +76,9 @@ const artists = [
   },
   {
     id: 6,
-    code: "Viktor_Lesque",
-    name: "Viktor Lesque",
+    name: "Frederico DeVittor",
     text:
-      "Kapela je autorským projektem Viktora Kracika (Victor Lesque), který přizval    ke spolupráci další tři muzikanty, Davida Herziga, Daniela Bösenberga a Jakuba Šindlera, ze   kterých se pak stali Victor Lesque & Cosmocolors. Tato čtyřčlenná elektronická formace    kombinuje prvky nu jazzu, space rocku a taneční muziky s estetikou filmové hudby. V březnu 2018 vydala kapela svoji debutovou desku s názvem L.",
+      "Jak říká zpěvačka Sisa Feherová: ”Když Federico hraje, andělíčci zpívají.”",
     image: Viktor_Lesque,
     links: [
       "https://open.spotify.com/artist/4yQpQQndwMOWt6pXvXzATg?si=e5SpR4v5T8OPshUpUuba8w",
@@ -95,10 +88,9 @@ const artists = [
   },
   {
     id: 7,
-    code: "Nvmeri",
-    name: "Nvmeri",
+    name: "DJ Jeffology",
     text:
-      'Math / progrockové trio NVMERI jsou Pišta Královič, Palo Javorník a Miro Tuchyňa. Hudba NVMERI je plná matematických beatů a chytlavých melodií inspirovaných skandinávským indie popem. Spojením komplexních a přitom lehko stravitelných aranží, šumivých synťákových ploch, psychedelických sólových úletů nebo Pištova výše položeného hlasu, se zařaďují k pozoruhodným zjevům na hudební scéně. Jejich první album "From The Dust", který vydali ještě jako The Uniques, si vysloužilp hodně pozornosti a také cenu za Nejlepší alternativní album podle kritiků Radio_Head Awards. Minulý rok vydali svůj třetí album "I don\'t think so", s kterým opět získali Cenu kritiků RHA za album roku 2017. Z tohoto alba pocházejí i úspěšné singly Art Of The Trial, Blue Church, Dynamite nebo Short Of Oxygen.',
+      "Diagnostikovaný sběratel vinylů a hledač na poli hudebním nehledě na žánry. Člen kapely Champion Sound která stála po boku Prago Union celých šest let přičemž stihla doprovázet většinu domácí hip hopové scény a také umělce ze zahraníčí.",
     image: Nvmeri,
     website: "https://nvmeri.com/",
     links: [
@@ -109,18 +101,6 @@ const artists = [
       "http://music.nvmeri.com/",
       "https://www.deezer.com/en/artist/4799459",
       "https://itunes.apple.com/sk/album/i-dont-think-so/id1262178463?l=sk&amp;ls=1&amp;app=music&amp;at=11lEW&amp;ct=kypx9l"
-    ]
-  },
-  {
-    id: 8,
-    code: "mono-chrome",
-    name: "mono/chrome",
-    text:
-      "Důsledně anonymní audiovizuální projekt mono/chrome se věnuje precizní synchronizaci obrazu a zvuku, pro kterou používá především analogové nástroje. Po několika kolaboracích a předchozích projektech se vydal na sólovou dráhu a připravuje svou debutovou desku, která právě vzniká v německém pohraničí. Hlavní důraz je kladený na generování zvuku, vytváření vlastních nástrojů či efektů, sbírání nánosů z okolního světa a vrstvení těchto komponentů do jednotného celku.",
-    image: mono_chrome,
-    links: [
-      "https://www.youtube.com/watch?v=GFQ79S3hr5E",
-      "https://soundcloud.com/mnchrme"
     ]
   }
 ];

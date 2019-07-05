@@ -27,7 +27,7 @@ const Container = styled(animated.div)`
   background-image: url(${background});
   background-size: cover;
   background-position: center;
-  transform: scale(1.03);
+  /* transform: scale(1.03); */
 
   z-index: 0;
 
