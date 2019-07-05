@@ -9,23 +9,28 @@ const Container = styled.div`
   align-items: center;
   flex-direction: column;
 
-  margin: 3rem;
+  margin: 1rem 2rem 3rem 2rem;
   z-index: 1000;
 `;
 
 const ImageBox = styled.div`
-  width: 26rem;
-  height: 14rem;
+  width: 20rem;
+  height: 12rem;
 
   background-image: ${({ image }) => (image ? `url(${image})` : "none")};
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+
+  @media (max-width: 900px) {
+    width: 14rem;
+    height: 8rem;
+  }
 `;
 
 const PartnerNameBox = styled.div`
   padding: 1rem 1rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;

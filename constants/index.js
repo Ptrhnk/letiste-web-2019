@@ -1,5 +1,5 @@
 export const globalShadow = "2px 2px 2px rgba(0, 0, 0, 0.25)";
-export const globalBorder = "5px solid rgba(44, 42, 36)";
+export const globalBorder = "5px solid rgb(44, 42, 36)";
 
 export const globalBlack = "rgb(44, 42, 36)";
 export const globalGreen = "rgb(35, 255, 159)";

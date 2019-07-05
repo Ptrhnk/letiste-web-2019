@@ -5,14 +5,11 @@ import { Trail } from "react-spring/renderprops.cjs";
 import ArtistBox from "./ArtistBox";
 
 const Container = styled.div`
+  width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
-
-  height: 80%;
-  width: 80%;
 `;
 
 const ArtistContainer = ({ artists }) => {
