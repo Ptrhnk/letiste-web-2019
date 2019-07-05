@@ -12,11 +12,11 @@ const Container = styled.div`
   flex-wrap: wrap;
 
   height: 80%;
-  width: 100%;
+  width: 80%;
 `;
 
 const ArtistContainer = ({ artists }) => {
-  const [shown, setShown] = useState(0);
+  const [shown, setShown] = useState(-1);
   const [showAll, setShowAll] = useState(true);
 
   const isShown = id => {
@@ -38,7 +38,6 @@ const ArtistContainer = ({ artists }) => {
   };
 
   const handleClick = artistId => {
-    console.log(artistId);
     setShowAll(!showAll);
     setShown(artistId);
   };

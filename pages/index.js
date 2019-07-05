@@ -39,9 +39,9 @@ const Letters = styled.div`
   background-position: 50% 50%;
   z-index: 2000;
 
-  animation: ${initOpacity} 1s ease-in-out;
+  animation: ${initOpacity} 1.4s ease-in-out;
   animation-fill-mode: backwards;
-  animation-delay: 4.5s;
+  animation-delay: 4s;
 
   @media (max-width: 700px) {
     background-size: auto 70%;
@@ -60,9 +60,9 @@ const Symbols = styled.div`
   background-position: 50% 50%;
   z-index: 3000;
 
-  animation: ${initOpacity} 1.3s ease-in-out;
+  animation: ${initOpacity} 1.5s ease-in-out;
   animation-fill-mode: backwards;
-  animation-delay: 5.5s;
+  animation-delay: 5s;
 
   @media (max-width: 700px) {
     background-size: auto 70%;
@@ -75,7 +75,6 @@ const Home = () => {
     <>
       <Relative>
         <SocialPanel />
-
         <Letters />
         <Symbols />
         {!showMenu && (

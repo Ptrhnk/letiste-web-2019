@@ -30,7 +30,8 @@ const Container = styled.div`
   align-items: flex-start;
   flex-direction: column;
 
-  margin: 3rem;
+  margin: 2rem 2rem 0 0;
+  margin-bottom: 1rem;
 `;
 
 const ImageBox = styled.div`

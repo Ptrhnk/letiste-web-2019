@@ -41,7 +41,7 @@ const Polyline1 = styled.polyline`
   /* stroke-dashoffset: 0; */
 
   animation: ${movePoly1} 1.6s ease-in-out;
-  animation-delay: 1.3s;
+  animation-delay: 1s;
   animation-fill-mode: backwards;
 `;
 
@@ -64,7 +64,7 @@ const Polyline2 = styled.polyline`
   /* stroke-dashoffset: 220; */
 
   animation: ${movePoly2} 1.6s ease-in-out;
-  animation-delay: 1.8s;
+  animation-delay: 1.5s;
   animation-fill-mode: backwards;
 `;
 
@@ -85,8 +85,8 @@ const Polyline3 = styled.polyline`
   stroke-dasharray: 400;
   /* stroke-dashoffset: 400; */
 
-  animation: ${movePoly3} 2s ease-in-out;
-  animation-delay: 2.4s;
+  animation: ${movePoly3} 1.8s ease-in-out;
+  animation-delay: 2.1s;
   animation-fill-mode: backwards;
 `;
 
@@ -107,8 +107,8 @@ const Line = styled.line`
   stroke-dasharray: 200;
   /* stroke-dashoffset: -200; */
 
-  animation: ${moveLine} 2.8s ease-in-out;
-  animation-delay: 2.8s;
+  animation: ${moveLine} 2.1s ease-in-out;
+  animation-delay: 2.7s;
   animation-fill-mode: backwards;
 `;
 

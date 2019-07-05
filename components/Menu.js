@@ -44,16 +44,16 @@ const Menu = ({ onHamburgerClick }) => {
   return (
     <>
       <Page>
-        <HamburgerButton onClick={() => handleHamburgerClick()} />
+        <HamburgerButton onClick={() => handleHamburgerClick()} active={open} />
         {open && (
           <Panel>
             <Trail
               reverse={false}
               items={menuItems}
               keys={item => item.id}
-              from={{ transform: "translate3d(-100px,0,0)", opacity: 0 }}
+              from={{ transform: "translate3d(-50px,0,0)", opacity: 0 }}
               to={{ transform: "translate3d(0,0px,0)", opacity: 1 }}
-              config={{ tension: 260, friction: 14, mass: 1 }}
+              config={{ tension: 260, friction: 26, mass: 2 }}
             >
               {item => props => (
                 <div style={props}>

@@ -1,45 +1,23 @@
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
+import React from "react";
 import styled from "styled-components";
 
 import ArtistContainer from "../components/ArtistContainer";
+import GoHomeButton from "../components/GoHomeButton";
 
 import artists from "../json/artists";
 
 const Page = styled.div`
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-`;
-
-const StyledLink = styled.a`
-  position: sticky;
-  top: 0;
-  padding: 1rem;
-  border: 3px solid black;
-  background-color: black;
-  color: white;
-  cursor: pointer;
-  z-index: 5000;
-  border-radius: 0 0 1rem 0;
-
-  transition: all 0.7s ease;
-
-  :hover {
-    /* background-color: rgba(255, 255, 255, 0); */
-    background-color: white;
-    color: black;
-  }
+  align-items: center;
 `;
 
 const Artists = () => {
   return (
     <>
       <Page>
-        <Link href="/">
-          <StyledLink>go home</StyledLink>
-        </Link>
+        <GoHomeButton />
         <ArtistContainer artists={artists} />
       </Page>
     </>

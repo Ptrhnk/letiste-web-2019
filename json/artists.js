@@ -10,7 +10,7 @@ import Nvmeri from "../img/artists/Nvmeri.png";
 // -------------------- ARTISTS --------------------
 const artists = [
   {
-    id: 1,
+    id: 7,
     name: "Prago Union",
     text:
       "Nehrajou je rádia a na trpitele to neuhrají – dramaturgové je nebojkotují, tyhle dva světy se prostě jen naprosto míjí. Jejich muzika tam nepatří, má tak daleko k “populární”, jak to jen jde. Nemají hit a pozor: nemají ani pořádný skandál. Jsou dřevní, jsou zemitý, páchnou člověčinou a fanoušky maj skalní. Na těch Prago Union musí něco bejt. Přijďte se na ně podívat.",
@@ -23,7 +23,7 @@ const artists = [
     ]
   },
   {
-    id: 2,
+    id: 1,
     name: "Kittchen",
     text:
       "Kuchyňský industriál mixnutý s postapo folkem. To je tajemný hrající anonym KITTCHEN, který vznikl v roce 2011 jako jednočlenný anonymní hudební projekt. Se svou druhou upečenou deskou RADIO vyhrál v roce 2013 Ceny Anděl. Na Letiště Karnevalu uvaří v pátek večer před půlnocí.",
@@ -37,7 +37,7 @@ const artists = [
     ]
   },
   {
-    id: 3,
+    id: 2,
     name: "Aid Kid",
     text:
       "Ondra Mikula aka Aid Kid staví své živé sety na improvizaci vlastních tracků, na kombinaci emotivních beatů a gradujících struktur. Hraje živě, vystupuje jako DJ, věnuje se scénické hudbě, skládá spoty, znělky, hudbu pro videomapping a interaktivní instalace. ",
@@ -51,7 +51,7 @@ const artists = [
     ]
   },
   {
-    id: 4,
+    id: 3,
     name: "Miltz",
     text:
       "Členka brněnského ÉTERu s přesahem i za hranici své domoviny. Tato čarodějnice svou hudbou a rituály zpomaluje tok času. Uleťte si s námi do jiného prostoru. Jane zahraje nad legendárním nedělním ránem. Na samotném vrcholu letošního karnevalu.",
@@ -64,7 +64,7 @@ const artists = [
     ]
   },
   {
-    id: 5,
+    id: 4,
     name: "Prozac",
     text:
       "Kdo zná Brno, zná i Bastl Instruments. A právě z tohoto kolektivu k nám zavítá modulárový mág PROZAC a představí znovuobjevený styl EBM s prvky chytlavého acidu. Na závěr akce bude liveshow na modulární syntezátor! Odpálí tím nedělní ÉTER afterparty ve stanu.",
@@ -75,7 +75,7 @@ const artists = [
     ]
   },
   {
-    id: 6,
+    id: 5,
     name: "Frederico DeVittor",
     text:
       "Jak říká zpěvačka Sisa Feherová: ”Když Federico hraje, andělíčci zpívají.”",
@@ -87,7 +87,7 @@ const artists = [
     ]
   },
   {
-    id: 7,
+    id: 6,
     name: "DJ Jeffology",
     text:
       "Diagnostikovaný sběratel vinylů a hledač na poli hudebním nehledě na žánry. Člen kapely Champion Sound která stála po boku Prago Union celých šest let přičemž stihla doprovázet většinu domácí hip hopové scény a také umělce ze zahraníčí.",

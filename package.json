@@ -10,6 +10,7 @@
     "next": "^8.1.0",
     "next-images": "^1.1.1",
     "react": "^16.8.6",
+    "react-animated-burgers": "^1.2.7",
     "react-dom": "^16.8.6",
     "react-spring": "^8.0.20",
     "styled-components": "^4.2.0"
