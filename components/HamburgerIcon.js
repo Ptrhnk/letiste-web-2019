@@ -9,10 +9,16 @@ const StyledHamburger = styled(HamburgerElastic)`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 5rem;
-  width: 5rem;
+  height: 4rem;
+  width: 4.8rem;
+  border-radius: 1rem;
 
   transition: all 0.5s ease;
+
+  @media (max-width: 700px) {
+    height: 3.4rem;
+    width: 4.2rem;
+  }
 `;
 
 const HamburgerIcon = ({ active, barColor, buttonColor }) => {
@@ -21,7 +27,7 @@ const HamburgerIcon = ({ active, barColor, buttonColor }) => {
       isActive={active}
       barColor={barColor ? barColor : "white"}
       buttonColor={buttonColor ? buttonColor : "black"}
-      buttonWidth={40}
+      buttonWidth={36}
     />
   );
 };

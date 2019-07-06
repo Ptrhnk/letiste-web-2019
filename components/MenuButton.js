@@ -4,20 +4,18 @@ import styled from "styled-components";
 import { globalBlack, globalBorder } from "../constants";
 
 const Button = styled.div`
-  margin: 0.4rem;
-  padding: 0.6rem 0.9rem;
+  margin: 0.5rem;
+  padding: 0.6rem 1rem;
   color: ${globalBlack};
   border: ${globalBorder};
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
   font-size: 1rem;
-  font-weight: 400;
   outline: none;
-  box-shadow: none;
   background-color: white;
   background-size: 3000% 3000%;
   background-position: center;
   cursor: pointer;
-  box-shadow: 0rem 0rem 0.6rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.3);
 
   transition: all 0.5s ease;
 

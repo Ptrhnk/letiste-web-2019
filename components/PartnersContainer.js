@@ -22,6 +22,8 @@ const GroupContainer = styled.div`
   align-items: center;
   flex-wrap: wrap;
   flex-direction: row;
+  /* background-color: blue; */
+  z-index: 20000;
 `;
 
 const GroupNameDiv = styled.div`
@@ -30,7 +32,9 @@ const GroupNameDiv = styled.div`
   border: ${globalBorder};
   z-index: 2000;
   padding: 1.2rem;
-  margin: 2rem 0;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  padding: 0.7rem;
 `;
 
 const PartnersContainer = ({ partners, name }) => {

@@ -27,13 +27,17 @@ const Container = styled(animated.div)`
   background-image: url(${background});
   background-size: cover;
   background-position: center;
-  /* transform: scale(1.03); */
+  transform: scale(1.03);
 
   z-index: 0;
 
   animation: ${initOpacity} 1.6s ease-in-out;
   animation-fill-mode: backwards;
   animation-delay: 0.2s;
+
+  @media (max-width: 700) {
+    /* background-image: url(${background}); */
+  }
 
   /* filter: url(#tripFilter); */
   /* filter: url(#colorFilter); */

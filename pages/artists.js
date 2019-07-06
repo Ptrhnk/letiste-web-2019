@@ -7,7 +7,6 @@ import GoHomeButton from "../components/GoHomeButton";
 import artists from "../json/artists";
 
 const Page = styled.div`
-  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;

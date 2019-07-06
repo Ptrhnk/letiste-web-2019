@@ -2,9 +2,9 @@
 import afp from "../img/partners/hlavni/afp_logo_black.png";
 
 // Finančně
-import aqp from "../img/partners/financne/aqp_logo_inverse_v01.png";
+import aqp from "../img/partners/financne/aqp_logo_inverse_v01-bl.png";
 import maler from "../img/partners/financne/maler_group.png";
-import ministersto_kultury from "../img/partners/financne/ministerstvo_kultury.jpg";
+import ministersto_kultury from "../img/partners/financne/ministerstvo_kultury.png";
 import mesto_hranice from "../img/partners/financne/mesto_hranice.png";
 import olomoucky_kraj from "../img/partners/financne/olomoucky_kraj.png";
 
@@ -32,10 +32,6 @@ const partners = {
   ],
   financne: [
     {
-      name: "AQ Pumpy",
-      image: aqp
-    },
-    {
       name: "Město Hranice",
       image: mesto_hranice
     },
@@ -46,6 +42,10 @@ const partners = {
     {
       name: "Olomoucký kraj",
       image: olomoucky_kraj
+    },
+    {
+      name: "AQ Pumpy",
+      image: aqp
     },
     {
       name: "Maléř Group",

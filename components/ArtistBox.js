@@ -6,6 +6,7 @@ import logo from "../img/grafika/logo.png";
 import { globalBorder, globalBlack } from "../constants";
 import ArtistTextBox from "./ArtistTextBox";
 import ArtistNameBox from "./ArtistNameBox";
+import ArtistSocialPanel from "./ArtistSocialPanel";
 
 const showLogo = keyframes`
   from {
@@ -52,9 +53,16 @@ const ImageBox = styled.div`
   cursor: pointer;
 `;
 
+const Row = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: space-around;
+  flex-direction: row;
+`;
+
 const ArtistBox = ({ artist, handleClick, showText, showArtist }, key) => {
   const [hover, setHover] = useState(false);
-  const { name, image, text } = artist;
+  const { name, image, text, links, website } = artist;
 
   return (
     <>
@@ -69,7 +77,10 @@ const ArtistBox = ({ artist, handleClick, showText, showArtist }, key) => {
           >
             {hover && !showText && <Logo src={logo} />}
           </ImageBox>
+          {/* <Row> */}
           <ArtistNameBox onClick={handleClick} name={name} />
+          <ArtistSocialPanel links={links} website={website} />
+          {/* </Row> */}
           {showText && <ArtistTextBox onClick={handleClick} text={text} />}
         </Container>
       )}

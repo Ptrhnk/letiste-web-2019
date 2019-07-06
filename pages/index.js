@@ -44,7 +44,7 @@ const Letters = styled.div`
   animation-delay: 4s;
 
   @media (max-width: 700px) {
-    background-size: auto 70%;
+    background-size: auto 68%;
   }
 `;
 
@@ -65,7 +65,7 @@ const Symbols = styled.div`
   animation-delay: 5s;
 
   @media (max-width: 700px) {
-    background-size: auto 70%;
+    background-size: auto 68%;
   }
 `;
 

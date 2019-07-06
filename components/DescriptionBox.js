@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
+import { useSpring, animated, config } from "react-spring";
 
 import { globalBorder } from "../constants";
 
@@ -33,12 +34,15 @@ const descriptionArr = [
   }
 ];
 
-const Box = styled.p`
+const Box = styled(animated.p)`
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   padding: 1rem;
-  /* margin: 1rem; */
   width: 26rem;
 
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 0.85);
   border: ${globalBorder};
   font-size: 1rem;
   border-radius: 1rem;
@@ -49,38 +53,23 @@ const Box = styled.p`
   align-items: center;
   text-align: center;
   white-space: pre-wrap;
-
-  ::first-letter {
-    font-weight: bold;
-    color: red;
-    initial-letter: 2;
-  }
-`;
-
-const Container = styled.div`
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  perspective: 50rem;
-  z-index: 10000;
+  z-index: 5000;
 
   @media (max-width: 700px) {
-    bottom: 0;
+    width: 90%;
+    font-size: 0.8rem;
+    margin: 2rem 0;
   }
 `;
 
 const DescriptionBox = () => {
-  return (
-    <>
-      <Container>
-        <Box>{description}</Box>
-      </Container>
-    </>
-  );
+  const animation = useSpring({
+    opacity: 1,
+    transform: "translate(-50%, -50%)",
+    from: { opacity: 0, transform: "translate(-50%, -200%)" },
+    config: { friction: 50, tension: 500, mass: 3 }
+  });
+  return <Box style={animation}>{description}</Box>;
 };
 
 export default DescriptionBox;

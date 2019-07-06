@@ -2,15 +2,28 @@ import React from "react";
 import styled from "styled-components";
 
 import SocialIcon from "./SocialIcon";
+import { globalBlack } from "../constants";
 
 const Button = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
 
-  padding: 0.4rem;
-  margin: 0.4rem;
-  border-radius: 2rem;
+  padding: 0.7rem;
+  margin-top: 0.8rem;
+  background-color: black;
+  border-radius: 0.9rem;
+
+  transition: all 0.3s ease;
+
+  :hover {
+    background-color: ${globalBlack};
+  }
+
+  @media (max-width: 700px) {
+    margin-right: 0.6rem;
+    padding: 0.6rem;
+  }
 `;
 
 const SocialButton = ({ social }) => {

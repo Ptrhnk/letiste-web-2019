@@ -8,7 +8,7 @@ import HamburgerButton from "./HamburgerButton";
 
 const Panel = styled.div`
   position: absolute;
-  top: 28%;
+  top: 26%;
   left: 50%;
   transform: translate(-50%, 0);
 

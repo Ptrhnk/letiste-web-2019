@@ -7,12 +7,12 @@ import instagramIcon from "../img/social_icons/instagram.png";
 import calendarMobil from "../img/social_icons/mobil/calendar-mob.png";
 
 const Image = styled.img`
-  width: 2rem;
-  height: 2rem;
+  width: 1.6rem;
+  height: 1.6rem;
 
   @media (max-width: 700px) {
-    width: 1.6rem;
-    height: 1.6rem;
+    width: 1.3rem;
+    height: 1.3rem;
   }
 `;
 

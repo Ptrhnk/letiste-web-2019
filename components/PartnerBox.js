@@ -14,7 +14,7 @@ const Container = styled.div`
 `;
 
 const ImageBox = styled.div`
-  width: 20rem;
+  width: 16rem;
   height: 12rem;
 
   background-image: ${({ image }) => (image ? `url(${image})` : "none")};
@@ -23,17 +23,18 @@ const ImageBox = styled.div`
   background-repeat: no-repeat;
 
   @media (max-width: 900px) {
-    width: 14rem;
+    width: 9rem;
     height: 8rem;
   }
 `;
 
 const PartnerNameBox = styled.div`
-  padding: 1rem 1rem;
+  padding: 0.8rem 1rem;
   margin-top: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 0.8rem;
 
   border: ${globalBorder};
   color: ${globalBlack};
@@ -42,6 +43,10 @@ const PartnerNameBox = styled.div`
   white-space: pre-wrap;
 
   transition: all 0.5s ease;
+
+  @media (max-width: 700px) {
+    padding: 0.4rem 0.8rem;
+  }
 `;
 
 const PartnerBox = ({ partner }, key) => {
