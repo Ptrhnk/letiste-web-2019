@@ -15,7 +15,7 @@ const Container = styled.div`
 
 const ImageBox = styled.div`
   width: 16rem;
-  height: 12rem;
+  height: 11rem;
 
   background-image: ${({ image }) => (image ? `url(${image})` : "none")};
   background-size: contain;

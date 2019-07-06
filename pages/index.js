@@ -11,6 +11,7 @@ import pismena from "../img/grafika/pismena-karneval.png";
 import symbols from "../img/grafika/symboly.png";
 import corner from "../img/grafika/corner.png";
 import rightSide from "../img/grafika/right-side.png";
+import GlobalStyle from "../layout/GlobalStyle";
 
 const Relative = styled.div`
   position: relative;
@@ -73,6 +74,7 @@ const Home = () => {
   const [showMenu, setShowMenu] = useState(false);
   return (
     <>
+      {/* <GlobalStyle /> */}
       <Relative>
         <SocialPanel />
         <Letters />

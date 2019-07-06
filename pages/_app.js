@@ -1,12 +1,5 @@
 import App, { Container, Head } from "next/app";
 import React from "react";
-import { ThemeProvider } from "styled-components";
-
-const theme = {
-  colors: {
-    primary: "#0070f3"
-  }
-};
 
 export default class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -24,9 +17,7 @@ export default class MyApp extends App {
     return (
       <>
         <Container>
-          <ThemeProvider theme={theme}>
-            <Component {...pageProps} />
-          </ThemeProvider>
+          <Component {...pageProps} />
         </Container>
       </>
     );

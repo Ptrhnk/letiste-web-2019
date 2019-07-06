@@ -12,6 +12,7 @@
     "react": "^16.8.6",
     "react-animated-burgers": "^1.2.7",
     "react-dom": "^16.8.6",
+    "react-modal": "^3.8.2",
     "react-spring": "^8.0.20",
     "styled-components": "^4.2.0"
   },

@@ -7,9 +7,9 @@ import { globalBorder, globalBlack } from "../constants";
 const TextBox = styled(animated.div)`
   border: ${globalBorder};
   background-color: white;
-  width: 30rem;
+  width: 100%;
   padding: 1rem;
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
   cursor: pointer;
 
   transition: background-color 0.5s ease;
@@ -17,6 +17,10 @@ const TextBox = styled(animated.div)`
   :hover {
     background-color: ${globalBlack};
     color: white;
+  }
+
+  @media (max-width: 700px) {
+    /* width: 96%; */
   }
 `;
 

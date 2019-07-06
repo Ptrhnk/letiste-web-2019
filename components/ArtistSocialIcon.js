@@ -9,12 +9,12 @@ import soundcloudIcon from "../img/social_icons/soundcloud-bl.png";
 import websiteIcon from "../img/social_icons/website-bl.png";
 
 const Icon = styled.img`
-  width: 2.6rem;
-  height: 2.6rem;
+  width: 2rem;
+  height: 2rem;
 
   @media (max-width: 700px) {
-    width: 1.3rem;
-    height: 1.3rem;
+    width: 1.9rem;
+    height: 1.9rem;
   }
 `;
 

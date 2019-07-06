@@ -4,7 +4,6 @@ import styled from "styled-components";
 import facebookIcon from "../img/social_icons/facebook3.png";
 import twitterIcon from "../img/social_icons/twitter.png";
 import instagramIcon from "../img/social_icons/instagram.png";
-import calendarMobil from "../img/social_icons/mobil/calendar-mob.png";
 
 const Image = styled.img`
   width: 1.6rem;
@@ -25,8 +24,6 @@ const SocialIcon = ({ social }) => {
         return twitterIcon;
       case "instagram":
         return instagramIcon;
-      case "calendar":
-        return calendarMobil;
     }
   };
 

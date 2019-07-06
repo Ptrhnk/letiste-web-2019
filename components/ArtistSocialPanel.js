@@ -7,12 +7,14 @@ import ArtistSocialButton from "./ArtistSocialButton";
 const Panel = styled.div`
   background-color: white;
   border: ${globalBorder};
-  padding: 0.6rem;
-  margin-top: 2rem;
+  padding: 0.2rem;
+  margin-bottom: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  align-self: flex-end;
+  justify-self: flex-end;
 `;
 
 const ArtistSocialPanel = ({ links, website }) => {

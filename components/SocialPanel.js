@@ -11,6 +11,8 @@ const Socials = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  align-self: flex-end;
+  justify-self: flex-end;
   margin-left: 0.8rem;
   animation-fill-mode: backwards;
   animation-delay: 7.6s;

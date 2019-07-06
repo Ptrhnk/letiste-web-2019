@@ -5,9 +5,10 @@ import { globalBorder, globalBlack } from "../constants";
 
 const NameBox = styled.div`
   padding: 1rem 1rem;
+  margin: 0 1rem 1rem 0;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-self: flex-start;
 
   border: ${globalBorder};
   background-color: white;

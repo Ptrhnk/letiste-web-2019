@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
-import { useSpring, animated } from "react-spring";
 
 import logo from "../img/grafika/logo.png";
-import { globalBorder, globalBlack } from "../constants";
-import ArtistTextBox from "./ArtistTextBox";
 import ArtistNameBox from "./ArtistNameBox";
-import ArtistSocialPanel from "./ArtistSocialPanel";
+import ImageBox from "./ImageBox";
 
 const showLogo = keyframes`
   from {
@@ -30,39 +27,15 @@ const Container = styled.div`
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
+  flex-wrap: wrap;
 
-  margin: 2rem 2rem 0 0;
+  margin: 2rem 2rem 0 2rem;
   margin-bottom: 1rem;
 `;
 
-const ImageBox = styled.div`
-  width: 20rem;
-  height: 16rem;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background-image: ${({ image }) => (image ? `url(${image})` : "none")};
-  filter: grayscale();
-  background-size: cover;
-  background-position: center;
-  border: ${globalBorder};
-  margin-bottom: 2rem;
-  color: white;
-  cursor: pointer;
-`;
-
-const Row = styled.div`
-  display: flex;
-  justify-content: space-around;
-  align-items: space-around;
-  flex-direction: row;
-`;
-
-const ArtistBox = ({ artist, handleClick, showText, showArtist }, key) => {
+const ArtistBox = ({ artist, showText, showArtist, openArtist }, key) => {
   const [hover, setHover] = useState(false);
-  const { name, image, text, links, website } = artist;
+  const { name, image } = artist;
 
   return (
     <>
@@ -71,17 +44,13 @@ const ArtistBox = ({ artist, handleClick, showText, showArtist }, key) => {
           <ImageBox
             key={key}
             image={image}
-            onClick={handleClick}
+            onClick={() => openArtist(artist)}
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
           >
             {hover && !showText && <Logo src={logo} />}
           </ImageBox>
-          {/* <Row> */}
-          <ArtistNameBox onClick={handleClick} name={name} />
-          <ArtistSocialPanel links={links} website={website} />
-          {/* </Row> */}
-          {showText && <ArtistTextBox onClick={handleClick} text={text} />}
+          <ArtistNameBox onClick={openArtist} name={name} />
         </Container>
       )}
     </>
