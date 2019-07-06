@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import { useSpring, animated, config } from "react-spring";
 
 import ArtistTextBox from "./ArtistTextBox";
 import ArtistNameBox from "./ArtistNameBox";
 import ArtistSocialPanel from "./ArtistSocialPanel";
 import ImageBox from "./ImageBox";
 
-const Box = styled.div`
+const Box = styled(animated.div)`
   display: flex;
   justify-content: center;
   align-items: space-around;
@@ -26,7 +27,7 @@ const Box = styled.div`
     width: 90%;
   }
 `;
-const Row = styled.div`
+const Row = styled(animated.div)`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,8 +39,15 @@ const Row = styled.div`
 
 const ArtistModalBox = ({ artist, closeModal }) => {
   const { name, text, image, links, website } = artist;
+  const boxAnimation = useSpring({
+    opacity: 1,
+    transform: "translate(0, 0)",
+    from: { opacity: 0, transform: "translate(50rem, 0)" },
+    config: { tension: 200, friction: 30, mass: 2 }
+  });
+
   return (
-    <Box onClick={closeModal}>
+    <Box onClick={closeModal} style={boxAnimation}>
       <ImageBox image={image} modal />
       <Row>
         <ArtistNameBox name={name} />

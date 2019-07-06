@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
 
 import DescriptionBox from "../components/DescriptionBox";
@@ -12,9 +12,10 @@ const Page = styled.div`
 `;
 
 const Karneval = () => {
+  const content = useRef();
   return (
     <>
-      <Page>
+      <Page ref={content}>
         <GoHomeButton />
         <DescriptionBox />
       </Page>

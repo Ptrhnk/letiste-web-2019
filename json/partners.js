@@ -16,7 +16,7 @@ import zeal from "../img/partners/partneri/zeal.png";
 import graficke_papiry from "../img/partners/partneri/graficke-papiry.png";
 import pivovar_zasova from "../img/partners/partneri/Pivovar_zasova.png";
 import stavby_stroje from "../img/partners/partneri/Stavby-stroje-Slavic.png";
-// import optys from "../img/partners/partneri/Optys.png";
+import optys from "../img/partners/partneri/optys.png";
 
 // Medialni
 import hranicky_denik from "../img/partners/medialni/hranicky_denik.png";
@@ -97,12 +97,12 @@ const partners = {
       image: graficke_papiry
     },
     {
-      name: "Zeal",
-      image: zeal
+      name: "Optys",
+      image: optys
     },
     {
-      name: "Optys"
-      // image: optys
+      name: "Zeal",
+      image: zeal
     }
   ]
 };

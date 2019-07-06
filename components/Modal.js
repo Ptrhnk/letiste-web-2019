@@ -40,6 +40,14 @@ const Modal = ({
   appElement,
   component
 }) => {
+  var style = () => {
+    if (window.innerWidth < 800) {
+      return minStyles;
+    } else {
+      return maxStyles;
+    }
+  };
+
   return (
     <ReactModal
       isOpen={isOpen}

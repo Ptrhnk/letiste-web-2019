@@ -14,11 +14,6 @@ const TextBox = styled(animated.div)`
 
   transition: background-color 0.5s ease;
 
-  :hover {
-    background-color: ${globalBlack};
-    color: white;
-  }
-
   @media (max-width: 700px) {
     /* width: 96%; */
   }
@@ -27,7 +22,10 @@ const TextBox = styled(animated.div)`
 const ArtistTextBox = ({ text, onClick }) => {
   const boxAnimation = useSpring({
     opacity: 1,
-    from: { opacity: 0 }
+    transform: "translate(0, 0)",
+    from: { opacity: 0, transform: "translate(20rem, 0)" },
+    config: { tension: 100, friction: 60, mass: 10 },
+    delay: 600
   });
   return (
     <TextBox style={boxAnimation} onClick={onClick}>

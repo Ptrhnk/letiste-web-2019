@@ -23,6 +23,8 @@ const ArtistSocialButton = ({ link, website }) => {
         return "youtube";
       } else if (link.includes("soundcloud")) {
         return "soundcloud";
+      } else if (link.includes("mixcloud")) {
+        return "mixcloud";
       } else if (website) {
         return "website";
       }
