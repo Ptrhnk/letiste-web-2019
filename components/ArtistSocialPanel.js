@@ -30,9 +30,8 @@ const ArtistSocialPanel = ({ links, website }) => {
 
   return (
     <Panel style={animation}>
-      {links.map((link, key) => (
-        <ArtistSocialButton key={key} link={link} />
-      ))}
+      {links &&
+        links.map((link, key) => <ArtistSocialButton key={key} link={link} />)}
       {website && <ArtistSocialButton link={website} website={true} />}
     </Panel>
   );

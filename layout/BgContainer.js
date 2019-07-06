@@ -2,7 +2,9 @@ import React from "react";
 import styled, { keyframes } from "styled-components";
 import { animated, Keyframes } from "react-spring/renderprops.cjs";
 
-import background from "../img/grafika/pozadi-02.jpeg";
+// import background from "../img/grafika/pozadi-02.jpeg";
+import backgroundMid from "../img/grafika/pozadi-01-mid.png";
+import backgroundLow from "../img/grafika/pozadi-01-low.png";
 
 const initOpacity = keyframes`
   from {
@@ -24,7 +26,7 @@ const Container = styled(animated.div)`
   justify-content: center;
   align-items: center;
 
-  background-image: url(${background});
+  background-image: url(${backgroundMid});
   background-size: cover;
   background-position: center;
   transform: scale(1.03);
@@ -36,7 +38,7 @@ const Container = styled(animated.div)`
   animation-delay: 0.2s;
 
   @media (max-width: 700) {
-    /* background-image: url(${background}); */
+    background-image: url(${backgroundLow});
   }
 
   /* filter: url(#tripFilter); */

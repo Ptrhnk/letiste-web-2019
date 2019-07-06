@@ -9,6 +9,7 @@ const ImageBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
 
   background-image: ${({ image }) => (image ? `url(${image})` : "none")};
   filter: grayscale();
@@ -22,6 +23,10 @@ const ImageBox = styled.div`
   @media (max-width: 1000px) {
     width: 16rem;
     height: 12rem;
+  }
+  @media (max-width: 700px) {
+    width: 14rem;
+    height: 10rem;
   }
 `;
 

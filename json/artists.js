@@ -10,12 +10,9 @@ import Jeffology from "../img/artists/patek/jeffology-low.png";
 import Imateva from "../img/artists/patek/imateva-low.png";
 import MetroFamily from "../img/artists/patek/metro-low.png";
 
-// DivoDej
-// V2SDG (film+diskuze)
-// NGO (Prales dětem)
 import Frederico from "../img/artists/sobota/frederico-low.png";
 import Humdrum from "../img/artists/sobota/humdrumlighthouse-low.png";
-// Runway session (jam)
+import jam from "../img/artists/sobota/jam-session-low.png";
 import PragoUnion from "../img/artists/sobota/pragounion-low.png";
 import Lebanon from "../img/artists/sobota/lebanon-low.png";
 
@@ -24,8 +21,13 @@ import Sabrehart from "../img/artists/sobota/Sabrehart-low.png";
 import RingoSlyng from "../img/artists/sobota/ringoslyng-low.png";
 import PetrHa from "../img/artists/sobota/petrHa-low.png";
 import AndreaDare from "../img/artists/sobota/andreadare-low.png";
-// ÉTER Kolektiv
+import CosmicSkaut from "../img/artists/sobota/kosmicskaut-low.png";
 import Miltz from "../img/artists/sobota/miltz-low.png";
+import Prozac from "../img/artists/sobota/prozac-low.png";
+import Obraz from "../img/artists/sobota/obraz-low.png";
+
+import DivoDej from "../img/artists/doprogram/divodej-low.png";
+import v4sdg from "../img/artists/doprogram/V4SDG-low.png";
 
 // -------------------- ARTISTS --------------------
 const artists = {
@@ -41,8 +43,9 @@ const artists = {
     },
     {
       id: 11,
-      name: "Tony a Hovorka",
-      image: TonyJen
+      name: "Antonín Dlapa a Jen Hovorka",
+      image: TonyJen,
+      links: ["https://www.youtube.com/watch?v=_6ENe3MziDQ"]
     },
     {
       id: 12,
@@ -61,9 +64,11 @@ const artists = {
       id: 13,
       name: "DEADBEATZ",
       image: DeadBeatz,
+      website: "http://www.deadbeatz.at/",
       links: [
         "https://www.facebook.com/deadbeatzmusic/",
-        "https://www.youtube.com/channel/UC97Ni03vr-zW7UDVgqQuh4w"
+        "https://www.youtube.com/channel/UC97Ni03vr-zW7UDVgqQuh4w",
+        "https://www.instagram.com/deadbeatz2/"
       ]
     },
     {
@@ -81,7 +86,7 @@ const artists = {
       links: ["https://www.facebook.com/aidkid/"]
     },
     {
-      id: 15,
+      id: 16,
       name: "DJ Jeffology",
       image: Jeffology,
       text:
@@ -89,44 +94,24 @@ const artists = {
       links: ["https://soundcloud.com/jeffology"]
     },
     {
-      id: 16,
+      id: 17,
       name: "Imateva",
       image: Imateva
     },
     {
-      id: 17,
+      id: 18,
       name: "METRO Family",
       image: MetroFamily
     }
   ],
   saturday: [
     {
-      id: 50,
-      name: "DivoDej",
-      text:
-        "DivoDej je projekt, za kterým stojí dvě ženy, které se vydaly na cestu za poznávaním dramaterapie. Skrze vlastní zkušenost pociťují léčivé rozměry, které dramaterapeutické techniky nabízí. Proto se rozhodli šírit tento prožitek dále.",
-      links: ["https://www.facebook.com/DivoDejom/"]
-    },
-    {
-      id: 51,
-      name: "V4SDG"
-    },
-    {
-      id: 52,
-      name: "NGO"
-    },
-    {
       id: 53,
       name: "Frederico DeVittor",
       image: Frederico,
       text:
-        "Jak říká zpěvačka Sisa Feherová: ”Když Federico hraje, andělíčci zpívají.”",
-      // image: Viktor_Lesque,
-      links: [
-        "https://open.spotify.com/artist/4yQpQQndwMOWt6pXvXzATg?si=e5SpR4v5T8OPshUpUuba8w",
-        "https://www.facebook.com/Victorlesque/",
-        "https://soundcloud.com/user-412342058"
-      ]
+        "Jak říká zpěvačka Sisa Feherová: ”Když Federico hraje, andělíčci zpívají.”"
+      // links: []
     },
     {
       id: 54,
@@ -138,8 +123,8 @@ const artists = {
     {
       id: 55,
       name: "Runway session (jam)",
+      image: jam,
       text: ""
-      // image: jam,
     },
     {
       id: 56,
@@ -148,7 +133,13 @@ const artists = {
         "Nehrajou je rádia a na trpitele to neuhrají – dramaturgové je nebojkotují, tyhle dva světy se prostě jen naprosto míjí. Jejich muzika tam nepatří, má tak daleko k “populární”, jak to jen jde. Nemají hit a pozor: nemají ani pořádný skandál. Jsou dřevní, jsou zemitý, páchnou člověčinou a fanoušky maj skalní. Na těch Prago Union musí něco bejt. Přijďte se na ně podívat.",
       image: PragoUnion,
       website: "http://www.pragounion.cz/",
-      links: ["https://www.facebook.com/pragounion/"]
+      links: [
+        "https://www.facebook.com/pragounion/",
+        "https://www.youtube.com/watch?v=zykjQzBflvQ",
+        "https://www.instagram.com/pragounion/",
+        "https://soundcloud.com/prago-union-official",
+        "https://open.spotify.com/artist/7B87nnff5Kbl42pSlOjpbm"
+      ]
     },
     {
       id: 57,
@@ -168,7 +159,8 @@ const artists = {
       id: 59,
       name: "sabrehart",
       text: "",
-      image: Sabrehart
+      image: Sabrehart,
+      website: "http://www.sabrehart.com/"
     },
     {
       id: 60,
@@ -184,7 +176,7 @@ const artists = {
       id: 61,
       name: "petr.ha",
       text:
-        "Petr Hanák působí jako bubeník a hudební producent hned v několika autorských projektech. Na koncertních pódiích ho můžete spatřit např. s elektro-akustickým seskupením Fallgrapp se kterými nyní spolupracuje na chystaném albu, které bude vycházet konci tohoto roku. Jeho tvorbu můžete slyšet mimo jiné třeba na posledním albu Katarzie s názvem Antigona. Společně se slovenským producentem Pjonim Katarzii letos doprovází v audio-vizuální show na turné k poslední desce.",
+        "Petr Hanák působí jako bubeník a hudební producent hned v několika autorských projektech. Na koncertních pódiích ho můžete spatřit např. s elektro-akustickým seskupením Fallgrapp se kterými nyní spolupracuje na chystaném albu, které bude vycházet konci tohoto roku. Jeho tvorbu můžete slyšet mimo jiné třeba na posledním albu Katarzie s názvem Antigona.",
       image: PetrHa,
       links: ["https://www.mixcloud.com/Nahak/"]
     },
@@ -196,8 +188,9 @@ const artists = {
     },
     {
       id: 63,
-      name: "ÉTER Kolektiv",
-      text: ""
+      name: "Kosmic Skaut",
+      text: "",
+      image: CosmicSkaut
     },
     {
       id: 64,
@@ -210,8 +203,30 @@ const artists = {
     {
       id: 65,
       name: "Prozac",
+      image: Prozac,
       text:
         "Kdo zná Brno, zná i Bastl Instruments. A právě z tohoto kolektivu k nám zavítá modulárový mág PROZAC a představí znovuobjevený styl EBM s prvky chytlavého acidu. Na závěr akce bude liveshow na modulární syntezátor! Odpálí tím nedělní ÉTER afterparty ve stanu."
+    },
+    {
+      id: 66,
+      name: "Obraz",
+      image: Obraz,
+      links: ["https://www.facebook.com/obr4z/"]
+    }
+  ],
+  doprogram: [
+    {
+      id: 50,
+      name: "DivoDej",
+      image: DivoDej,
+      text:
+        "DivoDej je projekt, za kterým stojí dvě ženy, které se vydaly na cestu za poznávaním dramaterapie. Skrze vlastní zkušenost pociťují léčivé rozměry, které dramaterapeutické techniky nabízí. Proto se rozhodli šírit tento prožitek dále.",
+      links: ["https://www.facebook.com/DivoDejom/"]
+    },
+    {
+      id: 51,
+      name: "V4SDG",
+      image: v4sdg
     }
   ]
 };

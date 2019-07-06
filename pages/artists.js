@@ -45,10 +45,16 @@ const Artists = () => {
           name={"Sobota"}
           ref={sobota}
         />
+        <ArtistContainer
+          artists={artists.doprogram}
+          openArtist={openArtist}
+          name={"Doprogram"}
+        />
         <Modal
           isOpen={modalOpened}
           onRequestClose={() => setModalOpened(false)}
           appElement={ReactDOM.findDOMNode(content.current)}
+          onClick={() => setModalOpened(false)}
           component={
             <ArtistModalBox
               artist={artist}

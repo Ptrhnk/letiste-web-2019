@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { useSpring, animated, config } from "react-spring";
 
 import ArtistTextBox from "./ArtistTextBox";
-import ArtistNameBox from "./ArtistNameBox";
+import ArtistNameModalBox from "./ArtistNameModalBox";
 import ArtistSocialPanel from "./ArtistSocialPanel";
 import ImageBox from "./ImageBox";
 
@@ -12,13 +12,11 @@ const Box = styled(animated.div)`
   justify-content: center;
   align-items: space-around;
   flex-direction: column;
-  width: 60%;
+  width: 32rem;
   flex-shrink: 0;
   flex-grow: 1;
-  overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
-  /* margin: 1rem 0; */
-  /* background-color: palevioletred; */
+  overflow: hidden;
 
   @media (max-width: 1300px) {
     width: 80%;
@@ -27,6 +25,19 @@ const Box = styled(animated.div)`
     width: 90%;
   }
 `;
+
+const ArtistModalContent = styled.div`
+  left: 0;
+  width: 100%;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  margin: 1rem 0;
+`;
+
 const Row = styled(animated.div)`
   display: flex;
   justify-content: space-between;
@@ -34,7 +45,6 @@ const Row = styled(animated.div)`
   flex-wrap: wrap;
   flex-direction: row;
   width: 100%;
-  /* background-color: blue; */
 `;
 
 const ArtistModalBox = ({ artist, closeModal }) => {
@@ -47,16 +57,18 @@ const ArtistModalBox = ({ artist, closeModal }) => {
   });
 
   return (
-    <Box onClick={closeModal} style={boxAnimation}>
-      <ImageBox image={image} modal />
-      <Row>
-        <ArtistNameBox name={name} />
-        {(links || website) && (
-          <ArtistSocialPanel links={links} website={website} />
-        )}
-      </Row>
-      {text && <ArtistTextBox text={text} />}
-    </Box>
+    <ArtistModalContent>
+      <Box onClick={closeModal} style={boxAnimation}>
+        <ImageBox image={image} modal />
+        <Row>
+          <ArtistNameModalBox name={name} />
+          {(links || website) && (
+            <ArtistSocialPanel links={links} website={website} />
+          )}
+        </Row>
+        {text && <ArtistTextBox text={text} />}
+      </Box>
+    </ArtistModalContent>
   );
 };
 

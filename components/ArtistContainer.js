@@ -6,12 +6,20 @@ import ArtistBox from "./ArtistBox";
 import { globalBlack, globalBorder } from "../constants";
 
 const GroupContainer = styled.div`
-  width: 80%;
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin-bottom: 2rem;
+
+  @media (max-width: 1000px) {
+    width: 90%;
+  }
+
+  @media (max-width: 700px) {
+    width: 100%;
+  }
 `;
 const Container = styled.div`
   /* width: 80%; */

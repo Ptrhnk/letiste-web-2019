@@ -4,13 +4,15 @@ import ReactModal from "react-modal";
 import { globalBorder } from "../constants";
 import background from "../img/grafika/pozadi-02.jpeg";
 
-const customStyle = {
+const maxStyles = {
   overlay: {
-    backgroundColor: "rgba(0, 0, 0, 1)",
+    backgroundColor: "rgba(0, 0, 0, .8)",
     zIndex: "10000",
     display: "flex",
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    width: "100%",
+    height: "100vh"
   },
   content: {
     backgroundImage: `url(${background})`,
@@ -19,17 +21,17 @@ const customStyle = {
     borderRadius: "2rem",
     opacity: "1",
     border: globalBorder,
-    width: "60%",
-    height: "90%",
+    width: "95%",
+    height: "95vh",
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    flexGrow: "1",
     flexDirection: "column",
-    overflowY: "scroll"
-    // -webkit-overflow-scrolling: "touch",
+    overflow: "-moz-scrollbars-none"
   }
 };
 
@@ -38,7 +40,8 @@ const Modal = ({
   onAfterOpen,
   onRequestClose,
   appElement,
-  component
+  component,
+  onClick
 }) => {
   var style = () => {
     if (window.innerWidth < 800) {
@@ -54,7 +57,7 @@ const Modal = ({
       onAfterOpen={onAfterOpen}
       onRequestClose={onRequestClose}
       appElement={appElement}
-      style={customStyle}
+      style={maxStyles}
       closeTimeoutMS={200}
     >
       {component}

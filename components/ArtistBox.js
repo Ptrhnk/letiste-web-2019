@@ -50,7 +50,7 @@ const ArtistBox = ({ artist, showText, showArtist, openArtist }, key) => {
           >
             {hover && !showText && <Logo src={logo} />}
           </ImageBox>
-          <ArtistNameBox onClick={openArtist} name={name} />
+          <ArtistNameBox onClick={() => openArtist(artist)} name={name} />
         </Container>
       )}
     </>

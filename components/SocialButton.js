@@ -30,7 +30,7 @@ const SocialButton = ({ social }) => {
   const getHref = () => {
     switch (social) {
       case "facebook":
-        return "https://www.facebook.com/letistedisaster/";
+        return "https://www.facebook.com/events/829025523963205/";
       case "twitter":
         return "https://www.twitter.com/letistefest/";
       case "instagram":
