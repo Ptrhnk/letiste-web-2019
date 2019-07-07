@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import { useSpring, animated, config } from "react-spring";
 
 import PartnerBox from "./PartnerBox";
 import { globalBlack, globalBorder } from "../constants";
 
-const Container = styled.div`
+const Container = styled(animated.div)`
   width: 90%;
   display: flex;
   justify-content: center;
@@ -38,8 +39,14 @@ const GroupNameDiv = styled.div`
 `;
 
 const PartnersContainer = ({ partners, name }) => {
+  const animation = useSpring({
+    opacity: 1,
+    transform: "translate(0, 0)",
+    from: { opacity: 0, transform: "translate(0, -10rem)" },
+    config: { tension: 200, friction: 30, mass: 2 }
+  });
   return (
-    <Container>
+    <Container style={animation}>
       <GroupNameDiv>{name}</GroupNameDiv>
       <GroupContainer>
         {partners.map((item, key) => (

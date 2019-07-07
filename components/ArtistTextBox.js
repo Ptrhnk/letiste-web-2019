@@ -24,8 +24,8 @@ const ArtistTextBox = ({ text, onClick }) => {
     opacity: 1,
     transform: "translate(0, 0)",
     from: { opacity: 0, transform: "translate(20rem, 0)" },
-    config: { tension: 100, friction: 60, mass: 10 },
-    delay: 600
+    config: { tension: 200, friction: 70, mass: 6 },
+    delay: 500
   });
   return (
     <TextBox style={boxAnimation} onClick={onClick}>

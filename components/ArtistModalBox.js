@@ -29,7 +29,8 @@ const Box = styled(animated.div)`
 const ArtistModalContent = styled.div`
   left: 0;
   width: 100%;
-  overflow-y: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   display: flex;
   flex-direction: column;
@@ -51,8 +52,8 @@ const ArtistModalBox = ({ artist, closeModal }) => {
   const boxAnimation = useSpring({
     opacity: 1,
     transform: "translate(0, 0)",
-    from: { opacity: 0, transform: "translate(50rem, 0)" },
-    config: { tension: 200, friction: 30, mass: 2 }
+    from: { opacity: 0, transform: "translate(20rem, 0)" },
+    config: { tension: 200, friction: 50, mass: 5 }
   });
 
   return (
