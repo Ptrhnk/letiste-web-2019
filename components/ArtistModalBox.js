@@ -37,6 +37,10 @@ const ArtistModalContent = styled.div`
   align-items: center;
   flex-grow: 1;
   padding: 3rem 0;
+
+  ::-webkit-scrollbar {
+    width: 0 !important;
+  }
 `;
 
 const Row = styled(animated.div)`

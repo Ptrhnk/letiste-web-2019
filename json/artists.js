@@ -47,7 +47,7 @@ const artists = {
       id: 11,
       name: "Antonín Dlapa a Jen Hovorka",
       text:
-        "Antonin Dlapa je virtuózní kytarista, multi-instrumentalista &. JeN Hovorka je MC, beatboxer, klávesista & producent. Jejich společné duo přináší semi-improvizovanou hudbu na pomezi hiphopu, jazzu & elektroniky.",
+        "Antonín Dlapa je virtuózní kytarista, multi-instrumentalista &. JeN Hovorka je MC, beatboxer, klávesista & producent. Jejich společné duo přináší semi-improvizovanou hudbu na pomezi hiphopu, jazzu & elektroniky.",
       image: TonyJen,
       links: ["https://www.youtube.com/watch?v=_6ENe3MziDQ"]
     },
@@ -113,7 +113,7 @@ const artists = {
       name: "METRO Family",
       image: MetroFamily,
       text:
-        "Snad ani není potřeba nic říkat. Soundcloud je plný muziky a to jde. Frank Love, DJ Lamborghini a Guru."
+        "Snad ani není potřeba nic říkat. Soundcloud je plný muziky a o to jde. Frank Love, DJ Lamborghini a Guru."
     }
   ],
   saturday: [

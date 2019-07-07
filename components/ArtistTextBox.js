@@ -23,7 +23,7 @@ const ArtistTextBox = ({ text, onClick }) => {
   const boxAnimation = useSpring({
     opacity: 1,
     transform: "translate(0, 0)",
-    from: { opacity: 0, transform: "translate(20rem, 0)" },
+    from: { opacity: 0, transform: "translate(15rem, 0)" },
     config: { tension: 200, friction: 70, mass: 6 },
     delay: 500
   });
