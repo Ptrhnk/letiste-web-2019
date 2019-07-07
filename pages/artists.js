@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
 
@@ -25,6 +25,12 @@ const Artists = () => {
   const openArtist = artist => {
     setArtist(artist);
     setModalOpened(true);
+    document.body.style.overflow = "hidden";
+  };
+
+  const handleModalClose = () => {
+    setModalOpened(false);
+    document.body.style.overflow = "auto";
   };
 
   return (
@@ -52,10 +58,7 @@ const Artists = () => {
           appElement={ReactDOM.findDOMNode(content.current)}
           onClick={() => setModalOpened(false)}
           component={
-            <ArtistModalBox
-              artist={artist}
-              closeModal={() => setModalOpened(false)}
-            />
+            <ArtistModalBox artist={artist} closeModal={handleModalClose} />
           }
         />
       </Page>

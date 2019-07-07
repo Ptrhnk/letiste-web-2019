@@ -23,10 +23,17 @@ const NameBox = styled.div`
     background-color: ${globalBlack};
     color: white;
   }
+
+  @media (max-width: 700px) {
+    padding: 0.6rem 0.8rem;
+  }
 `;
 
 const Name = styled.h1`
   font-size: 1rem;
+  @media (max-width: 700px) {
+    font-size: 0.8rem;
+  }
 `;
 
 const ArtistNameBox = ({ onClick, name }) => {

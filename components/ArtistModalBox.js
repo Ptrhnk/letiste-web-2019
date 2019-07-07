@@ -18,10 +18,10 @@ const Box = styled(animated.div)`
   -webkit-overflow-scrolling: touch;
   /* overflow: auto; */
 
-  @media (max-width: 1300px) {
-    width: 80%;
-  }
   @media (max-width: 1100px) {
+    width: 50%;
+  }
+  @media (max-width: 700px) {
     width: 90%;
   }
 `;
@@ -35,7 +35,7 @@ const ArtistModalContent = styled.div`
   flex-direction: column;
   align-items: center;
   flex-grow: 1;
-  margin: 1rem 0;
+  padding: 3rem 0;
 `;
 
 const Row = styled(animated.div)`

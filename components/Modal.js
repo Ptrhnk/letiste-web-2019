@@ -32,7 +32,7 @@ const maxStyles = {
     alignItems: "center",
     flexGrow: "1",
     flexDirection: "column",
-    overflow: "hidden"
+    padding: "0"
   }
 };
 
