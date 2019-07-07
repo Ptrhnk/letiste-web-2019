@@ -80,6 +80,8 @@ const artists = {
     {
       id: 14,
       name: "Citty",
+      text:
+        "Projekt Citty byl vytvořen s cílem prozkoumat zvukové možnosti dnešní doby a vytvořit dojem neexistujících světů pomocí ještě neslyšených atmosfér a modulací hluků. Rozmanitost, kterou Citty tvoří, vychází z temných ambientních atmosfér a bzukotů do hypnotického techna.",
       image: Citty,
       links: ["https://www.facebook.com/cittymodular/"]
     },
@@ -102,6 +104,8 @@ const artists = {
     {
       id: 17,
       name: "Imateva",
+      text:
+        "Ima Teva je hudební svět plný fantazií a symbolů, jež čerpá z podnětů neustále se transformující tajuplné přírody a kalendáře jejích cyklů. Cesta z města, na které balíme sluchátka do kapsy a posloucháme mýtickou alfamáti Přírodu, která šustí, ševelí, bzučí a hvízdá svoje mantry. ",
       image: Imateva
     },
     {
@@ -119,7 +123,6 @@ const artists = {
       image: Frederico,
       text:
         "Jak říká zpěvačka Sisa Feherová: ”Když Federico hraje, andělíčci zpívají.”"
-      // links: []
     },
     {
       id: 54,
@@ -153,9 +156,9 @@ const artists = {
     {
       id: 57,
       name: "Lebanon + Diesel Diesel Max",
-      text: "",
+      text:
+        "Lebanon je seskupením čtyř entit, které se navzájem moc neslyší, nevidí, dalo by se říct, že dělají, že tam ti ostatní nejsou. A tak proč rovnou nevytvořit z jednoho Lebanonu Lebanony čtyři? Do Evropy tak například dorazí čtyřikrát méně syrských uprchlíků.",
       image: Lebanon
-      // image: jam,
     },
     {
       id: 58,
@@ -168,13 +171,14 @@ const artists = {
     {
       id: 59,
       name: "sabrehart",
-      text: "",
+      text:
+        "Sabrehart je britský elektronický producent Stephen Abrehart, hrající na sampler / drum machine a různé jiné syntezátory a groove boxy. Jeho hudba obsahuje vlivy z hiphopu 90. let, breakbeatu a junglu, ale má výrazně moderní feel. Retro future beats for your listening pleasure!",
       image: Sabrehart,
       website: "http://www.sabrehart.com/"
     },
     {
       id: 60,
-      name: "Ringo Slyng",
+      name: "Dj Ringo Slyng",
       text: "",
       image: RingoSlyng,
       links: [
@@ -184,7 +188,7 @@ const artists = {
     },
     {
       id: 61,
-      name: "petr.ha",
+      name: "petr.ha (dj set)",
       text:
         "Petr Hanák působí jako bubeník a hudební producent hned v několika autorských projektech. Na koncertních pódiích ho můžete spatřit např. s elektro-akustickým seskupením Fallgrapp se kterými nyní spolupracuje na chystaném albu, které bude vycházet konci tohoto roku. Jeho tvorbu můžete slyšet mimo jiné třeba na posledním albu Katarzie s názvem Antigona.",
       image: PetrHa,
@@ -199,7 +203,8 @@ const artists = {
     {
       id: 63,
       name: "Kosmic Skaut",
-      text: "",
+      text:
+        "Dalším hostem bude olomoucký rodák, momentálně působící v Brně, Kosmic Skaut. Znalejší místních poměrů si ho možná pamatují jako rezidentního DJ legendárního Metro Chill Out Clubu. Kosmic Skauta můžete v poslední době vidět a slyšet především na streamech, podcastech a akcích platformy ÉTER.",
       image: CosmicSkaut
     },
     {
@@ -220,6 +225,8 @@ const artists = {
     {
       id: 66,
       name: "Obraz",
+      text:
+        "Upovídaný člen ÉTER kolektivu, definující se jako ‘mimo střední proud. nebo prostě jen mimo’ a znalec prostorové akustiky. V jeho setech najdete dlouholeté srdcovky mixlé o nejčerstvější materiál v unikátním spojení se sklony k temnejšímu proudu. ",
       image: Obraz,
       links: ["https://www.facebook.com/obr4z/"]
     }
