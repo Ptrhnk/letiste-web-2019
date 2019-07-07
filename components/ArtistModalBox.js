@@ -16,7 +16,7 @@ const Box = styled(animated.div)`
   flex-shrink: 0;
   flex-grow: 1;
   -webkit-overflow-scrolling: touch;
-  /* overflow: auto; */
+  margin-bottom: 3rem;
 
   @media (max-width: 1100px) {
     width: 50%;
