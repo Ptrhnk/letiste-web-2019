@@ -34,7 +34,7 @@ const GroupNameDiv = styled.div`
   color: white;
   background-color: ${globalBlack};
   border: ${globalBorder};
-  z-index: 2000;
+  z-index: 1000;
   padding: 1.2rem;
   margin: 2rem 0;
   font-size: 1rem;

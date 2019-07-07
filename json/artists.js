@@ -36,6 +36,8 @@ const artists = {
       id: 10,
       name: "Ešli",
       image: Esli,
+      text:
+        "Založila kapelu (The High Corporation), hudební projekt (Zorba že ja Buddha), zúčastnila se Red Bull Music Academy Prague Bass Camp 2015 a hrála jako support pro jména jako jsou Selah Sue , Akua Naru, Nneka nebo Oshun. Jazzová zpěvačka Ešli.",
       links: [
         "https://www.facebook.com/hashesman/",
         "https://www.instagram.com/hashesman/"
@@ -44,6 +46,8 @@ const artists = {
     {
       id: 11,
       name: "Antonín Dlapa a Jen Hovorka",
+      text:
+        "Antonin Dlapa je virtuózní kytarista, multi-instrumentalista &. JeN Hovorka je MC, beatboxer, klávesista & producent. Jejich společné duo přináší semi-improvizovanou hudbu na pomezi hiphopu, jazzu & elektroniky.",
       image: TonyJen,
       links: ["https://www.youtube.com/watch?v=_6ENe3MziDQ"]
     },
@@ -64,6 +68,8 @@ const artists = {
       id: 13,
       name: "DEADBEATZ",
       image: DeadBeatz,
+      text:
+        "Kytarista netřeba. Nechte se smést zvukem Deadbeats, bubeníkem zároveň hrajícího na harmoniku, a zpěvákem, který je taktéž mistrem dvojité baskytary. Pokud nevěříte, že tito dva bluesmani zvládnou vytvořit skutečně silný zvuk, doražte…",
       website: "http://www.deadbeatz.at/",
       links: [
         "https://www.facebook.com/deadbeatzmusic/",
@@ -101,7 +107,9 @@ const artists = {
     {
       id: 18,
       name: "METRO Family",
-      image: MetroFamily
+      image: MetroFamily,
+      text:
+        "Snad ani není potřeba nic říkat. Soundcloud je plný muziky a to jde. Frank Love, DJ Lamborghini a Guru."
     }
   ],
   saturday: [
@@ -116,7 +124,8 @@ const artists = {
     {
       id: 54,
       name: "Humdrum Lighthouse",
-      text: "",
+      text:
+        "Pražská čtveřice tvořící hudbu na pomezí popu a alternativy, propojuje popové struktury s nevšedními postupy a prvky abstrakce, organický zvuk kombinuje s elektronikou a střídá skladby pevných i tekutých forem.",
       image: Humdrum,
       links: ["https://www.facebook.com/humdrumlighthouse/"]
     },
@@ -150,9 +159,10 @@ const artists = {
     },
     {
       id: 58,
-      name: "uchoff",
+      name: "Uchoff",
       image: uchoff,
-      text: "",
+      text:
+        "David Baránek aka komponuje své eposy postavené na kalimbových smyčkách spolu s minimalistickými autorskými texty. Martin doprovází příběhy basovou a elektrickou kytarou. Repetivní plochy a ůderné melancholické poselství se zažírá a vrství do uší, jen pokud se člověk ztiší.",
       links: ["https://soundcloud.com/davidoff-150558718"]
     },
     {
@@ -183,7 +193,7 @@ const artists = {
     {
       id: 62,
       name: "Andrea Dare",
-      text: "",
+      text: "Není potřeba. Díky!",
       image: AndreaDare
     },
     {

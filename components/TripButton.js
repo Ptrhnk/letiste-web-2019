@@ -2,16 +2,15 @@ import React from "react";
 import styled, { keyframes } from "styled-components";
 import { animated } from "react-spring";
 
-import layerOne from "../img/grafika/pozadi-02.jpeg";
+import backgroundMid from "../img/grafika/pozadi-01-mid.png";
+import backgroundLow from "../img/grafika/pozadi-01-low.png";
 import { globalBlack } from "../constants";
 
 const initScale = keyframes`
   0% {
-    /* transform: scale(0.5) translate(-50%, -50%); */
     opacity: 0;
   }
   100% {
-    /* transform: scale(1) translate(-50%, -50%); */
     opacity: 1;
   }
 `;
@@ -33,7 +32,7 @@ const Button = styled(animated.a)`
   font-weight: 800;
   outline: none;
   box-shadow: none;
-  background-image: url(${layerOne});
+  background-image: url(${backgroundMid});
   background-size: 2000% 2000%;
   background-position: center;
   cursor: pointer;
@@ -52,6 +51,7 @@ const Button = styled(animated.a)`
     font-size: 0.8rem;
     padding: 0.4rem 0.7rem;
     top: 54%;
+    background-image: url(${backgroundLow});
   }
   @media (min-width: 700px) {
     :hover {
@@ -87,6 +87,10 @@ const Button = styled(animated.a)`
   }
 `;
 
+const Title = styled.h1`
+  font-size: 1rem;
+`;
+
 const TripButton = ({ onClick, name, href, onMouseEnter, onMouseLeave }) => {
   return (
     <>
@@ -97,7 +101,7 @@ const TripButton = ({ onClick, name, href, onMouseEnter, onMouseLeave }) => {
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
       >
-        {name}
+        <Title>{name}</Title>
       </Button>
     </>
   );

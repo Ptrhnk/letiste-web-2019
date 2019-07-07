@@ -25,10 +25,16 @@ const Button = styled.div`
   }
 `;
 
+const Nadpis = styled.h2`
+  font-size: 1rem;
+`;
+
 const MenuButton = ({ onClick, name }) => {
   return (
     <>
-      <Button onClick={onClick}>{name}</Button>
+      <Button onClick={onClick}>
+        <Nadpis>{name}</Nadpis>
+      </Button>
     </>
   );
 };

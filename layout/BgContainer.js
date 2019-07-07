@@ -2,7 +2,6 @@ import React from "react";
 import styled, { keyframes } from "styled-components";
 import { animated, Keyframes } from "react-spring/renderprops.cjs";
 
-// import background from "../img/grafika/pozadi-02.jpeg";
 import backgroundMid from "../img/grafika/pozadi-01-mid.png";
 import backgroundLow from "../img/grafika/pozadi-01-low.png";
 

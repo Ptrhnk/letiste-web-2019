@@ -49,6 +49,10 @@ const PartnerNameBox = styled.div`
   }
 `;
 
+const Name = styled.h1`
+  font-size: 1rem;
+`;
+
 const PartnerBox = ({ partner }, key) => {
   const { name, image } = partner;
 
@@ -56,7 +60,9 @@ const PartnerBox = ({ partner }, key) => {
     <>
       <Container key={key}>
         {image && <ImageBox image={image} />}
-        <PartnerNameBox>{name}</PartnerNameBox>
+        <PartnerNameBox>
+          <Name>{name}</Name>
+        </PartnerNameBox>
       </Container>
     </>
   );

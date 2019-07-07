@@ -5,14 +5,14 @@ import { useSpring, animated } from "react-spring";
 import { globalBorder, globalBlack } from "../constants";
 
 const TextBox = styled(animated.div)`
+  display: flex;
+  flex-shrink: 1;
+  flex-grow: 0;
   border: ${globalBorder};
   background-color: white;
-  width: 100%;
+  max-width: 100%;
   padding: 1rem;
-  /* margin-top: 2rem; */
   cursor: pointer;
-
-  transition: background-color 0.5s ease;
 
   @media (max-width: 700px) {
     /* width: 96%; */

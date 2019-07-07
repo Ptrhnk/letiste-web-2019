@@ -3,6 +3,9 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 
 import Meta from "../layout/meta";
 import BgContainer from "../layout/BgContainer";
+import backgroundMid from "../img/grafika/pozadi-01-mid.png";
+import backgroundLow from "../img/grafika/pozadi-01-low.png";
+import { globalBorder } from "../constants";
 
 const GlobalStyle = createGlobalStyle`
   html {

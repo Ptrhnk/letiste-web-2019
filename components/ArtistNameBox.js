@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { globalBorder, globalBlack } from "../constants";
 
 const NameBox = styled.div`
-  padding: 1rem 1rem;
+  padding: 0.8rem 1rem;
   margin: 0 0 1rem 0;
   display: flex;
   justify-content: center;
@@ -25,8 +25,16 @@ const NameBox = styled.div`
   }
 `;
 
+const Name = styled.h1`
+  font-size: 1rem;
+`;
+
 const ArtistNameBox = ({ onClick, name }) => {
-  return <NameBox onClick={onClick}>{name}</NameBox>;
+  return (
+    <NameBox onClick={onClick}>
+      <Name>{name}</Name>
+    </NameBox>
+  );
 };
 
 export default ArtistNameBox;

@@ -12,7 +12,7 @@ const Box = styled(animated.div)`
   justify-content: center;
   align-items: space-around;
   flex-direction: column;
-  width: 32rem;
+  width: 30rem;
   flex-shrink: 0;
   flex-grow: 1;
   -webkit-overflow-scrolling: touch;
@@ -41,7 +41,6 @@ const ArtistModalContent = styled.div`
 const Row = styled(animated.div)`
   display: flex;
   justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
   flex-direction: row;
   width: 100%;

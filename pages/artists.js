@@ -21,8 +21,6 @@ const Artists = () => {
   const [modalOpened, setModalOpened] = useState(false);
   const [artist, setArtist] = useState(1);
   const content = useRef();
-  const patek = useRef();
-  const sobota = useRef();
 
   const openArtist = artist => {
     setArtist(artist);
@@ -37,13 +35,11 @@ const Artists = () => {
           artists={artists.friday}
           openArtist={openArtist}
           name={"Pátek"}
-          ref={patek}
         />
         <ArtistContainer
           artists={artists.saturday}
           openArtist={openArtist}
           name={"Sobota"}
-          ref={sobota}
         />
         <ArtistContainer
           artists={artists.doprogram}
