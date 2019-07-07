@@ -61,8 +61,8 @@ const ArtistModalBox = ({ artist, closeModal }) => {
   });
 
   return (
-    <ArtistModalContent>
-      <Box onClick={closeModal} style={boxAnimation}>
+    <ArtistModalContent onClick={closeModal}>
+      <Box style={boxAnimation}>
         <ImageBox image={image} modal />
         <Row>
           <ArtistNameModalBox name={name} />

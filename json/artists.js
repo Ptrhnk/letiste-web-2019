@@ -45,7 +45,7 @@ const artists = {
     },
     {
       id: 11,
-      name: "Antonín Dlapa a Jen Hovorka",
+      name: "Antonín Dlapa \na Jen Hovorka",
       text:
         "Antonín Dlapa je virtuózní kytarista, multi-instrumentalista &. JeN Hovorka je MC, beatboxer, klávesista & producent. Jejich společné duo přináší semi-improvizovanou hudbu na pomezi hiphopu, jazzu & elektroniky.",
       image: TonyJen,
@@ -69,7 +69,7 @@ const artists = {
       name: "DEADBEATZ",
       image: DeadBeatz,
       text:
-        "Kytarista netřeba. Nechte se smést zvukem Deadbeats, bubeníkem zároveň hrajícího na harmoniku, a zpěvákem, který je taktéž mistrem dvojité baskytary. Pokud nevěříte, že tito dva bluesmani zvládnou vytvořit skutečně silný zvuk, doražte…",
+        "Kytarista netřeba. Nechte se smést zvukem Deadbeats, bubeníkem zároveň hrajícího na harmoniku, a zpěvákem, který je taktéž mistrem kontrabasu. Pokud nevěříte, že tito dva bluesmani zvládnou vytvořit skutečně silný zvuk, doražte…",
       website: "http://www.deadbeatz.at/",
       links: [
         "https://www.facebook.com/deadbeatzmusic/",
@@ -119,10 +119,10 @@ const artists = {
   saturday: [
     {
       id: 53,
-      name: "Frederico DeVittor",
+      name: "Frederico DeVittor \nTrio (IT/CZ)",
       image: Frederico,
       text:
-        "Jak říká zpěvačka Sisa Feherová: ”Když Federico hraje, andělíčci zpívají.”"
+        "Jazzový pianista původem z italské Verony působící v New Yorku. Zvuk jazzového tria: akustické piano, kontrabas a bicí souprava. Jazz, groove, swing. Jak říká zpěvačka Sisa Feherová: ”Když Federico hraje, andělé zpívají.”"
     },
     {
       id: 54,
@@ -190,7 +190,7 @@ const artists = {
       id: 61,
       name: "petr.ha (dj set)",
       text:
-        "Petr Hanák působí jako bubeník a hudební producent hned v několika autorských projektech. Na koncertních pódiích ho můžete spatřit např. s elektro-akustickým seskupením Fallgrapp se kterými nyní spolupracuje na chystaném albu, které bude vycházet konci tohoto roku. Jeho tvorbu můžete slyšet mimo jiné třeba na posledním albu Katarzie s názvem Antigona.",
+        "Bubeník a hudební producent, působicí hned v několika autorských projektech. Na koncertních pódiích ho můžete spatřit např. s elektro-akustickým seskupením Fallgrapp se kterými nyní spolupracuje na chystaném albu, které bude vycházet konci tohoto roku. Jeho tvorbu můžete slyšet mimo jiné třeba na posledním albu Katarzie s názvem Antigona.",
       image: PetrHa,
       links: ["https://www.mixcloud.com/Nahak/"]
     },

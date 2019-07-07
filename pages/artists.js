@@ -52,7 +52,7 @@ const Artists = () => {
         />
         <Modal
           isOpen={modalOpened}
-          onRequestClose={() => setModalOpened(false)}
+          onRequestClose={handleModalClose}
           appElement={ReactDOM.findDOMNode(content.current)}
           onClick={() => setModalOpened(false)}
           component={
