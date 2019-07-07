@@ -57,7 +57,7 @@ const ArtistModalBox = ({ artist, closeModal }) => {
     opacity: 1,
     transform: "translate(0, 0)",
     from: { opacity: 0, transform: "translate(20rem, 0)" },
-    config: { tension: 200, friction: 50, mass: 5 }
+    config: { tension: 200, friction: 50, mass: 6 }
   });
 
   return (

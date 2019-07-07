@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { Trail } from "react-spring/renderprops.cjs";
+import { useSpring, animated, config } from "react-spring";
 
 import ArtistBox from "./ArtistBox";
 import { globalBlack, globalBorder } from "../constants";
@@ -22,7 +23,6 @@ const GroupContainer = styled.div`
   }
 `;
 const Container = styled.div`
-  /* width: 80%; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,7 +30,7 @@ const Container = styled.div`
   flex-wrap: wrap;
 `;
 
-const GroupNameDiv = styled.div`
+const GroupNameDiv = styled(animated.div)`
   color: white;
   background-color: ${globalBlack};
   border: ${globalBorder};
@@ -43,10 +43,17 @@ const GroupNameDiv = styled.div`
 `;
 
 const ArtistContainer = ({ artists, openArtist, name }) => {
+  const initOpacity = useSpring({
+    opacity: 1,
+    transform: "scale(1)",
+    from: { opacity: 0, transform: "scale(0)" },
+    config: { tension: 300, friction: 50, mass: 4 },
+    delay: 800
+  });
   return (
     <>
       <GroupContainer>
-        <GroupNameDiv>{name}</GroupNameDiv>
+        <GroupNameDiv style={initOpacity}>{name}</GroupNameDiv>
         <Container>
           <Trail
             reverse={false}
