@@ -67,7 +67,7 @@ const DescriptionBox = () => {
     opacity: 1,
     transform: "translate(-50%, -50%)",
     from: { opacity: 0, transform: "translate(-50%, -200%)" },
-    config: { friction: 50, tension: 500, mass: 3 }
+    config: { friction: 100, tension: 300, mass: 2 }
   });
   return <Box style={animation}>{description}</Box>;
 };

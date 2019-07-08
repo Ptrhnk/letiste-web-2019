@@ -74,13 +74,13 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <title>Letiště Karneval</title>
           <script
             async
             src="https://www.googletagmanager.com/gtag/js?id=UA-143351878-1"
           />
           <script dangerouslySetInnerHTML={this.setGoogleTags()} />
           <Meta />
-          <title>Letiště Karneval</title>
         </Head>
         <body>
           <GlobalStyle />

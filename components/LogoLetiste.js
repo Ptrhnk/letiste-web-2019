@@ -9,6 +9,9 @@ const Container = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   height: 26%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   @media (max-width: 700px) {
     height: 20%;

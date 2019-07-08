@@ -12,7 +12,7 @@ const ImageBox = styled.div`
   flex-shrink: 0;
 
   background-image: ${({ image }) => (image ? `url(${image})` : "none")};
-  filter: grayscale();
+  filter: grayscale(100%);
   background-size: cover;
   background-position: center;
   border: ${globalBorder};
