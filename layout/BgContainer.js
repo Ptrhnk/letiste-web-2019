@@ -2,7 +2,7 @@ import React from "react";
 import styled, { keyframes } from "styled-components";
 import { animated, Keyframes } from "react-spring/renderprops.cjs";
 
-import backgroundMid from "../img/grafika/pozadi-01-mid.png";
+import backgroundHigh from "../img/grafika/pozadi-01-high.png";
 import backgroundLow from "../img/grafika/pozadi-01-low.png";
 
 const initOpacity = keyframes`
@@ -25,7 +25,7 @@ const Container = styled(animated.div)`
   justify-content: center;
   align-items: center;
 
-  background-image: url(${backgroundMid});
+  background-image: url(${backgroundHigh});
   background-size: cover;
   background-position: center;
   transform: scale(1.03);

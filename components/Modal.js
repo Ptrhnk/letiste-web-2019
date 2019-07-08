@@ -1,7 +1,7 @@
 import React from "react";
 import ReactModal from "react-modal";
 
-import backgroundMid from "../img/grafika/pozadi-01-mid.png";
+import backgroundHigh from "../img/grafika/pozadi-01-high.png";
 import { globalBorder } from "../constants";
 
 const maxStyles = {
@@ -15,7 +15,7 @@ const maxStyles = {
     height: "100vh"
   },
   content: {
-    backgroundImage: `url(${backgroundMid})`,
+    backgroundImage: `url(${backgroundHigh})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     borderRadius: "2rem",
