@@ -293,12 +293,12 @@ const artists = {
       text:
         "DivoDej je projekt, za kterým stojí dvě ženy, které se vydaly na cestu za poznávaním dramaterapie. Skrze vlastní zkušenost pociťují léčivé rozměry, které dramaterapeutické techniky nabízí. Proto se rozhodli šírit tento prožitek dále.",
       links: ["https://www.facebook.com/DivoDejom/"]
+    },
+    {
+      id: 51,
+      name: "V4SDG",
+      image: v4sdg
     }
-    // {
-    //   id: 51,
-    //   name: "V4SDG",
-    //   image: v4sdg
-    // }
   ]
 };
 

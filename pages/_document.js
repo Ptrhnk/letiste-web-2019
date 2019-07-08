@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 800;
     letter-spacing: .8px;
     box-sizing: border-box;
-    background-color: black;
+    background-color: #267CE1;
   }
   *, *::after, *::before {
       margin: 0;

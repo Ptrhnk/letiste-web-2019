@@ -20,21 +20,11 @@ const ButtonWrap = styled.div`
   @media (max-width: 700px) {
     /* padding: 0rem; */
   }
-
-  /* :hover {
-    background-color: white;
-    color: ${globalBlack};
-  } */
 `;
 
 const HamburgerButton = ({ onClick, active }) => {
-  const [hovered, setHovered] = useState(false);
   return (
-    <ButtonWrap
-      onClick={onClick}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-    >
+    <ButtonWrap onClick={onClick}>
       <HamburgerIcon active={active} />
     </ButtonWrap>
   );

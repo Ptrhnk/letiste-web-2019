@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { globalBlack, globalBorder } from "../constants";
 
 const Button = styled.div`
-  margin: 0.5rem;
+  margin: 0.4rem 0;
   padding: 0.6rem 1rem;
   color: ${globalBlack};
   border: ${globalBorder};
@@ -15,7 +15,7 @@ const Button = styled.div`
   background-size: 3000% 3000%;
   background-position: center;
   cursor: pointer;
-  box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0rem 0rem 0.6rem rgba(0, 0, 0, 0.2);
 
   transition: all 0.5s ease;
 

@@ -2,8 +2,8 @@ import React from "react";
 import styled, { keyframes } from "styled-components";
 import { animated } from "react-spring";
 
+import backgroundHigh from "../img/grafika/pozadi-01-high.png";
 import backgroundMid from "../img/grafika/pozadi-01-mid.png";
-import backgroundLow from "../img/grafika/pozadi-01-low.png";
 import { globalBlack } from "../constants";
 
 const initScale = keyframes`
@@ -32,7 +32,7 @@ const Button = styled(animated.a)`
   font-weight: 800;
   outline: none;
   box-shadow: none;
-  background-image: url(${backgroundMid});
+  background-image: url(${backgroundHigh});
   background-size: 2000% 2000%;
   background-position: center;
   cursor: pointer;
@@ -51,13 +51,13 @@ const Button = styled(animated.a)`
     font-size: 0.8rem;
     padding: 0.4rem 0.7rem;
     top: 54%;
-    background-image: url(${backgroundLow});
+    background-image: url(${backgroundMid});
   }
   @media (min-width: 700px) {
     :hover {
       padding: 1.2rem 1.4rem;
       background-size: 120% 120%;
-      transform: scale(8) translate(-6.5%, -5%);
+      transform: scale(8) translate(-6.2%, -5%);
       border: 1px solid ${globalBlack};
       font-size: 0.8rem;
       opacity: 1;
