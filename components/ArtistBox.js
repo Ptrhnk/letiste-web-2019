@@ -18,7 +18,7 @@ const showLogo = keyframes`
 
 const Logo = styled.img`
   height: 50%;
-  animation: ${showLogo} 0.3s ease;
+  animation: ${showLogo} 0.1s ease;
   animation-fill-mode: forwards;
 `;
 

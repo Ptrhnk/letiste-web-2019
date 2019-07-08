@@ -69,7 +69,7 @@ const artists = {
       name: "DEADBEATZ",
       image: DeadBeatz,
       text:
-        "Kytarista netřeba. Nechte se smést zvukem Deadbeats, bubeníkem zároveň hrajícího na harmoniku, a zpěvákem, který je taktéž mistrem kontrabasu. Pokud nevěříte, že tito dva bluesmani zvládnou vytvořit skutečně silný zvuk, doražte…",
+        "Kytarista netřeba. Nechte se smést zvukem Deadbeats, bubeníkem zároveň hrajícího na harmoniku, a zpěvákem, který je taktéž mistrem kontrabasu. Pokud nevěříte, že tito dva bluesmani zvládnou vytvořit skutečně silný zvuk, doražte… Punk-Blues-Punk",
       website: "http://www.deadbeatz.at/",
       links: [
         "https://www.facebook.com/deadbeatzmusic/",
@@ -95,10 +95,10 @@ const artists = {
     },
     {
       id: 16,
-      name: "DJ Jeffology",
+      name: "DJ Jeffology (DJ set)",
       image: Jeffology,
       text:
-        "Diagnostikovaný sběratel vinylů a hledač na poli hudebním nehledě na žánry. Člen kapely Champion Sound která stála po boku Prago Union celých šest let přičemž stihla doprovázet většinu domácí hip hopové scény a také umělce ze zahraníčí.",
+        "Diagnostikovaný sběratel vinylů a hledač na poli hudebním nehledě na žánry. Člen kapely Champion Sound která stála po boku Prago Union celých šest let, přičemž stihla doprovázet většinu domácí hip hopové scény a také umělce ze zahraničí.",
       links: ["https://soundcloud.com/jeffology"]
     },
     {
@@ -136,7 +136,8 @@ const artists = {
       id: 55,
       name: "Runway session (jam)",
       image: jam,
-      text: ""
+      text:
+        "Na Letišti se jamovalo vždycky. Muzikanti s krabičkářema, zpěvačky s DJs. Letos si to vyzkoušíme v “prajm tajmu”. Kromě vynikajících českých a moravských instrumentalistů účast naznačili taky rapper Douny, zpěvák a kytarista Gerald Clark a legendární jazzový saxofonista Štěpán Markovič. Co vznikne nevíme, určitě si to ale budeme pamatovat."
     },
     {
       id: 56,
@@ -178,8 +179,9 @@ const artists = {
     },
     {
       id: 60,
-      name: "Dj Ringo Slyng",
-      text: "",
+      name: "Ringo Slyng (dj set)",
+      text:
+        "Low-profile dj pro pobavení těla i duše. Jen 21. století, nostalgie z minulosti jen jako melancholie současnosti. Hranický rodák se vrátí s drobty posbíranými v Paříži.",
       image: RingoSlyng,
       links: [
         "https://www.facebook.com/ringoslyng",
@@ -202,14 +204,14 @@ const artists = {
     },
     {
       id: 63,
-      name: "Kosmic Skaut",
+      name: "Kosmic Skaut (ÉTER kolektiv)",
       text:
         "Dalším hostem bude olomoucký rodák, momentálně působící v Brně, Kosmic Skaut. Znalejší místních poměrů si ho možná pamatují jako rezidentního DJ legendárního Metro Chill Out Clubu. Kosmic Skauta můžete v poslední době vidět a slyšet především na streamech, podcastech a akcích platformy ÉTER.",
       image: CosmicSkaut
     },
     {
       id: 64,
-      name: "Miltz",
+      name: "Miltz (ÉTER kolektiv)",
       image: Miltz,
       text:
         "Členka brněnského ÉTERu s přesahem i za hranici své domoviny. Tato čarodějnice svou hudbou a rituály zpomaluje tok času. Uleťte si s námi do jiného prostoru. Jane zahraje nad legendárním nedělním ránem. Na samotném vrcholu letošního karnevalu.",
@@ -217,14 +219,14 @@ const artists = {
     },
     {
       id: 65,
-      name: "Prozac",
+      name: "Prozac (ÉTER kolektiv)",
       image: Prozac,
       text:
         "Kdo zná Brno, zná i Bastl Instruments. A právě z tohoto kolektivu k nám zavítá modulárový mág PROZAC a představí znovuobjevený styl EBM s prvky chytlavého acidu. Na závěr akce bude liveshow na modulární syntezátor! Odpálí tím nedělní ÉTER afterparty ve stanu."
     },
     {
       id: 66,
-      name: "Obraz",
+      name: "Obraz (ÉTER kolektiv)",
       text:
         "Upovídaný člen ÉTER kolektivu, definující se jako ‘mimo střední proud. nebo prostě jen mimo’ a znalec prostorové akustiky. V jeho setech najdete dlouholeté srdcovky mixlé o nejčerstvější materiál v unikátním spojení se sklony k temnejšímu proudu. ",
       image: Obraz,

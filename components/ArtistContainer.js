@@ -25,7 +25,7 @@ const GroupContainer = styled.div`
 const Container = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: row;
   flex-wrap: wrap;
 `;
@@ -45,8 +45,8 @@ const GroupNameDiv = styled(animated.div)`
 const ArtistContainer = ({ artists, openArtist, name }) => {
   const initOpacity = useSpring({
     opacity: 1,
-    transform: "scale(1)",
-    from: { opacity: 0, transform: "scale(0)" },
+    transform: "translate(0,0) scale(1)",
+    from: { opacity: 0, transform: "translate(0,10rem) scale(0)" },
     config: { tension: 300, friction: 50, mass: 4 },
     delay: 800
   });
