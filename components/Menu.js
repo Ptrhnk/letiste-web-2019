@@ -27,7 +27,7 @@ const Page = styled.div`
 `;
 
 const menuItems = [
-  { id: 0, href: "/artists", buttonName: "INTERPRETI" },
+  { id: 0, href: "/artists", buttonName: "UMĚLCI" },
   { id: 1, href: "/karneval", buttonName: "KARNEVAL" },
   { id: 2, href: "/partners", buttonName: "PARTNEŘI" }
 ];

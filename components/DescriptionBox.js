@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useSpring, animated, config } from "react-spring";
 
@@ -58,6 +58,13 @@ const Box = styled(animated.p)`
   white-space: pre-wrap;
   z-index: 5000;
 
+  /* &::first-letter {
+    text-transform: uppercase;
+    font-size: 5em;
+    font-weight: bold;
+    letter-spacing: 5px;
+  } */
+
   @media (max-width: 700px) {
     width: 90%;
     font-size: 0.8rem;
@@ -72,7 +79,37 @@ const DescriptionBox = () => {
     from: { opacity: 0, transform: "translate(-50%, -200%)" },
     config: { friction: 100, tension: 300, mass: 2 }
   });
-  return <Box style={animation}>{description}</Box>;
+
+  const descriptionArr = description.split("");
+  const [descriptionState, setDescriptionState] = useState(
+    descriptionArr.slice()
+  );
+  const symbols = "!#$%&*~";
+
+  // useEffect(() => void setInterval(() => changeLetter(), 2000), []);
+
+  const changeLetter = () => {
+    const replacement = symbols.charAt(
+      Math.floor(Math.random() * symbols.length)
+    );
+    const index = Math.floor(Math.random() * description.length);
+    if (
+      descriptionArr[index] === descriptionState[index] &&
+      descriptionArr[index] != " "
+    ) {
+      console.log(index);
+      console.log(descriptionState[index]);
+      descriptionStateTemp[index] = replacement;
+      setTimeout(function() {
+        descriptionState[index] = descriptionArr[index];
+        // descriptionStateTemp[index] = descriptionArr[index];
+        setDescriptionState(descriptionStateTemp);
+      }, Math.floor(Math.random() * 200 + 200));
+    }
+    console.log("---------");
+  };
+
+  return <Box style={animation}>{descriptionState}</Box>;
 };
 
 export default DescriptionBox;
