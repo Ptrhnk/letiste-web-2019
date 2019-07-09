@@ -46,6 +46,7 @@ const ArtistModalContent = styled.div`
 const Row = styled(animated.div)`
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   flex-wrap: wrap;
   flex-direction: row;
   width: 100%;

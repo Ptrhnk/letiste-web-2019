@@ -4,12 +4,11 @@ import styled from "styled-components";
 import { globalBorder } from "../constants";
 
 const NameBox = styled.div`
-  padding: 1rem 1rem;
+  padding: 0.8rem 1rem;
   margin: 0 1rem 1rem 0;
+  font-size: 1rem;
   display: flex;
   justify-content: center;
-  align-self: flex-start;
-
   border: ${globalBorder};
   background-color: white;
   color: black;
@@ -17,7 +16,9 @@ const NameBox = styled.div`
   cursor: pointer;
   white-space: pre-wrap;
 
-  transition: all 0.5s ease;
+  @media (max-width: 700px) {
+    font-size: 0.9rem;
+  }
 `;
 
 const ArtistNameBox = ({ onClick, name }) => {

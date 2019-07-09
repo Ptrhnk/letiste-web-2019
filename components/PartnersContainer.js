@@ -20,10 +20,9 @@ const Container = styled(animated.div)`
 const GroupContainer = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   flex-wrap: wrap;
   flex-direction: row;
-  /* background-color: blue; */
   z-index: 20000;
 `;
 

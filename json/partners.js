@@ -17,6 +17,8 @@ import graficke_papiry from "../img/partners/partneri/graficke-papiry.png";
 import pivovar_zasova from "../img/partners/partneri/Pivovar_zasova.png";
 import stavby_stroje from "../img/partners/partneri/Stavby-stroje-Slavic.png";
 import optys from "../img/partners/partneri/optys.png";
+import dovezto from "../img/partners/partneri/Doveztodal.png";
+import frida from "../img/partners/partneri/taxi-frida.png";
 
 // Medialni
 import hranicky_denik from "../img/partners/medialni/hranicky_denik.png";
@@ -103,6 +105,14 @@ const partners = {
     {
       name: "Zeal",
       image: zeal
+    },
+    {
+      name: "Taxi Frida",
+      image: frida
+    },
+    {
+      name: "Dovez to dál",
+      image: dovezto
     }
   ]
 };

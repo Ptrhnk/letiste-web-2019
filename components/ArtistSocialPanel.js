@@ -8,7 +8,6 @@ import ArtistSocialButton from "./ArtistSocialButton";
 const Panel = styled(animated.div)`
   background-color: white;
   border: ${globalBorder};
-  padding: 0.2rem 0;
   margin-bottom: 1rem;
   display: flex;
   justify-content: center;

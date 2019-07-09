@@ -7,7 +7,7 @@ import Citty from "../img/artists/patek/citty-low.png";
 
 import AidKid from "../img/artists/patek/aidkidv001-low.png";
 import Jeffology from "../img/artists/patek/jeffology-low.png";
-import Imateva from "../img/artists/patek/imateva-low.png";
+import Imateva from "../img/artists/patek/Ima-teva01-low.png";
 import MetroFamily from "../img/artists/patek/metro-low.png";
 
 import Frederico from "../img/artists/sobota/frederico-low.png";
@@ -28,6 +28,9 @@ import Obraz from "../img/artists/sobota/obraz-low.png";
 
 import DivoDej from "../img/artists/doprogram/divodej-low.png";
 import v4sdg from "../img/artists/doprogram/V4SDG-low.png";
+import prales from "../img/artists/doprogram/prales01-low.png";
+import typicko from "../img/artists/doprogram/typicko-low.png";
+import svetluska from "../img/artists/doprogram/svetluska-art-low.png";
 
 // -------------------- ARTISTS --------------------
 const artists = {
@@ -112,12 +115,13 @@ const artists = {
     },
     {
       id: 17,
-      name: "Imateva",
+      name: "Ima Teva",
       image: Imateva,
       text:
-        "Ima Teva je hudební svět plný fantazií a symbolů, jež čerpá z podnětů neustále se transformující tajuplné přírody a kalendáře jejích cyklů. Cesta z města, na které balíme sluchátka do kapsy a posloucháme mýtickou alfamáti Přírodu, která šustí, ševelí, bzučí a hvízdá svoje mantry. ",
+        "Ima Teva je hudební svět plný fantazií a symbolů, jež čerpá z podnětů neustále se transformující tajuplné přírody a kalendáře jejích cyklů. Cesta z města, na které balíme sluchátka do kapsy a posloucháme mýtickou alfamáti Přírodu, která šustí, ševelí, bzučí a hvízdá svoje mantry.",
       links: [
-        "https://soundcloud.com/imateva",
+        "https://www.facebook.com/imatevasoundtrackmothernature/",
+        "https://imateva.bandcamp.com/",
         "https://www.instagram.com/ima_teva/"
       ]
     },
@@ -287,17 +291,44 @@ const artists = {
   ],
   doprogram: [
     {
-      id: 50,
+      id: 70,
       name: "DivoDej",
       image: DivoDej,
       text:
-        "DivoDej je projekt, za kterým stojí dvě ženy, které se vydaly na cestu za poznávaním dramaterapie. Skrze vlastní zkušenost pociťují léčivé rozměry, které dramaterapeutické techniky nabízí. Proto se rozhodli šírit tento prožitek dále.",
+        "Když si hrají dospělí, svléknou role, které si pečlivě každý den oblékají. DivoDej nabízí jedinečný prostor autentického sebepoznání, kde můžeme odhalit to, co se skrývá pod maskou. Vstupte s námi do spontánního procesu s využitím dramaterapeutických technik, který nás povede možná až tam, kde pravda je skrytá.",
       links: ["https://www.facebook.com/DivoDejom/"]
     },
     {
-      id: 51,
+      id: 71,
       name: "V4SDG",
-      image: v4sdg
+      image: v4sdg,
+      text:
+        "Projekt, který se věnuje naplnění cílů udržitelného rozvoje OSN (SDGs) ve Visegrádě. Diskuse se zajímavými hosty Green Dressmakers a Fashion Revolution CZ&SK na téma “Oděvní průmysl jako druhý největší původce znečištění ve světě” a následný workshop upcyklace oblečení, kde můžete dodat nový život starým hadrům.",
+      links: ["https://www.facebook.com/v4sdg"]
+    },
+    {
+      id: 72,
+      name: "Prales dětem",
+      image: prales,
+      text:
+        "Neziskovka zabývající se ochranou divoké přírody a zvířat. Připravte se na prezentaci na téma ochrany divočiny a ohrožených druhů zvířat a co může udělat každý z nás. Po celou dobu také můžete navštívit infostánek.",
+      website: "https://pralesdetem.cz/",
+      links: ["https://www.facebook.com/PralesDetem/"]
+    },
+    {
+      id: 73,
+      name: "Týpíčko",
+      image: typicko,
+      text:
+        "Divoženka Tattuanna vás pohostí ve svém týpíčku, kde si můžete dopřát příjemného stínu a chillu a navíc vám k tomu vytvoří stylové tetování či bodypainting."
+    },
+    {
+      id: 74,
+      name: "Světluška Art",
+      image: svetluska,
+      text:
+        "Barev není nikdy dost a tak vám Světluška vytvoří bodypainting na míru vašim nejodvážnějším představám.",
+      links: ["https://www.facebook.com/SvetluskaBludicka/"]
     }
   ]
 };

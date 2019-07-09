@@ -1,13 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 import ArtistSocialIcon from "./ArtistSocialIcon";
+import { globalBlack } from "../constants";
 
 const Button = styled.a`
-  padding: 0.6rem;
-  margin: 0 0.6rem;
+  padding: 0.6rem 0.9rem;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 700px) {
+    padding: 0.6rem 0.9rem;
+  }
 `;
 
 const ArtistSocialButton = ({ link, website }) => {

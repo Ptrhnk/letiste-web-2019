@@ -14,8 +14,8 @@ const Icon = styled.img`
   height: 2rem;
 
   @media (max-width: 700px) {
-    width: 1.9rem;
-    height: 1.9rem;
+    width: 1.7rem;
+    height: 1.7rem;
   }
 `;
 

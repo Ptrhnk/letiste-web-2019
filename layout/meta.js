@@ -1,5 +1,8 @@
 export default () => (
   <>
+    <meta itemprop="name" content="Karneval Letiště " />
+    <meta itemprop="description" content="JAZZ | ELEKTRONIKA | DIVADLO. Informace o line upu a vstupenky na Letiště Karneval 2019, který se koná 12. - 13.7.2019 na letišti u Hranic " />
+    <meta itemprop="image" content="http://scontent.fprg1-1.fna.fbcdn.net/v/t1.0-9/37154007_2141339806123605_7164382736835149824_n.jpg" />
     <meta charSet="utf-8" class="next-head" />
     <meta
       name="viewport"
@@ -9,16 +12,15 @@ export default () => (
     <meta name="robots" content="all" />
     <meta
       name="keywords"
-      content="letište, letište karneval, karneval, zábava,  letište 2019, letište hranice, letište fest, letiste2019, letiste.org, JAZZ, ELEKTRONIKA, DIVADLO"
+      content="letište, letište karneval, karneval, zábava, letište 2019, letište hranice, letište fest, letiste2019, letiste.org, JAZZ, ELEKTRONIKA, DIVADLO"
     />
     <meta
       name="description"
-      content="JAZZ | ELEKTRONIKA | DIVADLO. Informace o line upu a vstupenky na happening Letiště 2019, který se koná 12. - 13.7.2019 na letišti u Hranic "
+      content="JAZZ | ELEKTRONIKA | DIVADLO. Informace o line upu a vstupenky na Letiště Karneval 2019, který se koná 12. - 13.7.2019 na letišti u Hranic "
     />
-
     <meta
       name="twitter:description"
-      content="Informace o line upu a vstupenky na happening Letiště 2019, který se koná 12. - 13.7.2019 na letišti u Hranic JAZZ | ELEKTRONIKA | DIVADLO"
+      content="Informace o line upu a vstupenky na Letiště Karneval 2019, který se koná 12. - 13.7.2019 na letišti u Hranic JAZZ | ELEKTRONIKA | DIVADLO"
     />
     <meta
       property="og:url"
