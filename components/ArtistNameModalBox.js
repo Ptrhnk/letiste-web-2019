@@ -15,6 +15,8 @@ const NameBox = styled.div`
   text-transform: uppercase;
   cursor: pointer;
   white-space: pre-wrap;
+  letter-spacing: 1px;
+  font-weight: 600;
 
   @media (max-width: 700px) {
     font-size: 0.9rem;

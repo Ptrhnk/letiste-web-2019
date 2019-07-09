@@ -119,9 +119,9 @@ const artists = {
       image: Imateva,
       text:
         "Ima Teva je hudební svět plný fantazií a symbolů, jež čerpá z podnětů neustále se transformující tajuplné přírody a kalendáře jejích cyklů. Cesta z města, na které balíme sluchátka do kapsy a posloucháme mýtickou alfamáti Přírodu, která šustí, ševelí, bzučí a hvízdá svoje mantry.",
+      website: "https://imateva.bandcamp.com/",
       links: [
         "https://www.facebook.com/imatevasoundtrackmothernature/",
-        "https://imateva.bandcamp.com/",
         "https://www.instagram.com/ima_teva/"
       ]
     },
@@ -311,7 +311,7 @@ const artists = {
       name: "Prales dětem",
       image: prales,
       text:
-        "Neziskovka zabývající se ochranou divoké přírody a zvířat. Připravte se na prezentaci na téma ochrany divočiny a ohrožených druhů zvířat a co může udělat každý z nás. Po celou dobu také můžete navštívit infostánek.",
+        "Nechte se zanést do divoké přírody deštného pralesa na indonéské Sumatře. Ochránkyně přírody Alena Bendová vám popovídá o tom, jak projekty spolku Prales dětem na ochranu ohrožených druhů zvířat a přírodního bohatství spojují sílu lidí a ukazují cestu pochopení přírody. Protože manažerů už je plnej svět a být strážcem přírody by chtěl každý! Uvidíte.",
       website: "https://pralesdetem.cz/",
       links: ["https://www.facebook.com/PralesDetem/"]
     },

@@ -32,6 +32,8 @@ const NameBox = styled.div`
 
 const Name = styled.h1`
   font-size: 1rem;
+  letter-spacing: 1px;
+  font-weight: 600;
   @media (max-width: 700px) {
     font-size: 0.8rem;
   }

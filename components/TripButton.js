@@ -26,10 +26,7 @@ const Button = styled(animated.a)`
   padding: 0.5rem 0.9rem;
   color: rgba(255, 255, 255, 1);
   border: 2px solid rgba(255, 255, 255, 1);
-  letter-spacing: 0.4rem;
   border-radius: 2rem;
-  font-size: 1rem;
-  font-weight: 800;
   outline: none;
   box-shadow: none;
   background-image: url(${backgroundHigh});
@@ -48,7 +45,6 @@ const Button = styled(animated.a)`
     top: 52%;
   }
   @media (max-width: 700px) {
-    font-size: 0.8rem;
     padding: 0.4rem 0.7rem;
     top: 54%;
     background-image: url(${backgroundMid});
@@ -89,6 +85,12 @@ const Button = styled(animated.a)`
 
 const Title = styled.h1`
   font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.4rem;
+
+  @media (max-width: 700px) {
+    font-size: 0.8rem;
+  }
 `;
 
 const TripButton = ({ onClick, name, href, onMouseEnter, onMouseLeave }) => {

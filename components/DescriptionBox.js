@@ -40,11 +40,14 @@ const Box = styled(animated.p)`
   top: 50%;
   transform: translate(-50%, -50%);
   padding: 1rem;
-  width: 26rem;
+  width: 30rem;
 
   background-color: rgba(255, 255, 255, 0.85);
   border: ${globalBorder};
-  font-size: 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 1.6rem;
   border-radius: 1rem;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 

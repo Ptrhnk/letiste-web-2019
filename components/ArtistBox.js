@@ -33,7 +33,7 @@ const Container = styled.div`
   margin-bottom: 1rem;
 `;
 
-const ArtistBox = ({ artist, showText, showArtist, openArtist }, key) => {
+const ArtistBox = ({ artist, showArtist, openArtist }, key) => {
   const [hover, setHover] = useState(false);
   const { name, image } = artist;
 
@@ -48,7 +48,7 @@ const ArtistBox = ({ artist, showText, showArtist, openArtist }, key) => {
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
           >
-            {hover && !showText && <Logo src={logo} />}
+            {hover && <Logo src={logo} />}
           </ImageBox>
           <ArtistNameBox onClick={() => openArtist(artist)} name={name} />
         </Container>

@@ -19,6 +19,12 @@ const TextBox = styled(animated.div)`
   }
 `;
 
+const Text = styled.p`
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 1.6rem;
+`;
+
 const ArtistTextBox = ({ text, onClick }) => {
   const boxAnimation = useSpring({
     opacity: 1,
@@ -29,7 +35,7 @@ const ArtistTextBox = ({ text, onClick }) => {
   });
   return (
     <TextBox style={boxAnimation} onClick={onClick}>
-      <p>{text}</p>
+      <Text>{text}</Text>
     </TextBox>
   );
 };

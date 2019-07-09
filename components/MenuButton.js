@@ -8,7 +8,6 @@ const Button = styled.div`
   padding: 0.6rem 1rem;
   color: ${globalBlack};
   border: ${globalBorder};
-  letter-spacing: 0.1rem;
   font-size: 1rem;
   outline: none;
   background-color: white;
@@ -25,15 +24,17 @@ const Button = styled.div`
   }
 `;
 
-const Nadpis = styled.h2`
+const Name = styled.h2`
   font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
 `;
 
 const MenuButton = ({ onClick, name }) => {
   return (
     <>
       <Button onClick={onClick}>
-        <Nadpis>{name}</Nadpis>
+        <Name>{name}</Name>
       </Button>
     </>
   );

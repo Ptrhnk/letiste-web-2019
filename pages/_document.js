@@ -9,9 +9,9 @@ const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
   }
   body {
-    @import url('https://fonts.googleapis.com/css?family=Poppins');
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800&display=swap');
     font-family: 'Poppins', sans-serif;
-    font-weight: 800;
+    font-weight: 400;
     letter-spacing: .8px;
     box-sizing: border-box;
     background-color: #267CE1;
