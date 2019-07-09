@@ -16,6 +16,7 @@ const NameBox = styled.div`
   text-transform: uppercase;
   cursor: pointer;
   white-space: pre-wrap;
+  line-height: 1.7rem;
 
   transition: all 0.5s ease;
 

@@ -37,7 +37,7 @@ const artists = {
   friday: [
     {
       id: 10,
-      name: "Ešli",
+      name: "Ešli (USA/SK)",
       image: Esli,
       text:
         "Založila kapelu (The High Corporation), hudební projekt (Zorba že ja Buddha), zúčastnila se Red Bull Music Academy Prague Bass Camp 2015 a hrála jako support pro jména jako jsou Selah Sue , Akua Naru, Nneka nebo Oshun. Jazzová zpěvačka Ešli.",
@@ -70,7 +70,7 @@ const artists = {
     },
     {
       id: 13,
-      name: "DEADBEATZ",
+      name: "DEADBEATZ (AUT)",
       image: DeadBeatz,
       text:
         "Kytarista netřeba. Nechte se smést zvukem Deadbeats, bubeníkem zároveň hrajícího na harmoniku, a zpěvákem, který je taktéž mistrem kontrabasu. Pokud nevěříte, že tito dva bluesmani zvládnou vytvořit skutečně silný zvuk, doražte… Punk-Blues-Punk",
@@ -137,7 +137,7 @@ const artists = {
   saturday: [
     {
       id: 53,
-      name: "Frederico DeVittor \nTrio (IT/CZ)",
+      name: "Frederico DeVittor Trio\n(IT/CZ)",
       image: Frederico,
       text:
         "Jazzový pianista původem z italské Verony působící v New Yorku. Zvuk jazzového tria: akustické piano, kontrabas a bicí souprava. Jazz, groove, swing. Jak říká zpěvačka Sisa Feherová: ”Když Federico hraje, andělé zpívají.”",
@@ -179,7 +179,7 @@ const artists = {
     },
     {
       id: 57,
-      name: "Lebanon + Diesel Diesel Max",
+      name: "Lebanon\n+ Diesel Diesel Max",
       text:
         "Lebanon je seskupením čtyř entit, které se navzájem moc neslyší, nevidí, dalo by se říct, že dělají, že tam ti ostatní nejsou. A tak proč rovnou nevytvořit z jednoho Lebanonu Lebanony čtyři? Do Evropy tak například dorazí čtyřikrát méně syrských uprchlíků.",
       image: Lebanon,
@@ -199,7 +199,7 @@ const artists = {
     },
     {
       id: 59,
-      name: "sabrehart",
+      name: "sabrehart (UK)",
       text:
         "Sabrehart je britský elektronický producent Stephen Abrehart, hrající na sampler / drum machine a různé jiné syntezátory a groove boxy. Jeho hudba obsahuje vlivy z hiphopu 90. let, breakbeatu a junglu, ale má výrazně moderní feel. Retro future beats for your listening pleasure!",
       image: Sabrehart,
@@ -243,7 +243,7 @@ const artists = {
     },
     {
       id: 63,
-      name: "Kosmic Skaut (ÉTER kolektiv)",
+      name: "Kosmic Skaut\n(ÉTER kolektiv)",
       text:
         "Dalším hostem bude olomoucký rodák, momentálně působící v Brně, Kosmic Skaut. Znalejší místních poměrů si ho možná pamatují jako rezidentního DJ legendárního Metro Chill Out Clubu. Kosmic Skauta můžete v poslední době vidět a slyšet především na streamech, podcastech a akcích platformy ÉTER.",
       image: CosmicSkaut,
