@@ -29,11 +29,19 @@ const StyledLink = styled.a`
   }
 `;
 
+const Home = styled.h1`
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+`;
+
 const GoHomeButton = () => {
   return (
     <>
       <Link href="/">
-        <StyledLink>Domů</StyledLink>
+        <StyledLink>
+          <Home>Domů</Home>
+        </StyledLink>
       </Link>
     </>
   );

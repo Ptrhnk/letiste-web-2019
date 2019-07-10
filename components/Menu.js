@@ -26,10 +26,10 @@ const Page = styled.div`
 `;
 
 const menuItems = [
-  { id: 0, href: "/artists", buttonName: "UMĚLCI" },
-  { id: 1, href: "/lineup", buttonName: "PROGRAM" },
-  { id: 2, href: "/karneval", buttonName: "KARNEVAL" },
-  { id: 3, href: "/partners", buttonName: "PARTNEŘI" }
+  { id: 0, href: "/artists", buttonName: "Umělci" },
+  { id: 1, href: "/lineup", buttonName: "Program" },
+  { id: 2, href: "/karneval", buttonName: "Karneval" },
+  { id: 3, href: "/partners", buttonName: "Partneři" }
 ];
 
 const Menu = ({ onHamburgerClick }) => {

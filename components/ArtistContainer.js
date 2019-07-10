@@ -37,9 +37,14 @@ const GroupNameDiv = styled(animated.div)`
   z-index: 1000;
   padding: 1.2rem;
   margin: 2rem 0;
-  font-size: 1rem;
   padding: 0.7rem;
   text-transform: uppercase;
+`;
+
+const GroupName = styled.h1`
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
 `;
 
 const ArtistContainer = ({ artists, openArtist, name }) => {
@@ -53,7 +58,9 @@ const ArtistContainer = ({ artists, openArtist, name }) => {
   return (
     <>
       <GroupContainer>
-        <GroupNameDiv style={initOpacity}>{name}</GroupNameDiv>
+        <GroupNameDiv style={initOpacity}>
+          <GroupName>{name}</GroupName>
+        </GroupNameDiv>
         <Container>
           <Trail
             reverse={false}

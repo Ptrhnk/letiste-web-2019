@@ -34,7 +34,6 @@ const PartnerNameBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 0.8rem;
 
   border: ${globalBorder};
   color: ${globalBlack};
@@ -50,7 +49,8 @@ const PartnerNameBox = styled.div`
 `;
 
 const Name = styled.h1`
-  font-size: 1rem;
+  font-size: 0.9rem;
+  font-weight: 500rem;
 `;
 
 const PartnerBox = ({ partner }, key) => {

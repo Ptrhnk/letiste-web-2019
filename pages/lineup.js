@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import GoHomeButton from "../components/GoHomeButton";
+import { useSpring, animated, config } from "react-spring";
 
+import GoHomeButton from "../components/GoHomeButton";
 import patek from "../img/line-up/patek.png";
 import sobota from "../img/line-up/sobota.png";
 import { globalBlack } from "../constants";
@@ -15,7 +16,7 @@ const Page = styled.div`
   width: 100%;
 `;
 
-const ImageContainer = styled.div`
+const ImageContainer = styled(animated.div)`
   position: absolute;
   display: flex;
   flex-direction: row;
@@ -41,11 +42,17 @@ const Image = styled.img`
 `;
 
 const LineUp = () => {
+  const boxAnimation = useSpring({
+    opacity: 1,
+    transform: "translate(0, 0)",
+    from: { opacity: 0, transform: "translate(0rem, -20rem)" },
+    config: { tension: 200, friction: 50, mass: 6 }
+  });
   return (
     <>
       <Page>
         <GoHomeButton />
-        <ImageContainer>
+        <ImageContainer style={boxAnimation}>
           <Image src={patek} />
           <Image src={sobota} />
         </ImageContainer>

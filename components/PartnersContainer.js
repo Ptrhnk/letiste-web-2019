@@ -37,6 +37,12 @@ const GroupNameDiv = styled.div`
   padding: 0.7rem;
 `;
 
+const GroupName = styled.h1`
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+`;
+
 const PartnersContainer = ({ partners, name }) => {
   const animation = useSpring({
     opacity: 1,
@@ -46,7 +52,9 @@ const PartnersContainer = ({ partners, name }) => {
   });
   return (
     <Container style={animation}>
-      <GroupNameDiv>{name}</GroupNameDiv>
+      <GroupNameDiv>
+        <GroupName>{name}</GroupName>
+      </GroupNameDiv>
       <GroupContainer>
         {partners.map((item, key) => (
           <PartnerBox partner={item} key={key} />
