@@ -4,8 +4,8 @@ import styled from "styled-components";
 import { globalBlack, globalBorder } from "../constants";
 
 const Button = styled.div`
-  margin: 0.4rem 0;
-  padding: 0.6rem 1rem;
+  margin: 0.3rem 0;
+  padding: 0.5rem 1rem;
   color: ${globalBlack};
   border: ${globalBorder};
   font-size: 1rem;

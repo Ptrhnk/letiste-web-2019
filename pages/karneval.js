@@ -9,7 +9,6 @@ const Page = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  /* position: absolute; */
   position: relative;
   height: 100vh;
   /* justify-content: flex-start; */

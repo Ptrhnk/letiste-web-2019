@@ -8,7 +8,7 @@ import HamburgerButton from "./HamburgerButton";
 
 const Panel = styled.div`
   position: absolute;
-  top: 26%;
+  top: 22%;
   left: 50%;
   transform: translate(-50%, 0);
 
@@ -19,7 +19,6 @@ const Panel = styled.div`
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
-  /* border: 2px solid white; */
 `;
 
 const Page = styled.div`
@@ -28,8 +27,9 @@ const Page = styled.div`
 
 const menuItems = [
   { id: 0, href: "/artists", buttonName: "UMĚLCI" },
-  { id: 1, href: "/karneval", buttonName: "KARNEVAL" },
-  { id: 2, href: "/partners", buttonName: "PARTNEŘI" }
+  { id: 1, href: "/lineup", buttonName: "PROGRAM" },
+  { id: 2, href: "/karneval", buttonName: "KARNEVAL" },
+  { id: 3, href: "/partners", buttonName: "PARTNEŘI" }
 ];
 
 const Menu = ({ onHamburgerClick }) => {

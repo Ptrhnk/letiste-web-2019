@@ -44,7 +44,7 @@ const Box = styled(animated.p)`
 
   background-color: rgba(255, 255, 255, 0.85);
   border: ${globalBorder};
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 500;
   letter-spacing: 1px;
   line-height: 1.6rem;
@@ -67,7 +67,8 @@ const Box = styled(animated.p)`
 
   @media (max-width: 700px) {
     width: 90%;
-    font-size: 0.8rem;
+    font-size: 1rem;
+    line-height: 1.4rem;
     margin: 2rem 0;
   }
 `;

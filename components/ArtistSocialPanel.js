@@ -10,7 +10,7 @@ const Panel = styled(animated.div)`
   border: ${globalBorder};
   margin-bottom: 1rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   align-self: flex-end;
