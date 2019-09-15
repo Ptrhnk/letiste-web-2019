@@ -3,18 +3,16 @@ import styled from "styled-components";
 import { useTransition, animated, config } from "react-spring";
 
 import foto1 from "../img/karneval/1.jpg";
-import foto2 from "../img/karneval/2.jpg";
 import foto3 from "../img/karneval/3.jpg";
 import foto4 from "../img/karneval/4.jpg";
 import foto5 from "../img/karneval/5.jpg";
 import foto6 from "../img/karneval/6.jpg";
-import foto7 from "../img/karneval/7.jpg";
 import foto8 from "../img/karneval/8.jpg";
 
 const Container = styled(animated.div)`
-  position: absolute;
+  position: fixed;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-image: url(${foto5});
   background-size: cover;
   background-position: center;
@@ -23,12 +21,10 @@ const Container = styled(animated.div)`
 
 const slides = [
   { id: 0, url: foto1 },
-  { id: 1, url: foto2 },
   { id: 2, url: foto3 },
   { id: 3, url: foto4 },
   { id: 4, url: foto5 },
   { id: 5, url: foto6 },
-  { id: 6, url: foto7 },
   { id: 7, url: foto8 }
 ];
 
@@ -40,6 +36,7 @@ const ImageSlider = () => {
     leave: { opacity: 0 },
     config: { tension: 450, friction: 500, mass: 1 }
   });
+
   useEffect(
     () =>
       void setInterval(

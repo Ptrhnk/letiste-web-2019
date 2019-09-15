@@ -2,10 +2,8 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useSpring, animated, config } from "react-spring";
 
-import { globalBorder } from "../constants";
-
 const description =
-  "Co je důležitější - diverzita nebo unita? Mohou tyto dva pojmy existovat zároveň? Letiště Karneval skýtá odpovědi. Místo standardní divadelní formy představíme site-specific koncept přesahující až do imerzivního divadla. Spolu s nejrůznějšími umělci z celé republiky vytvoříme alternativní svět mystického karnevalu. Prožij s námi příběh extravagance a jednoty. Pronikneme do setkání rozumných lidí a staneme se součástí elitního společenství.";
+  "Co je důležitější - diverzita nebo unita? Mohou tyto dva pojmy existovat zároveň? Letiště Karneval skýtá odpovědi. Místo standardní divadelní formy představíme site-specific koncept přesahující až do imerzivního divadla. Spolu s nejrůznějšími umělci z celé republiky vytvoříme alternativní svět mystického karnevalu. Prožij s námi příběh extravagance a jednoty. Pronikneme do setkání rozumných lidí\na staneme se součástí elitního společenství.";
 
 const descriptionArr = [
   {
@@ -35,10 +33,6 @@ const descriptionArr = [
 ];
 
 const Box = styled(animated.p)`
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   padding: 1rem;
   width: 30rem;
 
@@ -56,6 +50,7 @@ const Box = styled(animated.p)`
   text-align: center;
   white-space: pre-wrap;
   z-index: 5000;
+  margin: 2rem 0;
 
   /* &::first-letter {
     text-transform: uppercase;
@@ -68,15 +63,15 @@ const Box = styled(animated.p)`
     width: 90%;
     font-size: 1rem;
     line-height: 1.4rem;
-    margin: 2rem 0;
+    margin: 4rem 0 3rem 0;
   }
 `;
 
 const DescriptionBox = () => {
   const animation = useSpring({
     opacity: 1,
-    transform: "translate(-50%, -50%)",
-    from: { opacity: 0, transform: "translate(-50%, -200%)" },
+    transform: "translate(0, 0)",
+    from: { opacity: 0, transform: "translate(0%, -200%)" },
     config: { friction: 50, tension: 200, mass: 1 }
   });
 
@@ -84,11 +79,9 @@ const DescriptionBox = () => {
   const [descriptionState, setDescriptionState] = useState(
     descriptionArr.slice()
   );
-  // const symbols = "!#$%&*~";
-  // const symbols = "aábcčdďeěéfghiíjklmnoópqrřsštťuúůvwxyýzž";
   const symbols = "abcdefghijklmnopqrstuvwxyz!#$%&*~";
 
-  useEffect(() => void setInterval(() => changeLetter(), 70), []);
+  useEffect(() => void setInterval(() => changeLetter(), 60), []);
 
   const changeLetter = () => {
     const replacementSymbol = symbols.charAt(
@@ -105,7 +98,7 @@ const DescriptionBox = () => {
       setTimeout(function() {
         descriptionState[index] = descriptionArr[index];
         setDescriptionState(descriptionState.slice());
-      }, Math.floor(Math.random() * 300 + 100));
+      }, Math.floor(Math.random() * 400 + 100));
     }
   };
 
