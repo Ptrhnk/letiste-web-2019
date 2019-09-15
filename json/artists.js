@@ -224,7 +224,7 @@ const artists = {
       id: 61,
       name: "petr.ha (dj set)",
       text:
-        "Bubeník a hudební producent, působicí hned v několika autorských projektech. Na koncertních pódiích ho můžete spatřit např. s elektro-akustickým seskupením Fallgrapp se kterými nyní spolupracuje na chystaném albu, které bude vycházet konci tohoto roku. Jeho tvorbu můžete slyšet mimo jiné třeba na posledním albu Katarzie s názvem Antigona.",
+        "Bubeník a hudební producent, působící hned v několika autorských projektech. Na koncertních pódiích ho můžete spatřit např. s elektro-akustickým seskupením Fallgrapp se kterými nyní spolupracuje na chystaném albu, které bude vycházet konci tohoto roku. Jeho tvorbu můžete slyšet mimo jiné třeba na posledním albu Katarzie s názvem Antigona.",
       image: PetrHa,
       links: [
         "https://www.mixcloud.com/Nahak/",
@@ -303,8 +303,8 @@ const artists = {
       name: "V4SDG",
       image: v4sdg,
       text:
-        "Projekt, který se věnuje naplnění cílů udržitelného rozvoje OSN (SDGs) ve Visegrádě. Diskuse se zajímavými hosty Green Dressmakers a Fashion Revolution CZ&SK na téma “Oděvní průmysl jako druhý největší původce znečištění ve světě” a následný workshop upcyklace oblečení, kde můžete dodat nový život starým hadrům.",
-      links: ["https://www.facebook.com/v4sdg"]
+        "Co je opravdu udržitelná móda? Jakým způsobem napomoci její cirkularitě? Visegrád for Sustainability! Diskuse se zajímavými hosty z Green Dressmakers a Fashion Revolution CZ&SK, kteří přiblíží dopad “fast fashion” na životní prostředí se souvisejícími sociálními problémy a nastíní nám také řešení. Následovat bude workshop upcyklace oblečení, kde můžete dodat nový život starým hadrům.",
+      links: ["https://www.facebook.com/v4sdg.cesko"]
     },
     {
       id: 72,
