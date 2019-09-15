@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700&display=swap');
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     letter-spacing: .8px;

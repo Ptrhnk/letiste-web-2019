@@ -42,14 +42,13 @@ const Box = styled(animated.p)`
   padding: 1rem;
   width: 30rem;
 
-  background-color: rgba(255, 255, 255, 0.85);
-  border: ${globalBorder};
-  font-size: 1.2rem;
-  font-weight: 500;
-  letter-spacing: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-family: "Ubuntu Mono", monospace;
+  font-size: 1.3rem;
+  font-weight: 400;
   line-height: 1.6rem;
   border-radius: 1rem;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.4);
 
   display: flex;
   justify-content: center;
@@ -78,36 +77,36 @@ const DescriptionBox = () => {
     opacity: 1,
     transform: "translate(-50%, -50%)",
     from: { opacity: 0, transform: "translate(-50%, -200%)" },
-    config: { friction: 100, tension: 300, mass: 2 }
+    config: { friction: 50, tension: 200, mass: 1 }
   });
 
   const descriptionArr = description.split("");
   const [descriptionState, setDescriptionState] = useState(
     descriptionArr.slice()
   );
-  const symbols = "!#$%&*~";
+  // const symbols = "!#$%&*~";
+  // const symbols = "aábcčdďeěéfghiíjklmnoópqrřsštťuúůvwxyýzž";
+  const symbols = "abcdefghijklmnopqrstuvwxyz!#$%&*~";
 
-  // useEffect(() => void setInterval(() => changeLetter(), 2000), []);
+  useEffect(() => void setInterval(() => changeLetter(), 70), []);
 
   const changeLetter = () => {
-    const replacement = symbols.charAt(
+    const replacementSymbol = symbols.charAt(
       Math.floor(Math.random() * symbols.length)
     );
     const index = Math.floor(Math.random() * description.length);
     if (
       descriptionArr[index] === descriptionState[index] &&
-      descriptionArr[index] != " "
+      descriptionArr[index] !== " " &&
+      descriptionArr[index] !== "-"
     ) {
-      console.log(index);
-      console.log(descriptionState[index]);
-      descriptionStateTemp[index] = replacement;
+      descriptionState[index] = replacementSymbol;
+      setDescriptionState(descriptionState.slice());
       setTimeout(function() {
         descriptionState[index] = descriptionArr[index];
-        // descriptionStateTemp[index] = descriptionArr[index];
-        setDescriptionState(descriptionStateTemp);
-      }, Math.floor(Math.random() * 200 + 200));
+        setDescriptionState(descriptionState.slice());
+      }, Math.floor(Math.random() * 300 + 100));
     }
-    console.log("---------");
   };
 
   return <Box style={animation}>{descriptionState}</Box>;
