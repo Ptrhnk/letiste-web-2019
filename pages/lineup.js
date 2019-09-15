@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { useSpring, animated, config } from "react-spring";
 
 import GoHomeButton from "../components/GoHomeButton";
+import BgContainer from "../layout/BgContainer";
 import patek from "../img/line-up/patek.png";
 import sobota from "../img/line-up/sobota.png";
 import { globalBlack } from "../constants";
@@ -50,6 +51,7 @@ const LineUp = () => {
   });
   return (
     <>
+      <BgContainer />
       <Page>
         <GoHomeButton />
         <ImageContainer style={boxAnimation}>

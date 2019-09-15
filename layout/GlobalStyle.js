@@ -1,17 +1,17 @@
 import { createGlobalStyle } from "styled-components";
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
   html {
     scroll-behavior: smooth;
   }
   body {
-    @import url('https://fonts.googleapis.com/css?family=Poppins');
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700&display=swap');
     font-family: 'Poppins', sans-serif;
-    font-weight: 800;
+    font-weight: 400;
     letter-spacing: .8px;
     box-sizing: border-box;
-    background-color: black;
-    /* height: 100vh; */
+    background-color: #267CE1;
   }
   *, *::after, *::before {
       margin: 0;
@@ -29,5 +29,3 @@ const GlobalStyle = createGlobalStyle`
       opacity: 0;
   }
 `;
-
-export default GlobalStyle;

@@ -4,6 +4,7 @@ import styled from "styled-components";
 import DescriptionBox from "../components/DescriptionBox";
 import GoHomeButton from "../components/GoHomeButton";
 import ImageSlider from "../components/ImageSlider";
+import BgContainer from "../layout/BgContainer";
 
 const Page = styled.div`
   display: flex;
@@ -39,6 +40,7 @@ const Karneval = () => {
   const content = useRef();
   return (
     <>
+      <BgContainer />
       <ImageSlider />
       <Page ref={content}>
         <GoHomeButton />

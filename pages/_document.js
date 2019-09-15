@@ -1,38 +1,9 @@
-import { ServerStyleSheet, createGlobalStyle } from "styled-components";
+import { ServerStyleSheet } from "styled-components";
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
 import Meta from "../layout/meta";
 import BgContainer from "../layout/BgContainer";
-
-const GlobalStyle = createGlobalStyle`
-  html {
-    scroll-behavior: smooth;
-  }
-  body {
-    @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800&display=swap');
-    @import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700&display=swap');
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    letter-spacing: .8px;
-    box-sizing: border-box;
-    background-color: #267CE1;
-  }
-  *, *::after, *::before {
-      margin: 0;
-      padding: 0;
-      box-sizing: inherit;
-  }
-  .ReactModal__Overlay {
-    opacity: 0;
-    transition: opacity 200ms ease-in-out;
-  }
-  .ReactModal__Overlay--after-open{
-      opacity: 1;
-  }
-  .ReactModal__Overlay--before-close{
-      opacity: 0;
-  }
-`;
+import { GlobalStyle } from "../layout/GlobalStyle";
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -42,7 +13,13 @@ export default class MyDocument extends Document {
     try {
       ctx.renderPage = () =>
         originalRenderPage({
-          enhanceApp: App => props => sheet.collectStyles(<App {...props} />)
+          enhanceApp: App => props =>
+            sheet.collectStyles(
+              <>
+                <GlobalStyle />
+                <App {...props} />
+              </>
+            )
         });
 
       const initialProps = await Document.getInitialProps(ctx);
@@ -84,8 +61,8 @@ export default class MyDocument extends Document {
           <Meta />
         </Head>
         <body>
-          <GlobalStyle />
           <BgContainer />
+          <GlobalStyle />
           <Main />
           <NextScript />
         </body>

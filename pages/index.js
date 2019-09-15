@@ -6,6 +6,7 @@ import SocialPanel from "../components/SocialPanel";
 import TripButton from "../components/TripButton";
 import LogoLetiste from "../components/LogoLetiste";
 import Menu from "../components/Menu";
+import BgContainer from "../layout/BgContainer";
 
 import pismena from "../img/grafika/pismena-karneval.png";
 import symbols from "../img/grafika/symboly.png";

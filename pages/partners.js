@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import PartnersContainer from "../components/PartnersContainer";
 import GoHomeButton from "../components/GoHomeButton";
+import BgContainer from "../layout/BgContainer";
 
 import partners from "../json/partners";
 
@@ -17,6 +18,7 @@ const Partners = () => {
 
   return (
     <>
+      <BgContainer />
       <Page>
         <GoHomeButton />
         <PartnersContainer partners={hlavni} name={"Hlavní partner"} />
