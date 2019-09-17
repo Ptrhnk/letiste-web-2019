@@ -81,7 +81,7 @@ const DescriptionBox = () => {
   );
   const symbols = "abcdefghijklmnopqrstuvwxyz!#$%&*~";
 
-  useEffect(() => void setInterval(() => changeLetter(), 60), []);
+  useEffect(() => void setInterval(() => changeLetter(), 40), []);
 
   const changeLetter = () => {
     const replacementSymbol = symbols.charAt(
@@ -93,12 +93,14 @@ const DescriptionBox = () => {
       descriptionArr[index] !== " " &&
       descriptionArr[index] !== "-"
     ) {
-      descriptionState[index] = replacementSymbol;
-      setDescriptionState(descriptionState.slice());
-      setTimeout(function() {
-        descriptionState[index] = descriptionArr[index];
+      setTimeout(() => {
+        descriptionState[index] = replacementSymbol;
         setDescriptionState(descriptionState.slice());
-      }, Math.floor(Math.random() * 400 + 100));
+        setTimeout(() => {
+          descriptionState[index] = descriptionArr[index];
+          setDescriptionState(descriptionState.slice());
+        }, Math.floor(Math.random() * 500 + 100));
+      }, Math.floor(Math.random() * 200));
     }
   };
 

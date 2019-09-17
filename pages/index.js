@@ -73,12 +73,12 @@ const Home = () => {
         {!showMenu && (
           <>
             <LogoLetiste />
-            <TripButton
+            {/* <TripButton
               href={
                 "https://goout.net/cs/festivaly/letiste-karneval-2019/cwyxd/+jxgql/"
               }
               name={"LET 19"}
-            />
+            /> */}
           </>
         )}
         <Menu onHamburgerClick={() => setShowMenu(!showMenu)} />
