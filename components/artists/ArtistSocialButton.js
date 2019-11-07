@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import ArtistSocialIcon from "./ArtistSocialIcon";
-import { globalBlack } from "../constants";
+import { globalBlack } from "../../constants";
 
 const Button = styled.a`
   padding: 0.6rem 0.9rem;

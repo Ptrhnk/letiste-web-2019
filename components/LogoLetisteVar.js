@@ -101,7 +101,7 @@ const moveLine = keyframes`
     stroke-dashoffset: 0;
   }
 `;
-const Line = styled.line`
+const CenterLine = styled.line`
   fill: none;
   stroke: ${globalBlack};
   stroke-linejoin: round;
@@ -116,6 +116,11 @@ const Line = styled.line`
 `;
 
 const LogoLetiste = () => {
+  const x1 = 4.5;
+  const y1 = 186.82;
+  const x2 = 83.99;
+  const y2 = 155.51;
+
   return (
     <>
       <Container>
@@ -123,10 +128,10 @@ const LogoLetiste = () => {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 167.98 191.32"
         >
-          <Polyline1 points={`4.5 186.82 83.99 175.51 163.48 186.82`} />
+          <Polyline1 points={`4.5 186.82 83.99 155.51 163.48 186.82`} />
           <Polyline2 points={`4.5 186.82 83.99 112.31 163.48 186.82`} />
           <Polyline3 points={`4.5 186.82 83.99 4.5 163.48 186.82`} />
-          <Line x1="83.99" y1="175.51" x2="83.99" y2="4.5" />
+          <CenterLine x1="83.99" y1="175.51" x2="83.99" y2="4.5" />
         </StyledSvg>
       </Container>
     </>

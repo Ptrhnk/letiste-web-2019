@@ -4,7 +4,7 @@ import { Trail } from "react-spring/renderprops.cjs";
 import { useSpring, animated, config } from "react-spring";
 
 import ArtistBox from "./ArtistBox";
-import { globalBlack, globalBorder } from "../constants";
+import { globalBlack, globalBorder } from "../../constants";
 
 const GroupContainer = styled.div`
   width: 90%;

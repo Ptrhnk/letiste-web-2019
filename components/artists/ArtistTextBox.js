@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useSpring, animated } from "react-spring";
 
-import { globalBorder, globalBlack } from "../constants";
+import { globalBorder, globalBlack } from "../../constants";
 
 const TextBox = styled(animated.div)`
   display: flex;

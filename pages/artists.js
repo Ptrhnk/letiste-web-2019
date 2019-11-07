@@ -2,10 +2,10 @@ import React, { useState, useRef, useEffect } from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
 
-import ArtistContainer from "../components/ArtistContainer";
+import ArtistContainer from "../components/artists/ArtistContainer";
 import GoHomeButton from "../components/GoHomeButton";
 import Modal from "../components/Modal";
-import ArtistModalBox from "../components/ArtistModalBox";
+import ArtistModalBox from "../components/artists/ArtistModalBox";
 
 import artists from "../json/artists";
 

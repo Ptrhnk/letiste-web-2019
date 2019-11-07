@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useSpring, animated, config } from "react-spring";
 
-import { globalBorder } from "../constants";
+import { globalBorder } from "../../constants";
 import ArtistSocialButton from "./ArtistSocialButton";
 
 const Panel = styled(animated.div)`

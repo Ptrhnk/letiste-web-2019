@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
 
-import logo from "../img/grafika/logo.png";
+import logo from "../../img/grafika/logo.png";
 import ArtistNameBox from "./ArtistNameBox";
-import ImageBox from "./ImageBox";
+import ImageBox from "../ImageBox";
 
 const showLogo = keyframes`
   from {

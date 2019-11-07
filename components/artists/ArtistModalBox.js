@@ -5,7 +5,7 @@ import { useSpring, animated, config } from "react-spring";
 import ArtistTextBox from "./ArtistTextBox";
 import ArtistNameModalBox from "./ArtistNameModalBox";
 import ArtistSocialPanel from "./ArtistSocialPanel";
-import ImageBox from "./ImageBox";
+import ImageBox from "../ImageBox";
 
 const Box = styled(animated.div)`
   display: flex;
