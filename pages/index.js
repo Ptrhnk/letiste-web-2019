@@ -4,7 +4,7 @@ import { useSpring, animated, config } from "react-spring";
 
 import SocialPanel from "../components/SocialPanel";
 import TripButton from "../components/TripButton";
-import LogoLetiste from "../components/LogoLetiste";
+import LogoLetiste from "../components/logo/LogoLetiste";
 import Menu from "../components/Menu";
 import BgContainer from "../layout/BgContainer";
 

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import LogoLetisteVar from "../components/LogoLetisteVar";
+import LogoLetisteVar from "../components/logo/LogoLetisteVar";
 
 const Container = styled.div`
   position: fixed;

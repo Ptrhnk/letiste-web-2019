@@ -1,16 +1,10 @@
 import React, { useEffect, useState } from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { useSpring, useTrail, animated, config } from "react-spring";
 
-import { globalBlack } from "../constants";
-import { red } from "ansi-colors";
-
-const lineColor = "rgba(255, 255, 255, 0.8)";
-const linejoin = "round";
-const linecap = "round";
+import LogoLine from "./LogoLine";
 
 const Container = styled.div`
-  /* background-color: ${globalBlack}; */
   position: absolute;
   top: 45%;
   left: 50%;
@@ -32,41 +26,31 @@ const StyledSvg = styled.svg`
   z-index: 10000;
 `;
 
-const Line = styled(animated.line)`
-  fill: none;
-  /* stroke: ${lineColor}; */
-  stroke: rgba(255, 255, 255, .6);
-  stroke-linejoin: ${linejoin};
-  stroke-width: 2px;
-  stroke-linecap: ${linecap};
-  stroke-dasharray: 220;
-  /* opacity: ${({ opacity }) => opacity}; */
-  /* stroke: ${({ blick }) =>
-    blick ? `rgba(255, 255, 255, ${0.8})` : `rgba(255, 255, 255, ${0.0})`}; */
-  opacity: ${({ blick }) => (blick ? 1 : 0)};
-
-  /* stroke-dashoffset: -200; */
-`;
+const point1 = { x: 4.5, y: 186.82 };
+const point2 = { x: 83.99, y: 175.51 };
+const point3 = { x: 163.48, y: 186.82 };
+const point4 = { x: 83.99, y: 112.31 };
+const point5 = { x: 83.99, y: 4.5 };
 
 const lines = [
-  { x1: "163.48", y1: "186.82", x2: "83.99", y2: "175.51" },
-  { x1: "4.5", y1: "186.82", x2: "83.99", y2: "175.51" },
-  { x1: "163.48", y1: "186.82", x2: "83.99", y2: "112.31" },
-  { x1: "4.5", y1: "186.82", x2: "83.99", y2: "112.31" },
-  { x1: "163.48", y1: "186.82", x2: "83.99", y2: "4.5" },
-  { x1: "4.5", y1: "186.82", x2: "83.99", y2: "4.5" },
-  { x1: "83.99", y1: "175.51", x2: "83.99", y2: "4.5" }
+  { x1: point3.x, y1: point3.y, x2: point2.x, y2: point2.y },
+  { x1: point1.x, y1: point1.y, x2: point2.x, y2: point2.y },
+  { x1: point3.x, y1: point3.y, x2: point4.x, y2: point4.y },
+  { x1: point1.x, y1: point1.y, x2: point4.x, y2: point4.y },
+  { x1: point3.x, y1: point3.y, x2: point5.x, y2: point5.y },
+  { x1: point1.x, y1: point1.y, x2: point5.x, y2: point5.y },
+  { x1: point2.x, y1: point2.y, x2: point5.x, y2: point5.y }
 ];
 
 const LogoLetiste = () => {
   const [flipped, setFlipped] = useState(true);
-  const [flipArr, setFlipArr] = useState(Array(8).fill(true));
+  const [flipArr, setFlipArr] = useState(Array(8).fill(false));
 
   const animations = useSpring({
     // opacity: flipped ? 1 : 0.8,
     // strokeWidth: flipped ? `${4}px` : `${3}px`,
     // strokeDasharray: flipped ? 2 : 5,
-    strokeDashoffset: flipped ? 50 : 55,
+    // strokeDashoffset: flipped ? 50 : 55,
     config: { tension: 500, friction: 2, mass: 1 }
   });
 
@@ -77,7 +61,7 @@ const LogoLetiste = () => {
     stroke: flipped ? "turquoise" : "palevioletred"
   });
 
-  useEffect(() => void setInterval(() => flash(), 200), []);
+  useEffect(() => void setInterval(() => flash(), 100), []);
   // useEffect(() => void setInterval(() => flip(), 4000), []);
   const flip = () => {
     setFlipped(flipped => !flipped);
@@ -87,13 +71,15 @@ const LogoLetiste = () => {
     const index = Math.floor(Math.random() * flipArr.length);
     const pravda = flipArr[index];
     setTimeout(() => {
-      flipArr[index] = !pravda;
+      // flipArr[index] = !pravda;
+      flipArr[index] = true;
       setFlipArr(flipArr.slice());
       setTimeout(() => {
-        flipArr[index] = pravda;
+        // flipArr[index] = pravda;
+        flipArr[index] = false;
         setFlipArr(flipArr.slice());
-      }, Math.floor(Math.random() * 1000 + 100));
-    }, Math.floor(Math.random() * 200));
+      }, Math.floor(Math.random() * 300 + 550));
+    }, Math.floor(Math.random() * 500));
   };
 
   return (
@@ -103,21 +89,21 @@ const LogoLetiste = () => {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 167.98 191.32"
         >
-          {/* {lines.map((line, key) => {
+          {lines.map((line, key) => {
             return (
-              <Line
+              <LogoLine
                 key={key}
                 x1={line.x1}
                 y1={line.y1}
                 x2={line.x2}
                 y2={line.y2}
                 blick={flipArr[key]}
-                style={animations}
+                // style={animations}
               />
             );
-          })} */}
-          {trail.map((style, key) => (
-            <Line
+          })}
+          {/* {trail.map((style, key) => (
+            <LogoLine
               key={key}
               x1={lines[key].x1}
               y1={lines[key].y1}
@@ -126,7 +112,7 @@ const LogoLetiste = () => {
               blick={flipArr[key]}
               style={style}
             />
-          ))}
+          ))} */}
         </StyledSvg>
       </Container>
     </>

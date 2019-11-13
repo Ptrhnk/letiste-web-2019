@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 
-import { globalBlack } from "../constants";
+import { globalBlack } from "../../constants";
 
 const Container = styled.div`
   position: absolute;
