@@ -9,13 +9,13 @@ const Container = styled.div`
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 70%;
-  width: 80%;
+  height: 60%;
+  /* width: 80%; */
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: auto;
-  border: 1px dashed white;
+  /* border: 0.5px dashed grey; */
 
   @media (max-width: 700px) {
     height: 20%;
@@ -24,18 +24,18 @@ const Container = styled.div`
 `;
 
 const StyledSvg = styled.svg`
-  margin: 20px;
-  height: 90%;
-  width: 90%;
+  margin: 0;
+  height: 100%;
+  /* width: 90%; */
   z-index: 10000;
-  border: 0.5px dashed blue;
+  /* border: 0.5px dashed lightgrey; */
 `;
 
-const point1 = { x: -10, y: 186.82 };
-const point2 = { x: 83.99, y: 175.51 };
-const point3 = { x: 163.48, y: 186.82 };
-const point4 = { x: 83.99, y: 112.31 };
-const point5 = { x: 83.99, y: 4.5 };
+const point1 = { x: 24.5, y: 206.82 };
+const point2 = { x: 103.99, y: 195.51 };
+const point3 = { x: 183.48, y: 206.82 };
+const point4 = { x: 103.99, y: 132.31 };
+const point5 = { x: 103.99, y: 24.5 };
 
 const lines = [
   { x1: point3.x, y1: point3.y, x2: point2.x, y2: point2.y },
@@ -58,11 +58,13 @@ const LogoLetiste = () => {
     stroke: flipped ? "turquoise" : "palevioletred"
   });
 
-  // useEffect(() => void setInterval(() => flash(), 200), []);
+  useEffect(() => void setInterval(() => flash(), 200), []);
   // useEffect(() => void setInterval(() => flip(), 4000), []);
   const flip = () => {
     setFlipped(flipped => !flipped);
   };
+
+  const movePoint = () => {};
 
   const flash = () => {
     const index = Math.floor(Math.random() * flipArr.length);
@@ -72,8 +74,8 @@ const LogoLetiste = () => {
       setTimeout(() => {
         flipArr[index] = false;
         setFlipArr(flipArr.slice());
-      }, Math.floor(Math.random() * 500 + 50));
-    }, Math.floor(Math.random() * 1000));
+      }, Math.floor(Math.random() * 500 + 200));
+    }, Math.floor(Math.random() * 5000));
   };
 
   return (
@@ -81,7 +83,7 @@ const LogoLetiste = () => {
       <Container onClick={() => setFlipped(!flipped)}>
         <StyledSvg
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 167.98 191.32"
+          viewBox="0 0 207.98 231.32"
         >
           {lines.map((line, key) => {
             return (
