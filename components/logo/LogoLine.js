@@ -4,20 +4,25 @@ import { useSpring, animated, config } from "react-spring";
 
 const Line = styled(animated.line)`
   fill: none;
-  stroke: rgba(255, 255, 255, 0.8);
+  stroke: rgba(255, 255, 255, 0.7);
   stroke-linejoin: round;
-  stroke-width: 5px;
+  stroke-width: 0.5px;
   stroke-linecap: round;
-  stroke-dasharray: 220;
+  /* stroke-dasharray: 220; */
+  stroke-dasharray: ${({ dash }) => dash};
 `;
 
-const LogoLine = ({ key, x1, y1, x2, y2, blick, style }) => {
+const LogoLine = ({ key, x1, y1, x2, y2, blick }) => {
   const animations = useSpring({
-    opacity: blick ? 1 : 0.1,
-    strokeWidth: blick ? `${2}px` : `${0}px`,
+    config: { tension: 600, friction: 10, mass: 1 },
+    // opacity: blick ? 1 : 0,
+    strokeWidth: blick ? `${1.8}px` : `${0.4}px`
+    // stroke: `rgba(${blick ? Math.floor(Math.random() * 100 + 155) : 255}, ${
+    //   blick ? Math.floor(Math.random() * 100 + 155) : 255
+    // }, ${blick ? Math.floor(Math.random() * 100 + 155) : 255}, 0.7)`
+    // stroke: `rgba(255, ${blick ? 255 : 20}, 255, ${blick ? 0.8 : 0.1})`
     // strokeDasharray: blick ? 30 : 31,
     // strokeDashoffset: blick ? 50 : 55,
-    config: { tension: 600, friction: 10, mass: 1 }
   });
 
   return (
@@ -27,6 +32,7 @@ const LogoLine = ({ key, x1, y1, x2, y2, blick, style }) => {
       x2={x2}
       y2={y2}
       blick={blick ? 1 : 0}
+      dash={blick ? 220 : 12}
       style={animations}
     />
   );

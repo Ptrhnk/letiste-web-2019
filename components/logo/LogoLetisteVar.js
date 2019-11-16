@@ -9,11 +9,13 @@ const Container = styled.div`
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 40%;
+  height: 70%;
+  width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: auto;
+  border: 1px dashed white;
 
   @media (max-width: 700px) {
     height: 20%;
@@ -22,11 +24,14 @@ const Container = styled.div`
 `;
 
 const StyledSvg = styled.svg`
-  height: 100%;
+  margin: 20px;
+  height: 90%;
+  width: 90%;
   z-index: 10000;
+  border: 0.5px dashed blue;
 `;
 
-const point1 = { x: 4.5, y: 186.82 };
+const point1 = { x: -10, y: 186.82 };
 const point2 = { x: 83.99, y: 175.51 };
 const point3 = { x: 163.48, y: 186.82 };
 const point4 = { x: 83.99, y: 112.31 };
@@ -46,14 +51,6 @@ const LogoLetiste = () => {
   const [flipped, setFlipped] = useState(true);
   const [flipArr, setFlipArr] = useState(Array(8).fill(false));
 
-  const animations = useSpring({
-    // opacity: flipped ? 1 : 0.8,
-    // strokeWidth: flipped ? `${4}px` : `${3}px`,
-    // strokeDasharray: flipped ? 2 : 5,
-    // strokeDashoffset: flipped ? 50 : 55,
-    config: { tension: 500, friction: 2, mass: 1 }
-  });
-
   const trail = useTrail(lines.length, {
     config: { tension: 500, friction: 40, mass: 2 },
     // strokeDashoffset: flipped ? 15 : 55,
@@ -61,7 +58,7 @@ const LogoLetiste = () => {
     stroke: flipped ? "turquoise" : "palevioletred"
   });
 
-  useEffect(() => void setInterval(() => flash(), 100), []);
+  // useEffect(() => void setInterval(() => flash(), 200), []);
   // useEffect(() => void setInterval(() => flip(), 4000), []);
   const flip = () => {
     setFlipped(flipped => !flipped);
@@ -69,17 +66,14 @@ const LogoLetiste = () => {
 
   const flash = () => {
     const index = Math.floor(Math.random() * flipArr.length);
-    const pravda = flipArr[index];
     setTimeout(() => {
-      // flipArr[index] = !pravda;
       flipArr[index] = true;
       setFlipArr(flipArr.slice());
       setTimeout(() => {
-        // flipArr[index] = pravda;
         flipArr[index] = false;
         setFlipArr(flipArr.slice());
-      }, Math.floor(Math.random() * 300 + 550));
-    }, Math.floor(Math.random() * 500));
+      }, Math.floor(Math.random() * 500 + 50));
+    }, Math.floor(Math.random() * 1000));
   };
 
   return (
@@ -98,7 +92,6 @@ const LogoLetiste = () => {
                 x2={line.x2}
                 y2={line.y2}
                 blick={flipArr[key]}
-                // style={animations}
               />
             );
           })}
