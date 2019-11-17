@@ -59,7 +59,7 @@ const LogoLetiste = () => {
   ];
 
   useEffect(() => void setInterval(() => flash(), 100), []);
-  // useEffect(() => void setInterval(() => movePoint(), 1000), []);
+  useEffect(() => void setInterval(() => movePoint(), 1000), []);
 
   const movePoint = () => {
     const pointsToMove = [0, 1, 2];
@@ -67,12 +67,12 @@ const LogoLetiste = () => {
     console.log(index);
     console.log(pointsToMove[index]);
     console.log(pointsInit[pointsToMove[index]]);
-    console.log(points);
+    // console.log(points);
     setTimeout(() => {
       // points[pointsToMove[index]].x = pointsInit[pointsToMove[index]].x;
       // points[pointsToMove[index]].y = pointsInit[pointsToMove[index]].y
-      points[1].y = Math.floor(Math.random() * 20 + pointsInit[1] - 10);
-      setPoints(points.slice());
+      // points[1].y = Math.floor(Math.random() * 20 + pointsInit[1] - 10);
+      // setPoints(points.slice());
     }, Math.floor(Math.random() * 500 + 100));
   };
 

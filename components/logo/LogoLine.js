@@ -13,25 +13,30 @@ const Line = styled(animated.line)`
 `;
 
 const colours = ["rgba(0, 180, 255, 1)", "rgba(255, 80, 180, 1)"];
+const initHue = 200;
+const hueWidth = 60;
 
 const LogoLine = ({ x1, y1, x2, y2, blick }) => {
   const [offset, setOffset] = useState(3);
   const [space, setSpace] = useState(20);
   const [width, setWidth] = useState(6);
-  const [color, setColor] = useState(colours[0]);
-  const [red, setRed] = useState(1);
-  const [green, setGreen] = useState(10);
-  const [blue, setBlue] = useState(40);
+  const [red, setRed] = useState(220);
+  const [green, setGreen] = useState(40);
+  const [blue, setBlue] = useState(150);
+  const [hue, setHue] = useState(initHue);
+  // const [op, setOp] = useState(initialState)
 
   useEffect(() => {
     if (!blick) {
       setOffset(Math.floor(Math.random() * 2 + 8));
       setSpace(Math.floor(Math.random() * 8 + 16));
     } else {
-      setRed(red > 255 ? red - 250 : red + 51);
-      setGreen(green > 255 ? green - 255 : green + 51);
-      setBlue(blue > 255 ? blue - 255 : blue + 51);
-      // setColor(colours[Math.floor(Math.random() * colours.length)]);
+      const increment = 50;
+      setHue(
+        hue + increment > initHue + hueWidth
+          ? hue - hueWidth + increment
+          : hue + increment
+      );
     }
   }, [blick]);
 
@@ -41,13 +46,14 @@ const LogoLine = ({ x1, y1, x2, y2, blick }) => {
       friction: blick ? 20 : 100,
       mass: blick ? 2 : 1
     },
-    opacity: blick ? 0.9 : 0,
-    // stroke: `rgba(0, 230, 255, 1)`,
-    // stroke: color,
+    // opacity: blick ? 1 : 0,
     // stroke: blick ? `rgba(255, 80, 180, 1)` : `rgba(255, 0, 220, 0.2)`,
-    stroke: blick
-      ? `rgba(${red}, ${green}, ${blue}, 1)`
-      : `rgba(${red}, ${green - 80}, ${blue + 40}, 0.4)`,
+    // stroke: blick ? `rgba(0, 230, 255, 1)` : `rgba(0, 100, 255, 0.4)`,
+    stroke: blick ? `hsl(196, 95%, 70%)` : `rgba(0, 100, 255, 0.4)`,
+    // stroke: blick
+    //   ? `rgba(${red}, ${green}, ${blue}, 1)`
+    //   : `rgba(${red}, ${green - 80}, ${blue + 40}, 0.4)`,
+    // stroke: blick ? `hsl(${hue}, 100%, 75%)` : `hsl(${hue - 10}, 0%, 0%)`,
     strokeWidth: blick ? `${width}px` : `${0}px`,
     strokeDashoffset: offset,
     strokeDasharray: `0 ${space}`
