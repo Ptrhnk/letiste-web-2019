@@ -9,7 +9,7 @@ const Container = styled.div`
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 60%;
+  height: 50%;
   /* width: 80%; */
   display: flex;
   justify-content: center;
@@ -31,59 +31,83 @@ const StyledSvg = styled.svg`
   /* border: 0.5px dashed lightgrey; */
 `;
 
-const point1 = { x: 24.5, y: 206.82 };
-const point2 = { x: 103.99, y: 195.51 };
-const point3 = { x: 183.48, y: 206.82 };
-const point4 = { x: 103.99, y: 132.31 };
-const point5 = { x: 103.99, y: 24.5 };
-
-const lines = [
-  { x1: point3.x, y1: point3.y, x2: point2.x, y2: point2.y },
-  { x1: point1.x, y1: point1.y, x2: point2.x, y2: point2.y },
-  { x1: point3.x, y1: point3.y, x2: point4.x, y2: point4.y },
-  { x1: point1.x, y1: point1.y, x2: point4.x, y2: point4.y },
-  { x1: point3.x, y1: point3.y, x2: point5.x, y2: point5.y },
-  { x1: point1.x, y1: point1.y, x2: point5.x, y2: point5.y },
-  { x1: point2.x, y1: point2.y, x2: point5.x, y2: point5.y }
-];
+const p1 = { x: 44.5, y: 226.82 };
+const p2 = { x: 123.99, y: 215.51 };
+const p3 = { x: 203.48, y: 226.82 };
+const p4 = { x: 123.99, y: 152.31 };
+const p5 = { x: 123.99, y: 44.5 };
+const pointsInit = [p1, p2, p3, p4, p5];
 
 const LogoLetiste = () => {
-  const [flipped, setFlipped] = useState(true);
+  const [on, setOn] = useState(true);
   const [flipArr, setFlipArr] = useState(Array(8).fill(false));
+  const [point1, setPoint1] = useState(p1);
+  const [point2, setPoint2] = useState(p2);
+  const [point3, setPoint3] = useState(p3);
+  const [point4, setPoint4] = useState(p4);
+  const [point5, setPoint5] = useState(p5);
+  // const [points, setPoints] = useState(pointsInit);
 
-  const trail = useTrail(lines.length, {
-    config: { tension: 500, friction: 40, mass: 2 },
-    // strokeDashoffset: flipped ? 15 : 55,
-    // strokeDasharray: flipped ? 3 : 200,
-    stroke: flipped ? "turquoise" : "palevioletred"
-  });
+  const lines = [
+    { x1: point3.x, y1: point3.y, x2: point2.x, y2: point2.y },
+    { x1: point1.x, y1: point1.y, x2: point2.x, y2: point2.y },
+    { x1: point3.x, y1: point3.y, x2: point4.x, y2: point4.y },
+    { x1: point1.x, y1: point1.y, x2: point4.x, y2: point4.y },
+    { x1: point3.x, y1: point3.y, x2: point5.x, y2: point5.y },
+    { x1: point1.x, y1: point1.y, x2: point5.x, y2: point5.y },
+    { x1: point2.x, y1: point2.y, x2: point5.x, y2: point5.y }
+  ];
+  // const lines = [
+  //   { x1: points[2].x, y1: points[2].y, x2: points[1].x, y2: points[1].y },
+  //   { x1: points[0].x, y1: points[0].y, x2: points[1].x, y2: points[1].y },
+  //   { x1: points[2].x, y1: points[2].y, x2: points[3].x, y2: points[3].y },
+  //   { x1: points[0].x, y1: points[0].y, x2: points[3].x, y2: points[3].y },
+  //   { x1: points[2].x, y1: points[2].y, x2: points[4].x, y2: points[4].y },
+  //   { x1: points[0].x, y1: points[0].y, x2: points[4].x, y2: points[4].y },
+  //   { x1: points[1].x, y1: points[1].y, x2: points[4].x, y2: points[4].y }
+  // ];
 
-  useEffect(() => void setInterval(() => flash(), 200), []);
-  // useEffect(() => void setInterval(() => flip(), 4000), []);
-  const flip = () => {
-    setFlipped(flipped => !flipped);
+  // useEffect(() => void setInterval(() => flash(), 200), []);
+  // useEffect(() => void setInterval(() => movePoint(), 1000), []);
+
+  const movePoint = () => {
+    // setTimeout(() => setShape(), Math.floor(Math.random() * 500 + 100));
+    setTimeout(() => {
+      const random = Math.floor(Math.random() * 2);
+      if (random === 1) {
+        setPoint1({
+          x: p1.x,
+          y: Math.floor(Math.random() * 10 + p1.y - 5)
+        });
+      } else {
+        setPoint3({
+          x: p3.x,
+          y: Math.floor(Math.random() * 10 + p3.y - 5)
+        });
+      }
+    }, Math.floor(Math.random() * 500 + 100));
   };
 
-  const movePoint = () => {};
-
   const flash = () => {
-    const index = Math.floor(Math.random() * flipArr.length);
-    setTimeout(() => {
-      flipArr[index] = true;
-      setFlipArr(flipArr.slice());
+    if (on) {
+      const index = Math.floor(Math.random() * flipArr.length);
       setTimeout(() => {
-        flipArr[index] = false;
+        flipArr[index] = true;
         setFlipArr(flipArr.slice());
-      }, Math.floor(Math.random() * 500 + 200));
-    }, Math.floor(Math.random() * 5000));
+        setTimeout(() => {
+          flipArr[index] = false;
+          setFlipArr(flipArr.slice());
+        }, Math.floor(Math.random() * 500 + 2000));
+      }, Math.floor(Math.random() * 4000));
+    }
   };
 
   return (
     <>
-      <Container onClick={() => setFlipped(!flipped)}>
+      <Container onClick={() => setOn(!on)}>
         <StyledSvg
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 207.98 231.32"
+          viewBox="0 0 247.98 271.32"
         >
           {lines.map((line, key) => {
             return (
@@ -97,17 +121,6 @@ const LogoLetiste = () => {
               />
             );
           })}
-          {/* {trail.map((style, key) => (
-            <LogoLine
-              key={key}
-              x1={lines[key].x1}
-              y1={lines[key].y1}
-              x2={lines[key].x2}
-              y2={lines[key].y2}
-              blick={flipArr[key]}
-              style={style}
-            />
-          ))} */}
         </StyledSvg>
       </Container>
     </>
