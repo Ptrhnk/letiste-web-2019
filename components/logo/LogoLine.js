@@ -12,16 +12,26 @@ const Line = styled(animated.line)`
   stroke-dashoffset: 32;
 `;
 
+const colours = ["rgba(0, 180, 255, 1)", "rgba(255, 80, 180, 1)"];
+
 const LogoLine = ({ x1, y1, x2, y2, blick }) => {
   const [offset, setOffset] = useState(3);
   const [space, setSpace] = useState(20);
   const [width, setWidth] = useState(6);
+  const [color, setColor] = useState(colours[0]);
+  const [red, setRed] = useState(1);
+  const [green, setGreen] = useState(10);
+  const [blue, setBlue] = useState(40);
+
   useEffect(() => {
     if (!blick) {
       setOffset(Math.floor(Math.random() * 2 + 8));
       setSpace(Math.floor(Math.random() * 8 + 16));
     } else {
-      // setWidth(Math.floor(Math.random() * 2 + 5));
+      setRed(red > 255 ? red - 250 : red + 51);
+      setGreen(green > 255 ? green - 255 : green + 51);
+      setBlue(blue > 255 ? blue - 255 : blue + 51);
+      // setColor(colours[Math.floor(Math.random() * colours.length)]);
     }
   }, [blick]);
 
@@ -31,19 +41,20 @@ const LogoLine = ({ x1, y1, x2, y2, blick }) => {
       friction: blick ? 20 : 100,
       mass: blick ? 2 : 1
     },
-    // stroke: blick ? `rgba(255, 40, 150, .9)` : `rgba(255, 0, 220, 0.4)`,
-    stroke: blick ? `rgba(0, 230, 255, 1)` : `rgba(0, 100, 255, 0.4)`,
+    opacity: blick ? 0.9 : 0,
+    // stroke: `rgba(0, 230, 255, 1)`,
+    // stroke: color,
+    // stroke: blick ? `rgba(255, 80, 180, 1)` : `rgba(255, 0, 220, 0.2)`,
+    stroke: blick
+      ? `rgba(${red}, ${green}, ${blue}, 1)`
+      : `rgba(${red}, ${green - 80}, ${blue + 40}, 0.4)`,
     strokeWidth: blick ? `${width}px` : `${0}px`,
     strokeDashoffset: offset,
-    strokeDasharray: `0 ${space}`,
-    x1: x1,
-    y1: y1,
-    x2: x2,
-    y2: y2
+    strokeDasharray: `0 ${space}`
     // stroke: `rgba(255, ${blick ? 255 : 20}, 255, ${blick ? 0.8 : 0.1})`
   });
   const pointMovement = useSpring({
-    config: { tension: 200, friction: 2, mass: 2 },
+    config: { tension: 200, friction: 1, mass: 1 },
     x1: x1,
     y1: y1,
     x2: x2,

@@ -46,7 +46,7 @@ const LogoLetiste = () => {
   const [point3, setPoint3] = useState(p3);
   const [point4, setPoint4] = useState(p4);
   const [point5, setPoint5] = useState(p5);
-  // const [points, setPoints] = useState(pointsInit);
+  // const [points, setPoints] = useState([...pointsInit]);
 
   const lines = [
     { x1: point3.x, y1: point3.y, x2: point2.x, y2: point2.y },
@@ -57,34 +57,22 @@ const LogoLetiste = () => {
     { x1: point1.x, y1: point1.y, x2: point5.x, y2: point5.y },
     { x1: point2.x, y1: point2.y, x2: point5.x, y2: point5.y }
   ];
-  // const lines = [
-  //   { x1: points[2].x, y1: points[2].y, x2: points[1].x, y2: points[1].y },
-  //   { x1: points[0].x, y1: points[0].y, x2: points[1].x, y2: points[1].y },
-  //   { x1: points[2].x, y1: points[2].y, x2: points[3].x, y2: points[3].y },
-  //   { x1: points[0].x, y1: points[0].y, x2: points[3].x, y2: points[3].y },
-  //   { x1: points[2].x, y1: points[2].y, x2: points[4].x, y2: points[4].y },
-  //   { x1: points[0].x, y1: points[0].y, x2: points[4].x, y2: points[4].y },
-  //   { x1: points[1].x, y1: points[1].y, x2: points[4].x, y2: points[4].y }
-  // ];
 
-  // useEffect(() => void setInterval(() => flash(), 200), []);
+  useEffect(() => void setInterval(() => flash(), 100), []);
   // useEffect(() => void setInterval(() => movePoint(), 1000), []);
 
   const movePoint = () => {
-    // setTimeout(() => setShape(), Math.floor(Math.random() * 500 + 100));
+    const pointsToMove = [0, 1, 2];
+    const index = Math.floor(Math.random() * pointsToMove.length);
+    console.log(index);
+    console.log(pointsToMove[index]);
+    console.log(pointsInit[pointsToMove[index]]);
+    console.log(points);
     setTimeout(() => {
-      const random = Math.floor(Math.random() * 2);
-      if (random === 1) {
-        setPoint1({
-          x: p1.x,
-          y: Math.floor(Math.random() * 10 + p1.y - 5)
-        });
-      } else {
-        setPoint3({
-          x: p3.x,
-          y: Math.floor(Math.random() * 10 + p3.y - 5)
-        });
-      }
+      // points[pointsToMove[index]].x = pointsInit[pointsToMove[index]].x;
+      // points[pointsToMove[index]].y = pointsInit[pointsToMove[index]].y
+      points[1].y = Math.floor(Math.random() * 20 + pointsInit[1] - 10);
+      setPoints(points.slice());
     }, Math.floor(Math.random() * 500 + 100));
   };
 
@@ -97,8 +85,8 @@ const LogoLetiste = () => {
         setTimeout(() => {
           flipArr[index] = false;
           setFlipArr(flipArr.slice());
-        }, Math.floor(Math.random() * 500 + 2000));
-      }, Math.floor(Math.random() * 4000));
+        }, Math.floor(Math.random() * 1500 + 1000));
+      }, Math.floor(Math.random() * 4000 + 100));
     }
   };
 
