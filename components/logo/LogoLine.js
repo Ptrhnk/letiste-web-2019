@@ -20,40 +20,34 @@ const LogoLine = ({ x1, y1, x2, y2, blick }) => {
   const [offset, setOffset] = useState(3);
   const [space, setSpace] = useState(20);
   const [width, setWidth] = useState(6);
-  const [red, setRed] = useState(220);
-  const [green, setGreen] = useState(40);
-  const [blue, setBlue] = useState(150);
   const [hue, setHue] = useState(initHue);
-  // const [op, setOp] = useState(initialState)
 
   useEffect(() => {
     if (!blick) {
       setOffset(Math.floor(Math.random() * 2 + 8));
       setSpace(Math.floor(Math.random() * 8 + 16));
     } else {
-      const increment = 50;
-      setHue(
-        hue + increment > initHue + hueWidth
-          ? hue - hueWidth + increment
-          : hue + increment
-      );
+      setHue(Math.floor(Math.random() * 360));
+      // const increment = 50;
+      // setHue(
+      //   hue + increment > initHue + hueWidth
+      //     ? hue - hueWidth + increment
+      //     : hue + increment
+      // );
     }
   }, [blick]);
 
   const flashAnimations = useSpring({
     config: {
       tension: blick ? 200 : 60,
-      friction: blick ? 20 : 100,
+      friction: blick ? 24 : 100,
       mass: blick ? 2 : 1
     },
-    // opacity: blick ? 1 : 0,
+    opacity: blick ? .9 : 0,
     // stroke: blick ? `rgba(255, 80, 180, 1)` : `rgba(255, 0, 220, 0.2)`,
     // stroke: blick ? `rgba(0, 230, 255, 1)` : `rgba(0, 100, 255, 0.4)`,
-    stroke: blick ? `hsl(196, 95%, 70%)` : `rgba(0, 100, 255, 0.4)`,
-    // stroke: blick
-    //   ? `rgba(${red}, ${green}, ${blue}, 1)`
-    //   : `rgba(${red}, ${green - 80}, ${blue + 40}, 0.4)`,
-    // stroke: blick ? `hsl(${hue}, 100%, 75%)` : `hsl(${hue - 10}, 0%, 0%)`,
+    stroke: blick ? `hsl(196, 95%, 80%)` : `rgba(0, 100, 255, 0.4)`,
+    // stroke: blick ? `hsl(${hue}, 100%, 50%)` : `hsl(${hue - 10}, 0%, 0%)`,
     strokeWidth: blick ? `${width}px` : `${0}px`,
     strokeDashoffset: offset,
     strokeDasharray: `0 ${space}`

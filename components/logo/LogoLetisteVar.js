@@ -9,7 +9,7 @@ const Container = styled.div`
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 50%;
+  height: 70%;
   /* width: 80%; */
   display: flex;
   justify-content: center;
@@ -58,23 +58,7 @@ const LogoLetiste = () => {
     { x1: point2.x, y1: point2.y, x2: point5.x, y2: point5.y }
   ];
 
-  useEffect(() => void setInterval(() => flash(), 100), []);
-  useEffect(() => void setInterval(() => movePoint(), 1000), []);
-
-  const movePoint = () => {
-    const pointsToMove = [0, 1, 2];
-    const index = Math.floor(Math.random() * pointsToMove.length);
-    console.log(index);
-    console.log(pointsToMove[index]);
-    console.log(pointsInit[pointsToMove[index]]);
-    // console.log(points);
-    setTimeout(() => {
-      // points[pointsToMove[index]].x = pointsInit[pointsToMove[index]].x;
-      // points[pointsToMove[index]].y = pointsInit[pointsToMove[index]].y
-      // points[1].y = Math.floor(Math.random() * 20 + pointsInit[1] - 10);
-      // setPoints(points.slice());
-    }, Math.floor(Math.random() * 500 + 100));
-  };
+  useEffect(() => void setInterval(() => flash(), 200), []);
 
   const flash = () => {
     if (on) {
@@ -85,7 +69,7 @@ const LogoLetiste = () => {
         setTimeout(() => {
           flipArr[index] = false;
           setFlipArr(flipArr.slice());
-        }, Math.floor(Math.random() * 1500 + 1000));
+        }, Math.floor(Math.random() * 1500 + 1500));
       }, Math.floor(Math.random() * 4000 + 100));
     }
   };
